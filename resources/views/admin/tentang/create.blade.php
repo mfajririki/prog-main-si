@@ -33,7 +33,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Isi Konten<span class="text-danger">*</span></label>
-                                        <textarea name="konten_tentang" id="summernote" required=""></textarea>
+                                        <textarea name="konten_tentang" class="summernote" required=""></textarea>
                                         @error('konten_tentang')
                                                 <div class="mt-2 text-danger">{{ $message }}</div>
                                             @enderror 

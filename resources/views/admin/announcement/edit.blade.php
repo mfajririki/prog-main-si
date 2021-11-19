@@ -65,7 +65,7 @@
                                 <div class="col-md-12 mt-3">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Isi Konten</label>
-                                        <textarea name="content" id="summernote">{{ $announcement->content }}</textarea>
+                                        <textarea name="content" class="summernote">{{ $announcement->content }}</textarea>
                                     </div>
                                 </div>
 

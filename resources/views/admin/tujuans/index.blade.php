@@ -39,7 +39,7 @@
                             <tbody>
                                 @foreach($tujuan as $tujuan)
                                 <tr>
-                                    <td>{{ $tujuan->konten_tujuan }}</td>
+                                    <td>{!! $tujuan->konten_tujuan !!}</td>
                                     <td>
                                         <a href="{{ route('tujuans.edit', $tujuan) }}"
                                             class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>

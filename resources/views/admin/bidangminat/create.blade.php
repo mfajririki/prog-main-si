@@ -21,7 +21,7 @@
 
                 <div class="card card-primary">
                     <div class="card-header">
-                        Mat Kuliah Bidang Minat
+                        Mata Kuliah Bidang Minat
                     </div>
                     <!-- /.card-header -->
 

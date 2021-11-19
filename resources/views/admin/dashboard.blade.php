@@ -23,6 +23,7 @@
                 <div class="small-box bg-info">
                     <div class="inner">
                         <p>Pengumuman</p>
+                        <p>{{ $jumlah_pengumuman }}</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -38,15 +39,6 @@
                         <i class="ion ion-stats-bars"></i>
                     </div>
                     <a href="{{ url('/staf_pengajar') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-                <div class="small-box bg-info">
-                    <div class="inner">
-                        <p>Prestasi Mahasiswa</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <a href="{{ url('#') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -72,7 +64,7 @@
                 </div>
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <p>Tentang Prodi SI</p>
+                        <p>Tentang Prodi TI</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -86,6 +78,7 @@
                 <div class="small-box bg-info">
                     <div class="inner">
                         <p>Kurikulum | Mata Kuliah</p>
+                        <p>{{ $jumlah_mk }}</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -95,6 +88,7 @@
                 <div class="small-box bg-info">
                     <div class="inner">
                         <p>MK Bidang Minat</p>
+                        <p>{{ $jumlah_bidangminat }}</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -107,11 +101,7 @@
         </div>
         <!-- /.row -->
 
-        <!-- Main row -->
-        <div class="row">
-            
-        </div>
-        <!-- /.row (main row) -->
+        
     </div><!-- /.container-fluid -->
 </section>
 <!-- /.content -->

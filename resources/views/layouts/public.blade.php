@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sarjana Sistem Informasi &#8211; Universitas Bina Darma</title>
+    <title>Teknik Informatika &#8211; Universitas Bina Darma</title>
 
     <link rel='stylesheet' id='wp-block-library-css' href='{{ asset("assets/css/dist/block-library/style.min76f3.css?ver=5.7.3") }}' type='text/css' media='all' />
     <link rel='stylesheet' id='contact-form-7-css' href='{{ asset("assets/content/plugins/contact-form-7/includes/css/styles7661.css?ver=5.4.2") }}' type='text/css' media='all' />
@@ -86,7 +86,7 @@
 
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036"><a href="#">Tentang</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314"><a href="#">Tentang Sistem Informasi</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314"><a href="#">Tentang Teknik Informatika</a></li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638"><a href="{{ route('staf') }}">Staf Pengajar</a></li>
                                     </ul>
                                 </li>
@@ -142,15 +142,14 @@
 
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Kurikulum</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/kurikulum_konten">Kurikulum Sistem Informasi</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/kurikulum_konten">Kurikulum Teknik Informatika</a></li>
                                         </ul>
                                     </li>
 
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Tentang</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/">Tentang Sistem Informasi</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/">Tentang Teknik Informatika</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638" data-size="60"><a href="/staf">Staf Pengajar</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638" data-size="60"><a href="#">Profile Lulusan</a></li>
                                         </ul>
                                     </li>
 
@@ -171,7 +170,7 @@
 
                                     <div class="kingster-top-search-row">
                                         <div class="kingster-top-search-cell">
-                                            <form role="search" method="get" class="search-form" action="https://cs.ui.ac.id/">
+                                            <form role="search" method="get" class="search-form" action="#">
                                                 <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="s">
                                                 <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
                                                 <input type="submit" class="search-submit" value="Search">
@@ -220,7 +219,6 @@
                                 <h3 class="kingster-widget-title">Tentang</h3><span class="clear"></span>
                                 <div class="menu-about-footer-container">
                                     <ul id="menu-about-footer" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7524 kingster-normal-menu"><a href="#">Tentang Program Studi Sistem Informasi</a></li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7526 kingster-normal-menu"><a href="{{ route('staf') }}">Staf Pengajar</a></li>
                                     </ul>
                                 </div>

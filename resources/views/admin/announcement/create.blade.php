@@ -58,7 +58,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Isi Konten</label>
-                                        <textarea name="content" id="summernote"></textarea> 
+                                        <textarea name="content" class="summernote"></textarea> 
                                     </div>
                                 </div>
 

@@ -36,21 +36,13 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Visi </label>
-                                        <textarea type="text" name="visi" class="form-control" required="">{{$visi_misi->visi}}</textarea>
-                                        @error('visi')
-                                            <div class="mt-2 text-danger">{{ $message }}</div>
-                                        @enderror
+                                        <label for="exampleInputFile" class="d-block">Visi</label>
+                                        <textarea name="content" class="summernote">{{ $visi_misi->visi }}</textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Misi </label>
-                                        <textarea type="text" name="misi" class="form-control" required="">{{$visi_misi->misi}}</textarea>
-                                        @error('misi')
-                                            <div class="mt-2 text-danger">{{ $message }}</div>
-                                        @enderror
-                                    </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile" class="d-block">Misis</label>
+                                    <textarea name="content" class="summernote">{{ $visi_misi->misi }}</textarea>
                                 </div>
                                 <!-- /.col -->
                             </div>

@@ -31,20 +31,12 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Visi </label>
-                                        <textarea type="text" name="visi" class="form-control" value="{{ old('visi') }}" required=""></textarea>
-                                        @error('visi')
-                                            <div class="mt-2 text-danger">{{ $message }}</div>
-                                        @enderror
+                                        <label for="exampleInputFile" class="d-block">Visi</label>
+                                        <textarea name="visi" class="summernote"></textarea> 
                                     </div>
-                                </div>
-                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Misi </label>
-                                        <textarea type="text" name="misi" class="form-control" value="{{ old('misi') }}" required=""></textarea>
-                                        @error('misi')
-                                            <div class="mt-2 text-danger">{{ $message }}</div>
-                                        @enderror
+                                        <label for="exampleInputFile" class="d-block">Misi</label>
+                                        <textarea name="misi" class="summernote"></textarea> 
                                     </div>
                                 </div>
                             </div>

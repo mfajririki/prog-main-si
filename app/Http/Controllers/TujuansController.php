@@ -35,8 +35,8 @@ class TujuansController extends Controller
         // ]);
 
         DB::transaction(function () use ($request) {
-            $tujuan = Tujuans::create([
-                'tujuan'          => $request->tujuan,
+            $konten_tujuan = Tujuans::create([
+                'konten_tujuan'          => $request->konten_tujuan,
             ]);
         });
 
@@ -58,7 +58,7 @@ class TujuansController extends Controller
     {
         $tujuan = Tujuans::where('id', $id)
             ->update([
-                'tujuan'          => $request->tujuan,
+                'konten_tujuan'          => $request->konten_tujuan,
             ]);
 
 

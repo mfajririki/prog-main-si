@@ -38,7 +38,7 @@
                                 <div class="col-md-12 mt-3">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Isi Konten <span class="text-danger">*</span></label>
-                                        <textarea name="konten_tentang" id="summernote" required="">{{ $tentang->konten_tentang }}</textarea>
+                                        <textarea name="konten_tentang" class="summernote" required="">{{ $tentang->konten_tentang }}</textarea>
                                     </div>
                                 </div>
                             </div>

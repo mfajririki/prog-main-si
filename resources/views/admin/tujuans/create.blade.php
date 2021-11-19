@@ -32,14 +32,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Isi Tujuan</label>
-                                        <textarea name="konten_tujuan" id="summernote"></textarea> 
+                                        <textarea name="konten_tujuan" class="summernote"></textarea> 
                                     </div>
                                 </div>
                             <!-- /.row -->
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <span class="small text-danger">form bertanda * wajib diisi</span>
                             <button type="submit" class="float-right btn btn-primary">Submit</button>
                         </div>
                         <!-- /.card-footer -->

@@ -69,7 +69,7 @@
                             </tbody>
 
                         </table>
-                        {{ $kurikulum->links() }}
+                        
                     </div>
                     <!-- /.card-body -->
                 </div>

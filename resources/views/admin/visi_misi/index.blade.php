@@ -22,6 +22,10 @@
             <div class="col-12">
 
                 <div class="card">
+                    <div class="card-header">
+                        <a href="{{ route('visi_misi.create') }}" class="btn btn-sm btn-primary">Tambah Data <i
+                                class="ml-2 fa fa-plus fa-sm"></i></a>
+                    </div>
                     <!-- /.card-header -->
 
                     <div class="card-body">
@@ -42,6 +46,15 @@
                                         <a href="{{ route('visi_misi.edit', $visi_misi) }}"
                                             class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>
                                         </a>
+                                        <form class="d-inline" method="POST"
+                                            action="{{ route('visi_misi.destroy', $visi_misi) }}">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+
+                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                onclick="return confirm('Yakin ingin menghapus?');">Hapus <i
+                                                    class="fas fa-trash fa-sm ml-2"></i></button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach

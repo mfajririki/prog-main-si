@@ -9,6 +9,7 @@ use App\Models\Tentang;
 use App\Models\Document;
 use App\Models\Kurikulums;
 use App\Models\Tujuans;
+use App\Models\BidangMinat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,10 +25,20 @@ class AdminController extends Controller
         $announcements = Announcement::all();
         $staf_pengajar = Staf::all();
         $jumlah_staf = Staf::count();
+        $jumlah_mk = Kurikulums::count();
+        $jumlah_bidangminat = BidangMinat::count();
+        $jumlah_pengumuman = Announcement::count();
 
         return view(
             'admin.dashboard',
-            compact('announcements', 'staf_pengajar', 'jumlah_staf')
+            compact(
+                'announcements',
+                'staf_pengajar',
+                'jumlah_staf',
+                'jumlah_mk',
+                'jumlah_bidangminat',
+                'jumlah_pengumuman'
+            )
         );
     }
 
