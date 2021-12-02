@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teknik Informatika &#8211; Universitas Bina Darma</title>
+    <title>Sistem Informasi &#8211; Universitas Bina Darma</title>
 
     <link rel='stylesheet' id='wp-block-library-css' href='{{ asset("assets/css/dist/block-library/style.min76f3.css?ver=5.7.3") }}' type='text/css' media='all' />
     <link rel='stylesheet' id='contact-form-7-css' href='{{ asset("assets/content/plugins/contact-form-7/includes/css/styles7661.css?ver=5.4.2") }}' type='text/css' media='all' />
@@ -86,7 +86,7 @@
 
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036"><a href="#">Tentang</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314"><a href="#">Tentang Teknik Informatika</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314"><a href="#">Tentang Sistem Informasi</a></li>
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638"><a href="{{ route('staf') }}">Staf Pengajar</a></li>
                                     </ul>
                                 </li>
@@ -106,28 +106,14 @@
 
     <!-- Body -->
     <div class="kingster-body-outer-wrapper ">
-        <div class="kingster-body-wrapper clearfix  kingster-with-frame">
-
-            <!-- Top Bar -->
-            <div class="kingster-top-bar">
-                <div class="kingster-top-bar-background"></div>
-                <div class="kingster-top-bar-container kingster-container ">
-                    <div class="kingster-top-bar-container-inner clearfix">
-                        <div class="kingster-top-bar-right kingster-item-pdlr">
-                            <ul id="kingster-top-bar-menu" class="sf-menu kingster-top-bar-menu kingster-top-bar-right-menu">
-                                <!-- <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7184 kingster-normal-menu"><a href="#">Covid-19</a></li> -->
-                            </ul><a class="kingster-top-bar-right-button" href="https://pmb.binadarma.ac.id" target="_blank">Pendaftaran</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="kingster-body-wrapper clearfix  kingster-with-frame">            
 
             <!-- Header Navbar -->
             <header class="kingster-header-wrap kingster-header-style-plain  kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed clearfix" data-navigation-offset="75px">
                 <div class="kingster-header-background"></div>
                 <div class="kingster-header-container  kingster-container">
-
                     <div class="kingster-header-container-inner clearfix">
+                        {{-- logo --}}
                         <div class="kingster-logo  kingster-item-pdlr">
                             <div class="kingster-logo-inner">
                                 <a class="" href="#"><img src="{{ url('assets/content/uploads/2021/06/logo-fasilkom-white-2.png') }}" alt="" width="400" height="162" title="logo-fasilkom-white-2" /></a>
@@ -140,16 +126,20 @@
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5300 kingster-normal-menu {{ Request::segment(1) == 'pengumuman'  ? 'current-menu-item' : '' }} "><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
 
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Kurikulum</a>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><p>Kurikulum</p>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/kurikulum_konten">Kurikulum Teknik Informatika</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/kurikulum_konten">Kurikulum Sistem Informasi</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/bimbingan_akademik">Bimbingan Akademik</a></li>
                                         </ul>
                                     </li>
 
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><a href="#" class="sf-with-ul-pre">Tentang</a>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5300 kingster-normal-menu {{ Request::segment(1) == 'halpanduan'  ? 'current-menu-item' : '' }} "><a href="{{ route('halpanduan') }}">Panduan</a></li>
+
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><p>Tentang</p>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/">Tentang Teknik Informatika</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/">Tentang Sistem Informasi</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638" data-size="60"><a href="/staf">Staf Pengajar</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638" data-size="60"><a href="/profilelulusan">Profil Lulusan</a></li>
                                         </ul>
                                     </li>
 

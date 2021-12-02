@@ -10,7 +10,11 @@ use App\Http\Controllers\VisiMisiController;
 use App\Http\Controllers\TujuansController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\KurikulumsController;
+use App\Http\Controllers\PanduanController;
+use App\Http\Controllers\ProfileLulusanController;
+use App\Http\Controllers\PembimbingAkademikController;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Sail\Console\PublishCommand;
 
 // Landing page
@@ -20,8 +24,10 @@ Route::get('/', [PublicController::class, 'halamanUtama'])->name('landing');
 Route::get('/pengumuman', [PublicController::class, 'index'])->name('pengumuman');
 Route::get('/staf', [PublicController::class, 'staf'])->name('staf');
 Route::get('/pengumuman/{announcement}', [PublicController::class, 'show'])->name('pengumuman_detail');
-Route::get('/profile_lulusan', [PublicController::class, 'profile_lulusan']);
+Route::get('/profilelulusan', [PublicController::class, 'profilelulusan'])->name('profilelulusan');
+Route::get('/bimbingan_akademik', [PublicController::class, 'bimbingan_akademik'])->name('bimbingan_akademik');
 Route::get('/kurikulum_konten', [PublicController::class, 'kurikulum_konten'])->name('kurikulum_konten');
+Route::get('/halpanduan', [PublicController::class, 'halpanduan'])->name('halpanduan');
 
 // Admin
 Auth::routes([
@@ -32,12 +38,17 @@ Auth::routes([
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::resource('/announcement', AnnouncementController::class);
+Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'delete_doc'])->name('announcement.delete_doc');
+Route::resource('/panduan', PanduanController::class);
+Route::get('/panduan/{id}/hapus_doc', [PanduanController::class, 'hapus_doc'])->name('panduan.hapus_doc');
 Route::resource('/staf_pengajar', StafController::class);
 Route::resource('/bidangminat', BidangMinatController::class);
 Route::resource('/visi_misi', VisiMisiController::class);
+Route::resource('/profile_lulusan', ProfileLulusanController::class);
+Route::resource('/pembimbing_akademik', PembimbingAkademikController::class);
 Route::resource('/tujuans', TujuansController::class);
 Route::resource('/tentang', TentangController::class);
 Route::resource('/kurikulums', KurikulumsController::class);
-Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'delete_doc'])->name('announcement.delete_doc');
+Route::get('/kurikulums/{id}/hapus_doc', [KurikulumsController::class, 'hapus_doc'])->name('kurikulums.hapus_doc');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

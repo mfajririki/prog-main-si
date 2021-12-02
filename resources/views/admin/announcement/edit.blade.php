@@ -34,7 +34,7 @@
 
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Judul <span class="text-danger">*</span></label>
                                         <input type="text" name="title" class="form-control"
@@ -59,9 +59,21 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div class="col-md6">
+                                    <div class="form-group">
+                                        <label>Kategori <span class="text-danger">*</span></label>
+                                        <select class="form-control" name="category">
+                                            <option selected="selected" value="
+                                            {{ $announcement->category}}">{{ $announcement->category }}</option>
+                                            <option value="Pengumuman">Pengumuman</option>
+                                            <option value="Berita">Berita</option>
+                                            <option value="Prestasi">Prestasi</option>                                            
+                                          </select>
+                                    </div>
+                                </div>
 
                                 <!-- Content -->
-
                                 <div class="col-md-12 mt-3">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Isi Konten</label>

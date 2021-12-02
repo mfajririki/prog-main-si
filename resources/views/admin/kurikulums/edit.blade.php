@@ -59,6 +59,8 @@
                                             <option value="MKB">MKB (Mata Kuliah Keahlian Berkarya)</option>
                                             <option value="MKK">MKK (Mata Kuliah Keilmuan & Keterampilan)</option>
                                             <option value="MBB">MBB (Mata Kuliah Berkehidupan Bermasyarakat</option>
+                                            <option value="MPK">MPK</option>
+                                            <option value="MPB">MPB</option>
                                           </select>
                                     </div>
                                     <div class="form-group">
@@ -86,6 +88,52 @@
                                     </div>                                        
                                 </div>
                                 <!-- /.col -->
+                                <!-- Documents -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputFile" class="mt-3">Dokumen Lampiran</label>
+                                        <table class="table table-striped table-dark">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Nama Dokumen</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if($kurikulum->document==null ) 
+                                                <tr>
+                                                    <td colspan="2" class="text-center">Belum ada dokumen lampiran</td>
+                                                </tr>
+                                                @else                                                    
+                                                <tr>
+                                                    <td>
+                                                        {{ $kurikulum->document }}
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-sm btn-info"
+                                                            href="document/$kurikulum->document"
+                                                            target="_blank">Buka <i
+                                                            class="fas fa-eye fa-sm ml-2"></i></a>   
+                                                        <a class="btn btn-sm btn-danger"
+                                                            href="{{ route('kurikulums.hapus_doc', $kurikulum) }}"
+                                                            onclick="return confirm('Yakin ingin menghapus?');">Hapus
+                                                            <i class="fas fa-trash fa-sm ml-2"></i></a>                                                     
+                                                    </td>
+                                                </tr>                                                    
+                                                @endif
+                                            </tbody>
+                                        </table>
+
+                                        <label for="exampleInputFile" class="mt-3">Tambah Dokumen<span class="text-danger"> .docx, .doc, .pdf, .xlsx</span></label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" name="document" class="custom-file-input" multiple="">
+                                                <label class="custom-file-label" for="exampleInputFile">Pilih
+                                                    Dokumen</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.row -->
 

@@ -17,8 +17,10 @@ class CreateKurikulumTable extends Migration
             $table->id();
             $table->string('kode_mk');
             $table->string('nama_mk');
+            $table->string('kelompok_mk');
             $table->integer('sks');
             $table->string('semester');
+            $table->text('document')->nullable();
             $table->timestamps();
         });
     }

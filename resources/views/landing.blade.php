@@ -7,11 +7,11 @@
     <div class="kingster-page-title-overlay"></div>
     <div class="kingster-page-title-bottom-gradient"></div>
     <div class="kingster-page-title-container kingster-container">
-        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 60px ;">
+        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 200px ;padding-bottom: 30px ;">
             <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;">Program
                 Studi</div>
             <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;">
-                Sarjana Teknik Informatika</h1>
+                Sarjana Sistem Informasi</h1>
         </div>
     </div>
 </div>
@@ -21,10 +21,10 @@
     <div class="kingster-breadcrumbs-container kingster-container">
         <div class="kingster-breadcrumbs-item kingster-item-pdlr">
             <span property="itemListElement" typeof="ListItem">
-                <a property="item" typeof="WebPage" title="Beranda Sarjana Teknik Informatika." href="{{ url('') }}" class="home"><span property="name">Beranda</span></a>
+                <a property="item" typeof="WebPage" title="Beranda Sarjana Sistem Informasi." href="{{ url('') }}" class="home"><span property="name">Beranda</span></a>
                 <meta property="position" content="1">
             </span> &gt; <span property="itemListElement" typeof="ListItem">
-                <span property="name" class="post post-page current-item">Sarjana Teknik Informatika</span>
+                <span property="name" class="post post-page current-item">Sarjana Sistem Informasi</span>
                 <meta property="url" content="index.html">
                 <meta property="position" content="2">
             </span>
@@ -43,12 +43,12 @@
                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                 <div class="gdlr-core-title-item-title-wrap clearfix">
                                     <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 27px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #163269 ;">
-                                        Program Studi Teknik Informatika </h3>
+                                        Program Studi Sistem Informasi </h3>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- konten halaman utama. teknik informatika -->
+                        <!-- konten halaman utama. Sistem Informasi -->
                         <div class="gdlr-core-pbf-element">
                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;">
 
@@ -74,7 +74,7 @@
                                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                                     <div class="gdlr-core-title-item-title-wrap ">
                                                                         <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;text-transform: none ;color: #314e85 ;">
-                                                                            Sejarah Singkat Program Studi Teknik Informatika<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                                            Sejarah Singkat Program Studi Sistem Informasi<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
                                                                         </h3>
                                                                     </div>
                                                                 </div>
@@ -155,28 +155,17 @@
                                 <div class="gdlr-core-widget-box-shortcode " style="color: #ffffff ;padding: 30px 45px;background-color: #192f59 ;">
                                     <div class="gdlr-core-widget-box-shortcode-content">
                                         </p>
-                                        <h3 style="font-size: 20px; color: #fff; margin-bottom: 25px;">Universitas Bina
-                                            Darma</h3>
-                                        <p>
-                                            <span style="font-size: 15px;"><br />
-                                                Jl. Jenderal A. Yani No. 3 Palembang<br />
-                                            </span><span style="font-size: 15px;">Sumatera Selatan, Indonesia</span>
-                                        </p>
-
-                                        <p>
-                                            <span style="font-size: 15px;">0711-515582<br />
-                                                universitas@binadarma.ac.id<br />
-                                            </span>
-                                        </p>
-
+                                        <h3 style="font-size: 20px; color: #fff; margin-bottom: 25px;">Universitas Bina Darma</h3>
+                                        <p><span style="color: #3db166; font-size: 16px; font-weight: 600;">Program Studi Sistem Informasi</span>
+                                            <br /> <span style="font-size: 15px;"><br />Jl. Jenderal A. Yani No. 3 Palembang<br/>Sumatera Selatan, Indonesia</span></p>
+                                        <p><span style="font-size: 15px;">0711-515582<br /> universitas@binadarma.ac.id<br /> </span></p>
+                                        <p><span style="font-size: 16px; color: #3db166;">Senin-Jumat  08:00 &#8211; 16:00 <br/> Sabtu  08:00 &#8211; 12:00</span></p> <span class="gdlr-core-space-shortcode" style="margin-top: 40px ;"></span>
+                                        <h3 style="font-size: 20px; color: #fff; margin-bottom: 15px;">Social Info</h3>
                                         <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;">
-                                            <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="color: #d61b23 ;" rel="noopener"><i class="fa fa-facebook"></i></a>
-                                            <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin" style="color: #d61b23 ;" rel="noopener"><i class="fa fa-linkedin"></i></a>
-                                            <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter" style="color: #d61b23 ;" rel="noopener"><i class="fa fa-twitter"></i></a>
-                                            <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram" style="color: #d61b23 ;" rel="noopener"><i class="fa fa-instagram"></i></a>
-                                        </div>
-
-                                        <span class="gdlr-core-space-shortcode" style="margin-top: 40px ;"></span>
+                                           <a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="color: #3db166 ;"><i class="fa fa-facebook" ></i></a>
+                                           <a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="twitter" style="color: #3db166 ;"><i class="fa fa-twitter" ></i></a>
+                                           <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram" style="color: #3db166 ;"><i class="fa fa-instagram" ></i></a></div>
+                                        <p>
                                     </div>
                                 </div>
                             </div>
@@ -232,16 +221,14 @@
 
                                             <div class="gdlr-core-blockquote-item-quote gdlr-core-quote-font" style="font-size: 170px ; margin-top: -120px">“</div>
                                             <p style="margin-top: -120px" align="justify">
-                                                Lulusan Program Studi Teknik Informatika mempunyai kualifikasi sarjana Komputer
-                                                bidang Teknik Informatika yang berkualitas, berkarakter dan mampu mengembangkan jiwa
-                                                enterpreunership dan dapat bekerja sebagai Network Engineer, Tenaga IT Spesialis di
-                                                perusahaan/pemerintahan, Analisis Sistem/Programmer/Software Development, Tenaga Ahli
-                                                Database/Database Administrator (DBA) dll.
+                                                Kompetensi lulusan Program Studi Sistem Informasi meliputi 3 bidang keahlian
+                                                (konsentrasi) yaitu Konsentrasi dalam bidang Sistem Informasi Bisnis, Konsenstrasi 
+                                                dalam bidang Sistem Penunjang Manajemen, Konsentrasi dalam bidang Teknologi Informasi
                                             </p>
 
                                             <p>
-                                                <span style="font-weight: bold;">Alek Wijaya, S.Kom., M.I.T.</span>
-                                                <br>Ketua Program Studi Teknik Informatika
+                                                <span style="font-weight: bold;">Suyanto, M.M., M. Kom.</span>
+                                                <br>Ketua Program Studi Sistem Informasi
                                             </p>
                                         </div>
                                     </div>
@@ -267,7 +254,7 @@
                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
-                                        <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="images/staf/alex-wijaya.jpeg" width="700" height="450" />
+                                        <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="images/staf/SI_suyanto.jpeg" width="700" height="450" />
                                         </div>
                                     </div>
                                 </div>

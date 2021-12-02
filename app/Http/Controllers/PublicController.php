@@ -3,21 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\BidangMinat;
 use App\Models\Staf;
 use App\Models\Document;
+use App\Models\Kurikulums;
+use App\Models\Panduan;
+use App\Models\PembimbingAkademik;
+use App\Models\ProfileLulusan;
 use App\Models\VisiMisi;
-use App\Models\Tujuan;
 use App\Models\Tentang;
+use App\Models\Tujuans;
+use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use PhpParser\Node\Expr\FuncCall;
 
 class PublicController extends Controller
 {
     public function halamanUtama()
     {
-        $tentang = DB::table('tentang')->get();
-        $visi_misi = DB::table('visi_misi')->get();
-        $tujuan = DB::table('tujuan')->get();
+        $tentang = Tentang::get();
+        $visi_misi = VisiMisi::get();
+        $tujuan = Tujuans::get();
 
         return view(
             'landing',
@@ -47,14 +55,30 @@ class PublicController extends Controller
 
     public function kurikulum_konten()
     {
-        $kurikulum = DB::table('kurikulum')->get();
-        $mk_bidangminat = DB::table('mk_bidangminat')->get();
+        $kurikulum = Kurikulums::get();
+        $mk_bidangminat = BidangMinat::get();
 
         return view('kurikulum', compact('kurikulum', 'mk_bidangminat'));
     }
 
-    public function profile_lulusan()
+    public function halpanduan()
     {
-        return view('profile_lulusan');
+        $panduan = Panduan::get();
+
+        return view('panduan', compact('panduan'));
+    }
+
+    public function bimbingan_akademik()
+    {
+        $bimbingan_akademik = PembimbingAkademik::get();
+
+        return view('bimbingan_akademik', compact('bimbingan_akademik'));
+    }
+
+    public function profilelulusan()
+    {
+        $profilelulusan = ProfileLulusan::get();
+
+        return view('profilelulusan', compact('profilelulusan'));
     }
 }

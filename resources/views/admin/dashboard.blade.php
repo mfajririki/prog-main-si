@@ -77,7 +77,7 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <p>Kurikulum | Mata Kuliah</p>
+                        <p>Distribusi Mata Kuliah</p>
                         <p>{{ $jumlah_mk }}</p>
                     </div>
                     <div class="icon">

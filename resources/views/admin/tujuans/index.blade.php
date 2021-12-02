@@ -33,6 +33,7 @@
                             <thead>
                                 <tr>
                                     <th>Tujuan</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
 

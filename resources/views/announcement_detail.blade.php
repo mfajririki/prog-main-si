@@ -27,7 +27,7 @@
                         <div class="kingster-blog-info-wrapper">
                             <div
                                 class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author ">
-                                <span class="kingster-head">By </span><span class="fn">Teknik Informatika UBD</span></div>
+                                <span class="kingster-head">By </span><span class="fn">Sistem Informasi UBD</span></div>
                         </div>
                     </div>
                 </header>

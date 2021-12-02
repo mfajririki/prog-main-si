@@ -33,13 +33,14 @@
                             <thead>
                                 <tr>
                                     <th>Tentang</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 @foreach($tentang as $no => $tentang)
                                 <tr>
-                                    <td>{{ $tentang->konten_tentang }}</td>
+                                    <td>{!! $tentang->konten_tentang !!}</td>
                                     <td>
                                         <a href="{{ route('tentang.edit', $tentang) }}"
                                             class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>

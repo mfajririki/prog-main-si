@@ -34,14 +34,15 @@
                                 <tr>
                                     <th>Visi</th>
                                     <th>Misi</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                @foreach($visi_misi as $no => $visi_misi)
+                                @foreach($visi_misi as $visi_misi)
                                 <tr>
-                                    <td>{{ $visi_misi->visi }}</td>
-                                    <td>{{ $visi_misi->misi }}</td>
+                                    <td>{!! $visi_misi->visi !!}</td>
+                                    <td>{!! $visi_misi->misi !!}</td>
                                     <td>
                                         <a href="{{ route('visi_misi.edit', $visi_misi) }}"
                                             class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>

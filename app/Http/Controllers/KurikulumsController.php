@@ -17,7 +17,7 @@ class KurikulumsController extends Controller
 
     public function index()
     {
-        $kurikulum  = Kurikulums::paginate(10);
+        $kurikulum  = Kurikulums::latest()->get();
 
         return view('admin.kurikulums.index', compact('kurikulum'));
     }
@@ -30,17 +30,15 @@ class KurikulumsController extends Controller
     public function store(Request $request)
     {
         // Validate posted form data
-        // $request->validate([
-        //     'title'     => 'required|string|unique:staf_pengajar',
-        // ]);
+        $this->validate($request, [
+            'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
+        ]);
 
         DB::transaction(function () use ($request) {
-            $file = $request->file('photo');
-            if ($file) {
-                $image_name = time() . '.' . $file->getClientOriginalExtension();
-                $destinationPath = public_path('images/staf/');
-                $file->move($destinationPath, $image_name);
-            }
+            $document = $request->file('document');
+            $nama_document = time() . "_" . $document->getClientOriginalName();
+            $tujuan_upload = 'document';
+            $document->move($tujuan_upload, $nama_document);
 
             $kurikulum = Kurikulums::create([
                 'kode_mk'           => $request->kode_mk,
@@ -48,6 +46,7 @@ class KurikulumsController extends Controller
                 'kelompok_mk'       => $request->kelompok_mk,
                 'sks'               => $request->sks,
                 'semester'          => $request->semester,
+                'document'          => $nama_document,
             ]);
         });
 
@@ -67,12 +66,16 @@ class KurikulumsController extends Controller
 
     public function update($id, Request $request)
     {
-        $file = $request->file('photo');
-        if ($file) {
-            $image_name = time() . '.' . $file->getClientOriginalExtension();
-            $destinationPath = public_path('images/');
-            $file->move($destinationPath, $image_name);
-        }
+        $this->validate($request, [
+            'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
+        ]);
+
+        $document = $request->file('document');
+
+        $nama_document = time() . "_" . $document->getClientOriginalName();
+
+        $tujuan_upload = 'document';
+        $document->move($tujuan_upload, $nama_document);
 
         $kurikulum = Kurikulums::where('id', $id)
             ->update([
@@ -81,9 +84,8 @@ class KurikulumsController extends Controller
                 'kelompok_mk'       => $request->kelompok_mk,
                 'sks'               => $request->sks,
                 'semester'          => $request->semester,
+                'document'          => $nama_document,
             ]);
-
-
 
         return redirect(route('kurikulums.index'))->with('alert', 'Data berhasil diupdate!');
     }
@@ -93,5 +95,14 @@ class KurikulumsController extends Controller
         $kurikulum->delete();
 
         return redirect(route('kurikulums.index'))->with('alert', 'Data berhasil dihapus!');
+    }
+
+    public function hapus_doc($id, Request $request)
+    {
+        $document = Kurikulums::where('id', $id);
+
+        $document->update(['document' => null]);
+
+        return back()->with('alert', 'Dokumen berhasil dihapus!');
     }
 }

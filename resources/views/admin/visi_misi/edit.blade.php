@@ -37,13 +37,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Visi</label>
-                                        <textarea name="content" class="summernote">{{ $visi_misi->visi }}</textarea>
+                                        <textarea name="visi" class="summernote">{{ $visi_misi->visi }}</textarea>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputFile" class="d-block">Misis</label>
-                                    <textarea name="content" class="summernote">{{ $visi_misi->misi }}</textarea>
-                                </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile" class="d-block">Misis</label>
+                                        <textarea name="misi" class="summernote">{{ $visi_misi->misi }}</textarea>
+                                    </div>
+                                </div>                                
                                 <!-- /.col -->
                             </div>
                             <!-- /.row -->

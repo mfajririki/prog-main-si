@@ -46,8 +46,9 @@ class AnnouncementController extends Controller
 
             $announcement = Announcement::create([
                 'title'          => $request->title,
+                'category'       => $request->category,
                 'content'        => request('content') ? $request->content : null,
-                'photo'          => request('photo') ? "images/".$image_name : null,
+                'photo'          => request('photo') ? "images/" . $image_name : null,
                 'slug'           => Str::slug($request->title, '-'),
             ]);
 
@@ -60,7 +61,7 @@ class AnnouncementController extends Controller
 
                     $insert[$key]['announcement_id'] = $announcement->id;
                     $insert[$key]['name'] = $name;
-                    $insert[$key]['document'] = 'document/'.$document;
+                    $insert[$key]['document'] = 'document/' . $document;
                 }
 
                 Document::insert($insert);
@@ -93,12 +94,13 @@ class AnnouncementController extends Controller
         }
 
         $announcement = Announcement::where('id', $id)
-        ->update([
-            'title'          => $request->title,
-            'content'        => request('content') ? $request->content : null,
-            'photo'          => request('photo') ? "images/".$image_name : $request->old,
-            'slug'           => Str::slug($request->title, '-'),
-        ]);
+            ->update([
+                'title'          => $request->title,
+                'category'      => $request->category,
+                'content'        => request('content') ? $request->content : null,
+                'photo'          => request('photo') ? "images/" . $image_name : $request->old,
+                'slug'           => Str::slug($request->title, '-'),
+            ]);
 
         if ($request->hasfile('files')) {
             foreach ($request->file('files') as $key => $file) {
@@ -109,7 +111,7 @@ class AnnouncementController extends Controller
 
                 $insert[$key]['announcement_id'] = $id;
                 $insert[$key]['name'] = $name;
-                $insert[$key]['document'] = 'document/'.$document;
+                $insert[$key]['document'] = 'document/' . $document;
             }
 
             Document::insert($insert);

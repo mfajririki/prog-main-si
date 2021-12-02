@@ -8,10 +8,9 @@
    <div class="kingster-page-title-bottom-gradient"></div>
    <div class="kingster-page-title-container kingster-container">
       <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 60px ;">
-         <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;">Program
-            Studi</div>
+         <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;">Sistem Informasi</div>
          <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;">
-            Sarjana Teknik Informatika</h1>
+            Kurikulum</h1>
       </div>
    </div>
 </div>
@@ -21,10 +20,10 @@
    <div class="kingster-breadcrumbs-container kingster-container">
       <div class="kingster-breadcrumbs-item kingster-item-pdlr">
          <span property="itemListElement" typeof="ListItem">
-            <a property="item" typeof="WebPage" title="Beranda Sarjana Teknik Informatika." href="{{ url('') }}" class="home"><span property="name">Beranda</span></a>
+            <a property="item" typeof="WebPage" title="Beranda Sarjana Sistem Informasi." href="{{ url('') }}" class="home"><span property="name">Beranda</span></a>
             <meta property="position" content="1">
          </span> &gt; <span property="itemListElement" typeof="ListItem">
-            <span property="name" class="post post-page current-item">Kurikulum Teknik Informatika</span>
+            <span property="name" class="post post-page current-item">Kurikulum Sistem Informasi</span>
             <meta property="url" content="index.html">
             <meta property="position" content="2">
          </span>
@@ -43,7 +42,7 @@
                      <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                         <div class="gdlr-core-title-item-title-wrap clearfix">
                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 27px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #163269 ;">
-                              Kurikulum Teknik Informatika </h3>
+                              Kurikulum Sistem Informasi </h3>
                         </div>
                      </div>
                   </div>
@@ -100,7 +99,11 @@
                                                             <tr style="color: darkblue">
                                                                <td>{{ $no+1 }}</td>
                                                             <td>{{ $semester1_mk->kode_mk }}</td>
-                                                            <td>{{ $semester1_mk->nama_mk }}</td>
+                                                            @if ($semester1_mk->document == null)
+                                                                <td>{{ $semester1_mk->nama_mk }}</td>
+                                                            @else
+                                                            <td><a href="#"  target="_blank" download="{{ $semester1_mk->document }}">{{ $semester1_mk->nama_mk }}</a></td>
+                                                            @endif                                                            
                                                             <td>{{ $semester1_mk->kelompok_mk }}</td>
                                                             <td>{{ $semester1_mk->sks }}</td>
                                                             </tr>

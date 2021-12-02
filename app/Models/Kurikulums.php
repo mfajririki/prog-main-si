@@ -16,5 +16,6 @@ class Kurikulums extends Model
         'kelompok_mk',
         'sks',
         'semester',
+        'document'
     ];
 }

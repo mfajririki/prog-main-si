@@ -44,29 +44,6 @@
                                                 <div class="mt-2 text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
-                                    </div>
-                                    {{-- /.col --}}
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Kelompok Mata Kuliah <span class="text-danger">*</span></label>
-                                            <select class="form-control" name="kelompok_mk">
-                                                <option selected="selected">- Pilih Kelompok Mata Kuliah -</option>
-                                                <option value="MBP">MBP (Mata Kuliah Perilaku Berkarya)</option>
-                                                <option value="MKB">MKB (Mata Kuliah Keahlian Berkarya)</option>
-                                                <option value="MKK">MKK (Mata Kuliah Keilmuan & Keterampilan)</option>
-                                                <option value="MBB">MBB (Mata Kuliah Berkehidupan Bermasyarakat)</option>
-                                              </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>SKS <span class="text-danger">*</span></label>
-                                            <input type="text" name="sks" class="form-control" value="{{ old('sks') }}" required="">
-                                            @error('sks')
-                                                <div class="mt-2 text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <!-- /.col -->
-                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Semester <span class="text-danger">*</span></label>
                                             <select class="form-control" name="semester">
@@ -80,9 +57,40 @@
                                                 <option value="Semester 7">Semester 7</option>
                                                 <option value="Semester 8">Semester 8</option>
                                               </select>
-                                        </div>                                        
+                                        </div>
                                     </div>
-                                    <!-- /.col -->
+                                    {{-- /.col --}}
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Dokumen Lampiran<span class="text-danger">.docx, .doc, .pdf, .xlsx</span></label>
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" name="document" class="custom-file-input" multiple="">
+                                                    <label class="custom-file-label" for="exampleInputFile">Pilih Dokumen</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Kelompok Mata Kuliah <span class="text-danger">*</span></label>
+                                            <select class="form-control" name="kelompok_mk">
+                                                <option selected="selected">- Pilih Kelompok Mata Kuliah -</option>
+                                                <option value="MBP">MBP (Mata Kuliah Perilaku Berkarya)</option>
+                                                <option value="MKB">MKB (Mata Kuliah Keahlian Berkarya)</option>
+                                                <option value="MKK">MKK (Mata Kuliah Keilmuan & Keterampilan)</option>
+                                                <option value="MBB">MBB (Mata Kuliah Berkehidupan Bermasyarakat)</option>
+                                                <option value="MPK">MPK</option>
+                                                <option value="MPB">MPB</option>
+                                              </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>SKS <span class="text-danger">*</span></label>
+                                            <input type="text" name="sks" class="form-control" value="{{ old('sks') }}" required="">
+                                            @error('sks')
+                                                <div class="mt-2 text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>                                       
+                                    </div>
+                                    <!-- /.col -->                                    
                             <!-- /.row -->
                             
                         </div>

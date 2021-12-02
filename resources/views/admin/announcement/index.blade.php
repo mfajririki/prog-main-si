@@ -34,6 +34,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Judul</th>
+                                    <th>Kategori</th>
                                     <th>Foto</th>
                                     <th>Dokumen</th>
                                     <th>Aksi</th>
@@ -45,6 +46,7 @@
                                 <tr>
                                     <td>{{ $no+1 }}</td>
                                     <td>{{ $announcement->title }}</td>
+                                    <td>{{ $announcement->category }}</td>
                                     <td>
                                         @if (!is_null($announcement->photo))
                                         <img src="{{ asset($announcement->photo) }}" width="100">

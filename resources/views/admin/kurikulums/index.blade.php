@@ -38,6 +38,8 @@
                                     <th>Kelompok Mata Kuliah</th>
                                     <th>SKS</th>
                                     <th>Semester</th>
+                                    <th>Document</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
 
@@ -50,6 +52,7 @@
                                     <td>{{ $mata_kuliah->kelompok_mk }}</td>
                                     <td>{{ $mata_kuliah->sks }}</td>
                                     <td>{{ $mata_kuliah->semester }}</td>
+                                    <td><a href="{{ asset($mata_kuliah->document) }}" target="_blank">{{ $mata_kuliah->document }}</a></td>
                                     <td>
                                         <a href="{{ route('kurikulums.edit', $mata_kuliah) }}"
                                             class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>

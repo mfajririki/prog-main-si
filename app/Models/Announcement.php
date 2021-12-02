@@ -11,15 +11,17 @@ class Announcement extends Model
 
     protected $fillable = [
         'title',
+        'category',
         'slug',
         'content',
         'photo'
     ];
 
-    function documents() {
+    function documents()
+    {
         return $this->hasMany(Document::class);
     }
-    
+
     public function getRouteKeyName()
     {
         return 'slug';

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TI UBD | Dashboard</title>
+    <title>SI UBD | Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -81,36 +81,52 @@
 
                         <li class="nav-item">
                             <a href="{{ route('announcement.index') }}" class="nav-link {{ Request::segment(1) == 'announcement'  ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-copy"></i>
+                                <i class="nav-icon fas fa-bullhorn"></i>
                                 <p>Pengumuman</p>
                             </a>
-                        </li>
+                        </li>                        
 
+                        {{-- Dropdown Tentang --}}
                         <li class="nav-item">
-                            <a href="{{ route('visi_misi.index') }}" class="nav-link {{ Request::segment(1) == 'visi_misi'  ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-flag"></i>
-                                <p>Visi & Misi</p>
+                            <a href="#" class="nav-link">
+                              <i class="nav-icon fas fa-folder"></i>
+                              <p>
+                                Tentang
+                                <i class="fas fa-angle-left right"></i>
+                              </p>
                             </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('tujuans.index') }}" class="nav-link {{ Request::segment(1) == 'tujuans'  ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>Tujuan</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('tentang.index') }}" class="nav-link {{ Request::segment(1) == 'tentang'  ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>Tentang Prodi TI</p>
-                            </a>
-                        </li>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('visi_misi.index') }}" class="nav-link {{ Request::segment(1) == 'visi_misi'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-flag"></i>
+                                        <p>Visi & Misi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('tujuans.index') }}" class="nav-link {{ Request::segment(1) == 'tujuans'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-file"></i>
+                                        <p>Tujuan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('tentang.index') }}" class="nav-link {{ Request::segment(1) == 'tentang'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-file"></i>
+                                        <p>Tentang Prodi SI</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('profile_lulusan.index') }}" class="nav-link {{ Request::segment(1) == 'profile_lulusan'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-file"></i>
+                                        <p>Profile Lulusan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>                        
 
                         {{-- Dropdown Kurikulum --}}
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                              <i class="nav-icon fas fa-table"></i>
+                              <i class="nav-icon fas fa-folder"></i>
                               <p>
                                 Kurikulum
                                 <i class="fas fa-angle-left right"></i>
@@ -120,7 +136,7 @@
                                 <li class="nav-item">
                                     <a href="{{ route('kurikulums.index') }}" class="nav-link {{ Request::segment(1) == 'kurikulums'  ? 'active' : '' }}">
                                         <i class="nav-icon fas fa-book"></i>
-                                        <p>Mata Kuliah</p>
+                                        <p>Distribusi Mata Kuliah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -128,18 +144,28 @@
                                         <i class="nav-icon fas fa-book"></i>
                                         <p>MK Bidang Minat</p>
                                     </a>
-                                </li>                              
+                                </li>                                
                             </ul>
                           </li>
-                        
-                        
 
-                        
+                          <li class="nav-item">
+                            <a href="{{ route('panduan.index') }}" class="nav-link {{ Request::segment(1) == 'panduan'  ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>Panduan</p>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="{{ route('staf_pengajar.index') }}" class="nav-link {{ Request::segment(1) == 'staf_pengajar'  ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>Staf Pengajar</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('pembimbing_akademik.index') }}" class="nav-link {{ Request::segment(1) == 'pembimbing_akademik'  ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Bimbingan Akademik</p>
                             </a>
                         </li>
 
@@ -185,7 +211,7 @@
             <strong>Copyright &copy; 2021</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Teknik Informatika UBD</b>
+                <b>Sistem Informasi UBD</b>
             </div>
         </footer>
 
