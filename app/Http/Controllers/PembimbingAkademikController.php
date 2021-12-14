@@ -19,7 +19,7 @@ class PembimbingAkademikController extends Controller
     {
         $pembimbing_akademik  = PembimbingAkademik::latest()->get();
 
-        return view('admin.pembimbing_akademik.index', compact('pembimbing_akademik'));
+        return view('admin.pembimbing_akademik.index', compact('pembimbing_akademik',));
     }
 
     public function create()
@@ -30,15 +30,22 @@ class PembimbingAkademikController extends Controller
     public function store(Request $request)
     {
         // Validate posted form data
-        // $request->validate([
-        //     'title'     => 'required|string|unique:staf_pengajar',
+        // $this->validate($request, [
+        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
+        //     'title' => 'required',
         // ]);
 
         DB::transaction(function () use ($request) {
+            $document = $request->file('document');
+
+            $nama_document = time() . "_" . $document->getClientOriginalName();
+
+            $tujuan_upload = 'document';
+            $document->move($tujuan_upload, $nama_document);
+
             $pembimbing_akademik = PembimbingAkademik::create([
-                'dosen'          => $request->dosen,
-                'mahasiswa'        => $request->mahasiswa,
-                'angkatan'          => $request->angkatan,
+                'document' => $nama_document,
+                'title'          => $request->title,
             ]);
         });
 
@@ -58,14 +65,23 @@ class PembimbingAkademikController extends Controller
 
     public function update($id, Request $request)
     {
+        // $this->validate($request, [
+        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
+        //     'title' => 'required',
+        // ]);
+
+        $document = $request->file('document');
+
+        $nama_document = time() . "_" . $document->getClientOriginalName();
+
+        $tujuan_upload = 'document';
+        $document->move($tujuan_upload, $nama_document);
+
         $pembimbing_akademik = PembimbingAkademik::where('id', $id)
             ->update([
-                'dosen'          => $request->dosen,
-                'mahasiswa'          => $request->mahasiswa,
-                'angkatan'          => $request->angkatan,
+                'document' => $nama_document,
+                'title'          => $request->title,
             ]);
-
-
 
         return redirect(route('pembimbing_akademik.index'))->with('alert', 'Data berhasil diupdate!');
     }
@@ -75,5 +91,14 @@ class PembimbingAkademikController extends Controller
         $pembimbing_akademik->delete();
 
         return redirect(route('pembimbing_akademik.index'))->with('alert', 'Data berhasil dihapus!');
+    }
+
+    public function hapus_doc($id, Request $request)
+    {
+        $document = PembimbingAkademik::where('id', $id);
+
+        $document->update(['document' => null]);
+
+        return back()->with('alert', 'Dokumen berhasil dihapus!');
     }
 }

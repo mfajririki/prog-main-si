@@ -20,33 +20,28 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-
                 <div class="card">
                     <div class="card-header">
                         <a href="{{ route('pembimbing_akademik.create') }}" class="btn btn-sm btn-primary">Tambah Data <i
                                 class="ml-2 fa fa-plus fa-sm"></i></a>
                     </div>
                     <!-- /.card-header -->
-
                     <div class="card-body">
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Dosen</th>
-                                    <th>Mahasiswa</th>
-                                    <th>Angkatan</th>
+                                    <th>Judul</th>                                    
+                                    <th>Dokumen</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-
                             <tbody>
                                 @foreach($pembimbing_akademik as $no => $pembimbing_akademik)
                                 <tr>
                                     <td>{{ $no+1 }}</td>
-                                    <td>{{ $pembimbing_akademik->dosen }}</td>
-                                    <td>{{ $pembimbing_akademik->mahasiswa }}</td>
-                                    <td>{{ $pembimbing_akademik->angkatan }}</td>
+                                    <td>{{ $pembimbing_akademik->title }}</td>
+                                    <td><a href="{{ asset($pembimbing_akademik->document) }}" target="_blank">{{ $pembimbing_akademik->document }}</a></td>
                                     <td>
                                         <a href="{{ route('pembimbing_akademik.edit', $pembimbing_akademik) }}"
                                             class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>
@@ -64,7 +59,6 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-
                         </table>
                     </div>
                     <!-- /.card-body -->

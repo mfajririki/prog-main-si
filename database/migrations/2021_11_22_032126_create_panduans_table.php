@@ -16,6 +16,7 @@ class CreatePanduansTable extends Migration
         Schema::create('panduans', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->text('document');
             $table->timestamps();
         });
     }

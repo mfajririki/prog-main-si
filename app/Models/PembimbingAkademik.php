@@ -9,10 +9,9 @@ class PembimbingAkademik extends Model
 {
     use HasFactory;
 
-    protected $table = 'pembimbing_akademik';
+    protected $table = 'bimbingan_akademik';
     protected $fillable = [
-        'dosen',
-        'mahasiswa',
-        'angkatan',
+        'title',
+        'document',
     ];
 }

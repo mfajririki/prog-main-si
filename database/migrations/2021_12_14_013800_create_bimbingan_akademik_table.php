@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePembimbingAkademikTable extends Migration
+class CreateBimbinganAkademikTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreatePembimbingAkademikTable extends Migration
      */
     public function up()
     {
-        Schema::create('pembimbing_akademik', function (Blueprint $table) {
+        Schema::create('bimbingan_akademik', function (Blueprint $table) {
             $table->id();
-            $table->string('dosen');
-            $table->string('mahasiswa');
-            $table->string('angkatan');
+            $table->string('title');
+            $table->text('document');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreatePembimbingAkademikTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pembimbing_akademik');
+        Schema::dropIfExists('bimbingan_akademik');
     }
 }

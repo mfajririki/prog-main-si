@@ -14,19 +14,16 @@
     </div><!-- /.container-fluid -->
 </div>
 <!-- /.content-header -->
-
 <!-- Main content -->
 <section class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-
                 <div class="card card-primary">
                     <div class="card-header">
-                        Bimbingan Akademik
+                        Pembimbing Akademik
                     </div>
                     <!-- /.card-header -->
-
                     <form action="{{ route('pembimbing_akademik.update', $pembimbing_akademik->id) }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
@@ -34,35 +31,64 @@
 
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Dosen <span class="text-danger">*</span></label>
-                                        <input type="text" name="dosen" class="form-control"
-                                            value="{{ $pembimbing_akademik->dosen }}" required="">
-                                        <input type="hidden" name="old_dosen" value="{{ $pembimbing_akademik->dosen }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Mahasiswa <span class="text-danger">*</span></label>
-                                        <input type="text" name="mahasiswa" class="form-control"
-                                            value="{{ $pembimbing_akademik->mahasiswa }}" required="">
-                                        <input type="hidden" name="old_mahasiswa" value="{{ $pembimbing_akademik->mahasiswa }}">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Angkatan <span class="text-danger">*</span></label>
-                                        <input type="text" name="angkatan" class="form-control"
-                                            value="{{ $pembimbing_akademik->angkatan }}" required="">
-                                        <input type="hidden" name="old_angkatan" value="{{ $pembimbing_akademik->angkatan }}">
+                                        <label>Judul <span class="text-danger">*</span></label>
+                                        <input type="text" name="title" class="form-control"
+                                            value="{{ $pembimbing_akademik->title }}" required="">
+                                        <input type="hidden" name="old_title" value="{{ $pembimbing_akademik->title }}">
                                     </div>
                                 </div>
                                 <!-- /.col -->
+                                <!-- Documents -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputFile" class="mt-3">Dokumen Lampiran</label>
+                                        <table class="table table-striped table-dark">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Nama Dokumen</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @if($pembimbing_akademik->document==null ) 
+                                                <tr>
+                                                    <td colspan="2" class="text-center">Belum ada dokumen lampiran</td>
+                                                </tr>
+                                                @else                                                    
+                                                <tr>
+                                                    <td>
+                                                        {{ $pembimbing_akademik->document }}
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-sm btn-info"
+                                                            href="{{ asset($pembimbing_akademik->document) }}"
+                                                            target="_blank">Buka <i
+                                                            class="fas fa-eye fa-sm ml-2"></i></a>   
+                                                        <a class="btn btn-sm btn-danger"
+                                                            href="{{ route('pembimbing_akademik.hapus_doc', $pembimbing_akademik) }}"
+                                                            onclick="return confirm('Yakin ingin menghapus?');">Hapus
+                                                            <i class="fas fa-trash fa-sm ml-2"></i></a>                                                     
+                                                    </td>
+                                                </tr>                                                    
+                                                @endif
+                                            </tbody>
+                                        </table>
+                                        <label for="exampleInputFile" class="mt-3">Tambah Dokumen<span class="text-danger"> .docx, .doc, .pdf, .xlsx</span></label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" name="document" class="custom-file-input" multiple="">
+                                                <label class="custom-file-label" for="exampleInputFile">Pilih
+                                                    Dokumen</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.row -->
-
                         </div>
                         <!-- /.card-body -->
-
                         <div class="card-footer">
                             <span class="small text-danger">form bertanda * wajib diisi</span>
                             <button type="submit" class="float-right btn btn-primary">Submit</button>
@@ -70,10 +96,8 @@
                         <!-- /.card-footer -->
                     </form>
                     <!-- /form -->
-
                 </div>
                 <!-- /.card -->
-
             </div>
             <!-- /.col -->
         </div>

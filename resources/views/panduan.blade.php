@@ -1,18 +1,6 @@
 @extends('layouts.public')
 
 @section('content')
-<!-- Hero Section -->
-<div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" style="background-image: url(assets/content/uploads/2020/06/cta-akademik-1.jpg) ;" >
-    <div class="kingster-header-transparent-substitute" ></div>
-    <div class="kingster-page-title-overlay"  ></div>
-    <div class="kingster-page-title-bottom-gradient" ></div>
-    <div class="kingster-page-title-container kingster-container" >
-        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 160px ;padding-bottom: 20px ;"  >
-            <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;"  >Sistem Informasi</div>
-            <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;"  >Panduan</h1>
-        </div>
-    </div>
-</div>
 
 <!-- Breadcrumb -->
 <div class="kingster-breadcrumbs">
@@ -22,7 +10,7 @@
             <a property="item" typeof="WebPage" title="Beranda." href="{{ url('') }}" class="home" ><span property="name">Beranda</span></a>
             <meta property="position" content="1">
         </span> &gt; <span property="itemListElement" typeof="ListItem">
-            <span property="name" class="post post-page current-item">Staf Pengajar</span>
+            <span property="name" class="post post-page current-item">Panduan</span>
             <meta property="url" content="index.html"><meta property="position" content="2"></span>
         </div>
     </div>

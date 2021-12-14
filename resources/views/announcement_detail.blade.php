@@ -2,39 +2,6 @@
 
 @section('content')
 <div class="kingster-page-wrapper" id="kingster-page-wrapper">
-
-    <!-- Hero Section -->
-    <div class="kingster-blog-title-wrap kingster-style-small">
-        <div class="kingster-header-transparent-substitute"></div>
-        <div class="kingster-blog-title-top-overlay"></div>
-        <div class="kingster-blog-title-overlay"></div>
-        <div class="kingster-blog-title-bottom-overlay"></div>
-        <div class="kingster-blog-title-container kingster-container">
-            <div class="kingster-blog-title-content kingster-item-pdlr">
-                <header class="kingster-single-article-head clearfix">
-                    <div class="kingster-single-article-date-wrapper  post-date updated">
-                        <div class="kingster-single-article-date-day">
-                            {{ $announcement->created_at->format('d') }}
-                        </div>
-                        <div class="kingster-single-article-date-month">
-                            {{ $announcement->created_at->format('M') }}
-                        </div>
-                    </div>
-                    <div class="kingster-single-article-head-right">
-                        <h1 class="kingster-single-article-title">
-                            {{ $announcement->title }}
-                        </h1>
-                        <div class="kingster-blog-info-wrapper">
-                            <div
-                                class="kingster-blog-info kingster-blog-info-font kingster-blog-info-author vcard author post-author ">
-                                <span class="kingster-head">By </span><span class="fn">Sistem Informasi UBD</span></div>
-                        </div>
-                    </div>
-                </header>
-            </div>
-        </div>
-    </div>
-
     <!-- Breadcrumb -->
     <div class="kingster-breadcrumbs">
         <div class="kingster-breadcrumbs-container kingster-container">

@@ -122,11 +122,11 @@ class PublicController extends Controller
 
     public function bimbingan_akademik()
     {
-        $bimbingan_akademik = PembimbingAkademik::get();
+        $pembimbing_akademik = PembimbingAkademik::get();
         $sliders = Slider::get();
         $title = "Bimbingan Akademik";
 
-        return view('bimbingan_akademik', compact('bimbingan_akademik', 'title', 'sliders'));
+        return view('bimbingan_akademik', compact('pembimbing_akademik', 'title', 'sliders'));
     }
 
     public function profilelulusan()
