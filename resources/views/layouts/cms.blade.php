@@ -78,24 +78,17 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('announcement.index') }}" class="nav-link {{ Request::segment(1) == 'announcement'  ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-bullhorn"></i>
-                                <p>Pengumuman</p>
-                            </a>
-                        </li>                        
-
-                        {{-- Dropdown Tentang --}}
+                        {{-- Dropdown Beranda --}}
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                               <i class="nav-icon fas fa-folder"></i>
                               <p>
-                                Tentang
+                                Beranda
                                 <i class="fas fa-angle-left right"></i>
                               </p>
                             </a>
                             <ul class="nav nav-treeview">
+                                <div class="container">
                                 <li class="nav-item">
                                     <a href="{{ route('visi_misi.index') }}" class="nav-link {{ Request::segment(1) == 'visi_misi'  ? 'active' : '' }}">
                                         <i class="nav-icon fas fa-flag"></i>
@@ -104,7 +97,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('tujuans.index') }}" class="nav-link {{ Request::segment(1) == 'tujuans'  ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-file"></i>
+                                        <i class="nav-icon fas fa-flag"></i>
                                         <p>Tujuan</p>
                                     </a>
                                 </li>
@@ -113,16 +106,22 @@
                                         <i class="nav-icon fas fa-file"></i>
                                         <p>Tentang Prodi SI</p>
                                     </a>
-                                </li>
+                                </li>                                
                                 <li class="nav-item">
-                                    <a href="{{ route('profile_lulusan.index') }}" class="nav-link {{ Request::segment(1) == 'profile_lulusan'  ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-file"></i>
-                                        <p>Profile Lulusan</p>
+                                    <a href="{{ route('profile_kaprodi.index') }}" class="nav-link {{ Request::segment(1) == 'profile_kaprodi'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-user"></i>
+                                        <p>Profil Kaprodi</p>
                                     </a>
                                 </li>
+                                </div>
                             </ul>
-                        </li>                        
-
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('announcement.index') }}" class="nav-link {{ Request::segment(1) == 'announcement'  ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-bullhorn"></i>
+                                <p>Pengumuman</p>
+                            </a>
+                        </li>
                         {{-- Dropdown Kurikulum --}}
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -133,6 +132,7 @@
                               </p>
                             </a>
                             <ul class="nav nav-treeview">
+                                <div class="container">
                                 <li class="nav-item">
                                     <a href="{{ route('kurikulums.index') }}" class="nav-link {{ Request::segment(1) == 'kurikulums'  ? 'active' : '' }}">
                                         <i class="nav-icon fas fa-book"></i>
@@ -144,31 +144,60 @@
                                         <i class="nav-icon fas fa-book"></i>
                                         <p>MK Bidang Minat</p>
                                     </a>
-                                </li>                                
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('pembimbing_akademik.index') }}" class="nav-link {{ Request::segment(1) == 'pembimbing_akademik'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>Bimbingan Akademik</p>
+                                    </a>
+                                </li>
+                                </div>
                             </ul>
                           </li>
-
                           <li class="nav-item">
                             <a href="{{ route('panduan.index') }}" class="nav-link {{ Request::segment(1) == 'panduan'  ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>Panduan</p>
                             </a>
                         </li>
-
+                        {{-- Tentang --}}
                         <li class="nav-item">
-                            <a href="{{ route('staf_pengajar.index') }}" class="nav-link {{ Request::segment(1) == 'staf_pengajar'  ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>Staf Pengajar</p>
+                            <a href="#" class="nav-link">
+                              <i class="nav-icon fas fa-folder"></i>
+                              <p>
+                                Tentang
+                                <i class="fas fa-angle-left right"></i>
+                              </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <div class="container">
+                                <li class="nav-item">
+                                    <a href="{{ route('staf_pengajar.index') }}" class="nav-link {{ Request::segment(1) == 'staf_pengajar'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>Staf Pengajar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('profile_lulusan.index') }}" class="nav-link {{ Request::segment(1) == 'profile_lulusan'  ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-file"></i>
+                                        <p>Profil Lulusan</p>
+                                    </a>
+                                </li>
+                                </div>
+                            </ul>
+                        </li>                        
+                        <li class="nav-item">
+                            <a href="{{ route('slider.index') }}" class="nav-link {{ Request::segment(1) == 'slider'  ? 'active' : '' }}">
+                                <i class="nav-icon fas  fa-clone"></i>
+                                <p>Slider</p>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a href="{{ route('pembimbing_akademik.index') }}" class="nav-link {{ Request::segment(1) == 'pembimbing_akademik'  ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>Bimbingan Akademik</p>
+                            <a href="{{ route('user.index') }}" class="nav-link {{ Request::segment(1) == 'user'  ? 'active' : '' }}">
+                                <i class="nav-icon fas  fa-user-plus"></i>
+                                <p>User</p>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a href="{{ route('landing') }}" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
@@ -306,8 +335,6 @@
         $(function() {
             bsCustomFileInput.init();
         });
-    </script>
-
+    </script>    
 </body>
-
 </html>

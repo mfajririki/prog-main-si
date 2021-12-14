@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistem Informasi &#8211; Universitas Bina Darma</title>
+    <title>{{ $title }} | Sistem Informasi Universitas Bina Darma</title>
 
     <link rel='stylesheet' id='wp-block-library-css' href='{{ asset("assets/css/dist/block-library/style.min76f3.css?ver=5.7.3") }}' type='text/css' media='all' />
     <link rel='stylesheet' id='contact-form-7-css' href='{{ asset("assets/content/plugins/contact-form-7/includes/css/styles7661.css?ver=5.4.2") }}' type='text/css' media='all' />
@@ -25,156 +25,111 @@
     <link rel='stylesheet' id='kingster-custom-style-css' href='{{ asset("assets/content/uploads/kingster-style-custom479c.css?1623216733&amp;ver=5.7.3") }}' type='text/css' media='all' />
     <link rel='stylesheet' id='kingster-learnpress-css' href='{{ asset("assets/content/themes/kingster/learnpress/kingster-learnpress76f3.css?ver=5.7.3") }}' type='text/css' media='all' />
     <link rel='stylesheet' id='kingster-learnpress-pb-css' href='{{ asset("assets/content/themes/kingster/learnpress/kingster-learnpress-pb76f3.css?ver=5.7.3") }}' type='text/css' media='all' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <script type='text/javascript' src='{{ asset("assets/js/jquery/jquery.min9d52.js?ver=3.5.1") }}' id='jquery-core-js'></script>
     <script type='text/javascript' src='{{ asset("assets/js/jquery/jquery-migrate.mind617.js?ver=3.3.2") }}' id='jquery-migrate-js'></script>
     <script type='text/javascript' src='{{ asset("assets/content/plugins/revslider/public/assets/js/rbtools.min49c2.js?ver=6.2.22") }}' id='tp-tools-js'></script>
     <script type='text/javascript' src='{{ asset("assets/content/plugins/revslider/public/assets/js/rs6.min49c2.js?ver=6.2.22") }}' id='revmin-js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <!-- head -->
 
 <body class="post-template-default single single-post postid-13735 single-format-standard gdlr-core-body tribe-no-js kingster-body kingster-body-front kingster-full  kingster-with-sticky-navigation  kingster-blog-style-1  kingster-blockquote-style-1 gdlr-core-link-to-lightbox">
-    <!-- Mobile Navbar -->
-    <div class="kingster-mobile-header-wrap">
-        <div class="kingster-mobile-header kingster-header-background kingster-style-slide kingster-sticky-mobile-navigation " id="kingster-mobile-header">
-            <div class="kingster-mobile-header-container kingster-container clearfix">
-                <div class="kingster-logo kingster-item-pdlr">
-                    <div class="kingster-logo-inner">
-                        <a class="" href="#">
-                            <img src="{{ url('assets/content/uploads/2021/06/logo-fasilkom-white-2.png') }}" alt="" width="400" height="162" title="logo-fasilkom-white-2" />
-                        </a>
-                    </div>
-                </div>
-
-                <div class="kingster-mobile-menu-right">
-                    <div class="kingster-main-menu-search" id="kingster-mobile-top-search">
-                        <i class="fa fa-search"></i>
-                    </div>
-
-                    <div class="kingster-top-search-wrap">
-                        <div class="kingster-top-search-close"></div>
-                        <div class="kingster-top-search-row">
-                            <div class="kingster-top-search-cell">
-                                <form role="search" method="get" class="search-form" action="#">
-                                    <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="s">
-                                    <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
-                                    <input type="submit" class="search-submit" value="Search">
-                                    <div class="kingster-top-search-close"><i class="icon_close"></i></div>
-                                    <input type="hidden" name="ref" value="course" /><input type="hidden" name="post_type" value="lp_course" />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="kingster-mobile-menu">
-                        <a class="kingster-mm-menu-button kingster-mobile-menu-button kingster-mobile-button-hamburger" href="#kingster-mobile-menu"><span></span></a>
-
-                        <div class="kingster-mm-menu-wrap kingster-navigation-font" id="kingster-mobile-menu" data-slide="right">
-                            <ul id="menu-main-navigation" class="m-menu">
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-14556"><a href="{{ url('/') }}">Beranda</a></li>
-
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5300"><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
-
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6982"><a href="#">Kemahasiswaan</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5731"><a href="#">Prestasi Mahasiswa</a></li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8110"><a href="#">Layanan Mahasiswa</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036"><a href="#">Tentang</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314"><a href="#">Tentang Sistem Informasi</a></li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638"><a href="{{ route('staf') }}">Staf Pengajar</a></li>
-                                    </ul>
-                                </li>
-
-                                @guest
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313"><a href="{{ route('login') }}">Login</a></li>
-                                @else
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313"><a href="{{ route('login') }}">Admin</a></li>
-                                @endguest
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Body -->
     <div class="kingster-body-outer-wrapper ">
-        <div class="kingster-body-wrapper clearfix  kingster-with-frame">            
-
-            <!-- Header Navbar -->
-            <header class="kingster-header-wrap kingster-header-style-plain  kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed clearfix" data-navigation-offset="75px">
-                <div class="kingster-header-background"></div>
-                <div class="kingster-header-container  kingster-container">
-                    <div class="kingster-header-container-inner clearfix">
-                        {{-- logo --}}
-                        <div class="kingster-logo  kingster-item-pdlr">
-                            <div class="kingster-logo-inner">
-                                <a class="" href="#"><img src="{{ url('assets/content/uploads/2021/06/logo-fasilkom-white-2.png') }}" alt="" width="400" height="162" title="logo-fasilkom-white-2" /></a>
-                            </div>
-                        </div>
-                        <div class="kingster-navigation kingster-item-pdlr clearfix ">
-                            <div class="kingster-main-menu" id="kingster-main-menu">
-                                <ul id="menu-main-navigation-1" class="sf-menu">
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-14556 kingster-normal-menu {{ Request::segment(1) == ''  ? 'current-menu-item' : '' }} "><a href="{{ route('landing') }}" class="sf-with-ul-pre">Beranda</a></li>
-
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5300 kingster-normal-menu {{ Request::segment(1) == 'pengumuman'  ? 'current-menu-item' : '' }} "><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
-
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><p>Kurikulum</p>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/kurikulum_konten">Kurikulum Sistem Informasi</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/bimbingan_akademik">Bimbingan Akademik</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5300 kingster-normal-menu {{ Request::segment(1) == 'halpanduan'  ? 'current-menu-item' : '' }} "><a href="{{ route('halpanduan') }}">Panduan</a></li>
-
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6036 kingster-normal-menu"><p>Tentang</p>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5314" data-size="60"><a href="/">Tentang Sistem Informasi</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638" data-size="60"><a href="/staf">Staf Pengajar</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6638" data-size="60"><a href="/profilelulusan">Profil Lulusan</a></li>
-                                        </ul>
-                                    </li>
-
-                                    @guest
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313 kingster-normal-menu"><a href="{{ route('login') }}">Login</a></li>
-                                    @else
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6313 kingster-normal-menu"><a href="{{ route('login') }}">Admin</a></li>
-                                    @endguest
-                                </ul>
-
-                                <div class="kingster-navigation-slide-bar" id="kingster-navigation-slide-bar"></div>
-                            </div>
-
-                            <div class="kingster-main-menu-right-wrap clearfix ">
-                                <div class="kingster-main-menu-search" id="kingster-top-search"><i class="icon_search"></i></div>
-                                <div class="kingster-top-search-wrap">
-                                    <div class="kingster-top-search-close"></div>
-
-                                    <div class="kingster-top-search-row">
-                                        <div class="kingster-top-search-cell">
-                                            <form role="search" method="get" class="search-form" action="#">
-                                                <input type="text" class="search-field kingster-title-font" placeholder="Search..." value="" name="s">
-                                                <div class="kingster-top-search-submit"><i class="fa fa-search"></i></div>
-                                                <input type="submit" class="search-submit" value="Search">
-                                                <div class="kingster-top-search-close"><i class="icon_close"></i></div>
-                                                <input type="hidden" name="ref" value="course" /><input type="hidden" name="post_type" value="lp_course" />
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="kingster-body-wrapper clearfix  kingster-with-frame">
+            <!-- Header Navbar -->            
+            <header class="kingster-header-wrap kingster-header-style-plain  kingster-style-menu-right kingster-sticky-navigation kingster-style-fixed" data-navigation-offset="75px">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="{{ route('landing') }}"><img src="{{ url('assets/content/uploads/2021/06/ubd_logo.png') }}" alt="" width="100" title="logo-fasilkom-white-2" /></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link {{ ($title === "Beranda") ? 'active' : '' }}" aria-current="page" href="{{ route('landing') }}">Beranda</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link {{ ($title === "Pengumuman") ? 'active' : '' }}" href="{{ route('pengumuman') }}">Pengumuman</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link {{ ($title === "Kurikulum" || $title === "Bimbingan Akademik") ? 'active' : '' }} dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Kurikulum
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="{{ route('kurikulum_konten') }}">Kurikulum Sistem Informasi</a></li>
+                              <li><a class="dropdown-item" href="{{ route('bimbingan_akademik') }}">Bimbingan Akademik</a></li>                          
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link {{ ($title === "Panduan") ? 'active' : '' }}" href="{{ route('halpanduan') }}">Panduan</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link {{ ($title === "Staf Pengajar" || $title === "Profil Lulusan") ? 'active' : '' }} dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tentang
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="/staf">Staf Pengajar</a></li>
+                              <li><a class="dropdown-item" href="/profilelulusan">Profil Lulusan</a></li>                          
+                            </ul>
+                          </li>                                           
+                        </ul>
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            </li>
+                            @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Admin</a>
+                            </li>
+                            @endguest
+                        </ul>                     
+                      </div>
                     </div>
-                </div>
+                </nav>
             </header>
+
+            {{-- Slider --}}
+            <div style="background-color: #202021; padding: 20px 20px 20px 20px">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        @if ($sliders == [])
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        @else
+                            @foreach ($sliders as $no => $slider)
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $no }}" class="{{ ($no === 0) ? 'active' : '' }}" aria-current="{{ ($no === 0) ? 'true' : '' }}" aria-label="Slide {{ $no+1 }}"></button>
+                            @endforeach
+                        @endif                        
+                    </div>
+                    <div class="carousel-inner">
+                        @if ($sliders == [])
+                            <div class="carousel-item active">
+                                <img src="images/slider.png" class="d-block w-100" alt="slider" style="height: 275px;">
+                            </div>
+                        @else
+                            @foreach ($sliders as $no => $slider)
+                            <div class="carousel-item {{ ($no === 0) ? 'active' : '' }}">
+                                <img src="{{ $slider->photo }}" class="d-block w-100" alt="{{ $slider->nama }}" style="height: 275px;">
+                            </div>
+                            @endforeach
+                        @endif                        
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
 
             @yield('content')
 
@@ -185,45 +140,63 @@
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                             <div id="text-2" class="widget widget_text kingster-widget">
                                 <div class="textwidget">
-                                    <p><img src="{{ url('assets/content/uploads/2021/06/logo-footer-fasilkom.png') }}" alt="" /><br /><span class="gdlr-core-space-shortcode" style="margin-top: 5px ;"></span></p>
+                                    <p><img src="{{ url('assets/content/uploads/2021/06/ubd_logo.png') }}" alt="" />
+                                        <br /> <span class="gdlr-core-space-shortcode" id="span_1dd7_10"></span>
+                                        <br /> 30264
+                                        <br /> Jalan Jenderal Ahmad Yani No.12 Plaju
+                                        <br /> Palembang, Sumatera Selatan</p>
+                                    <p><span class="gdlr-core-space-shortcode" id="span_1dd7_12"></span>
+                                        <span>universitas@binadarma.ac.id</span></p>
+                                    <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-left-align">
+                                        <div class="gdlr-core-divider-line gdlr-core-skin-divider" id="div_1dd7_111"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
-                            <div id="gdlr-core-custom-menu-widget-3" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Layanan</h3><span class="clear"></span>
-                                <div class="menu-about-footer-container">
-                                    <ul id="menu-about-footer" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7524 kingster-normal-menu"><a href="{{ url('') }}">Beranda</a></li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7526 kingster-normal-menu"><a href="{{ route('pengumuman') }}">Pengumuman</a></li>
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7524 kingster-normal-menu"><a href="https://pmb.binadarma.ac.id">Pendaftaran</a></li>
+                            <div id="gdlr-core-custom-menu-widget-2" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                                <h3 class="kingster-widget-title">Kontak</h3><span class="clear"></span>
+                                <div class="menu-our-campus-container">
+                                    <ul id="menu-our-campus" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                        <li class="menu-item">No. Telepon<br/>0711-515582</li>
+                                        <li class="menu-item">Layanan PPM<br/>0821-8061-0336/0821-7967-3360</li>
+                                        <li class="menu-item">Layanan PMB<br/>0811-7155-582/0811-1725-582</li>                          
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
                             <div id="gdlr-core-custom-menu-widget-3" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
-                                <h3 class="kingster-widget-title">Tentang</h3><span class="clear"></span>
-                                <div class="menu-about-footer-container">
-                                    <ul id="menu-about-footer" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
-                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7526 kingster-normal-menu"><a href="{{ route('staf') }}">Staf Pengajar</a></li>
+                                <h3 class="kingster-widget-title">Our Campus</h3><span class="clear"></span>
+                                <div class="menu-campus-life-container">
+                                    <ul id="menu-campus-life" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                        <li class="menu-item"><a href="https://www.binadarma.ac.id/" target="_blank">Portal Web UBD</a></li>
+                                        <li class="menu-item"><a href="https://sisfo.binadarma.ac.id/" target="_blank">Sistem Informasi Akademik</a></li>
+                                        <li class="menu-item"><a href="https://elearning.binadarma.ac.id/" target="_blank">E-Learning</a></li>                                                                                
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="kingster-footer-column kingster-item-pdlr kingster-column-15">
+                            <div id="gdlr-core-custom-menu-widget-4" class="widget widget_gdlr-core-custom-menu-widget kingster-widget">
+                                <h3 class="kingster-widget-title">Social Info</h3><span class="clear"></span>
+                                <div class="menu-academics-container">
+                                    <ul id="menu-academics" class="gdlr-core-custom-menu-widget gdlr-core-menu-style-plain">
+                                        <li class="menu-item"><a href="https://www.facebook.com/UBDPalembang/" target="_blank">Facebook</a></li>
+                                        <li class="menu-item"><a href="https://www.instagram.com/ubd_palembang/" target="_blank">Instagram</a></li>
+                                        <li class="menu-item"><a href="https://www.youtube.com/BINADARMATV" target="_blank">Youtube</a></li>                                                                                
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                      
                     </div>
                 </div>
 
                 <div class="kingster-copyright-wrapper">
                     <div class="kingster-copyright-container kingster-container clearfix">
-                        <div class="kingster-copyright-left kingster-item-pdlr">Copyright All Rights Reserved 2021, Universitas Bina Darma.</div>
+                        <div class="kingster-copyright-left kingster-item-pdlr">&copy; Copyright All Rights Reserved 2021, Universitas Bina Darma.</div>
                         <div class="kingster-copyright-right kingster-item-pdlr">
-                            <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;"><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i class="fa fa-facebook"></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i class="fa fa-linkedin"></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i class="fa fa-twitter"></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="youtube"><i class="fa fa-youtube"></i></a><a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram"><i class="fa fa-instagram"></i></a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

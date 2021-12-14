@@ -7,7 +7,7 @@
     <div class="kingster-page-title-overlay"  ></div>
     <div class="kingster-page-title-bottom-gradient" ></div>
     <div class="kingster-page-title-container kingster-container" >
-        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 60px ;"  >
+        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 160px ;padding-bottom: 20px ;"  >
             <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;"  >Sistem Informasi</div>
             <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;"  >Panduan</h1>
         </div>

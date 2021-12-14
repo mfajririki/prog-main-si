@@ -1,21 +1,6 @@
 @extends('layouts.public')
 
 @section('content')
-<!-- Hero Section -->
-<div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" style="background-image: url(assets/content/uploads/2020/06/cta-akademik-1.jpg) ;">
-    <div class="kingster-header-transparent-substitute"></div>
-    <div class="kingster-page-title-overlay"></div>
-    <div class="kingster-page-title-bottom-gradient"></div>
-    <div class="kingster-page-title-container kingster-container">
-        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 200px ;padding-bottom: 30px ;">
-            <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;">Program
-                Studi</div>
-            <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;">
-                Sarjana Sistem Informasi</h1>
-        </div>
-    </div>
-</div>
-
 <!-- Breadcrumb -->
 <div class="kingster-breadcrumbs">
     <div class="kingster-breadcrumbs-container kingster-container">
@@ -23,10 +8,6 @@
             <span property="itemListElement" typeof="ListItem">
                 <a property="item" typeof="WebPage" title="Beranda Sarjana Sistem Informasi." href="{{ url('') }}" class="home"><span property="name">Beranda</span></a>
                 <meta property="position" content="1">
-            </span> &gt; <span property="itemListElement" typeof="ListItem">
-                <span property="name" class="post post-page current-item">Sarjana Sistem Informasi</span>
-                <meta property="url" content="index.html">
-                <meta property="position" content="2">
             </span>
         </div>
     </div>
@@ -162,10 +143,11 @@
                                         <p><span style="font-size: 16px; color: #3db166;">Senin-Jumat  08:00 &#8211; 16:00 <br/> Sabtu  08:00 &#8211; 12:00</span></p> <span class="gdlr-core-space-shortcode" style="margin-top: 40px ;"></span>
                                         <h3 style="font-size: 20px; color: #fff; margin-bottom: 15px;">Social Info</h3>
                                         <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" style="padding-bottom: 0px ;">
-                                           <a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="color: #3db166 ;"><i class="fa fa-facebook" ></i></a>
-                                           <a href="#url" target="_blank" class="gdlr-core-social-network-icon" title="twitter" style="color: #3db166 ;"><i class="fa fa-twitter" ></i></a>
-                                           <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="instagram" style="color: #3db166 ;"><i class="fa fa-instagram" ></i></a></div>
-                                        <p>
+                                            <a href="https://api.whatsapp.com/send?phone=628117155582&text=Saya%20Ingin%20info%20Mahasiswa%20Baru%20Universitas%20Bina%20Darma" target="_blank" class="gdlr-core-social-network-icon" title="whatsapp" style="color: #3db166 ;"><i class="fa fa-whatsapp" ></i></a>
+                                            <a href="https://www.facebook.com/UBDPalembang/" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="color: #3db166 ;"><i class="fa fa-facebook" ></i></a>                                           
+                                            <a href="https://www.instagram.com/ubd_palembang/" target="_blank" class="gdlr-core-social-network-icon" title="instagram" style="color: #3db166 ;"><i class="fa fa-instagram" ></i></a>
+                                            <a href="https://www.youtube.com/BINADARMATV" target="_blank" class="gdlr-core-social-network-icon" title="youtube" style="color: #3db166 ;"><i class="fa fa-youtube" ></i></a>
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>
@@ -173,41 +155,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Alumni -->
-        <div class="gdlr-core-pbf-wrapper " style="padding: 45px 0px 45px 0px;">
-            <div class="gdlr-core-pbf-background-wrap"></div>
-            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                    <div class="gdlr-core-pbf-element">
-                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 35px ;">
-                            <div class="gdlr-core-title-item-title-wrap clearfix">
-                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #163269 ;">
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gdlr-core-pbf-column gdlr-core-column-40 gdlr-core-column-first">
-                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 5px ;">
-                                        <div class="gdlr-core-text-box-item-content" style="text-transform: none ;">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>        
 
         <!-- PMB -->
-        <div class="gdlr-core-pbf-wrapper " style="padding: 65px 0px 60px 0px;">
+        <div class="gdlr-core-pbf-wrapper " style="padding: 65px 0px 60px 0px; margin: 100px 0px 0px 0px;">
             <div class="gdlr-core-pbf-background-wrap" style="background-color: #192f59 ;"></div>
             <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                 <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -220,33 +171,27 @@
                                         <div class="gdlr-core-text-box-item-content" style="text-transform: none ;color: #ffffff ;">
 
                                             <div class="gdlr-core-blockquote-item-quote gdlr-core-quote-font" style="font-size: 170px ; margin-top: -120px">“</div>
+                                            @foreach ($profile_kaprodi as $kaprodi)
                                             <p style="margin-top: -120px" align="justify">
-                                                Kompetensi lulusan Program Studi Sistem Informasi meliputi 3 bidang keahlian
-                                                (konsentrasi) yaitu Konsentrasi dalam bidang Sistem Informasi Bisnis, Konsenstrasi 
-                                                dalam bidang Sistem Penunjang Manajemen, Konsentrasi dalam bidang Teknologi Informasi
+                                                {!! $kaprodi->kutipan !!}
                                             </p>
-
                                             <p>
-                                                <span style="font-weight: bold;">Suyanto, M.M., M. Kom.</span>
+                                                <span style="font-weight: bold;">{{ $kaprodi->nama }}</span>
                                                 <br>Ketua Program Studi Sistem Informasi
                                             </p>
+                                            @endforeach                                            
                                         </div>
                                     </div>
                                 </div>
-
 {{-- Informasi Pendaftaran | Informasi Jalur Pendaftaran --}}
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 10px ;">
-                                        <a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-left-align gdlr-core-button-no-border" href="https://pmb.binadarma.ac.id" target="_blank" style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;padding: 13px 26px 16px 30px;text-transform: none ;margin: 0px 10px 10px 0px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;background: #d61b23 ;"><span class="gdlr-core-content">Informasi Pendaftaran</span><i class="gdlr-core-pos-right fa fa-external-link" style="font-size: 14px ;"></i></a>
-
-                                        <a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-left-align gdlr-core-button-no-border" href="#" style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;padding: 13px 26px 16px 30px;text-transform: none ;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;background: #3db166 ;"><span class="gdlr-core-content">Informasi Jalur Penerimaan</span><i class="gdlr-core-pos-right fa fa-external-link" style="font-size: 14px ;"></i></a>
+                                        <a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-left-align gdlr-core-button-no-border" href="https://pmb.binadarma.ac.id" target="_blank" style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;padding: 13px 26px 16px 30px;text-transform: none ;margin: 0px 10px 10px 0px;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;background: #d61b23 ;"><span class="gdlr-core-content">Informasi Pendaftaran</span><i class="gdlr-core-pos-right fa fa-external-link" style="font-size: 14px ;"></i></a>                                        
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                     {{-- Profile Photo --}}
                     <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-284">
                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: -123px 0px 0px 0px;padding: 0px 0px 0px 40px;">
@@ -254,14 +199,14 @@
                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
-                                        <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="images/staf/SI_suyanto.jpeg" width="700" height="450" />
+                                        <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
+                                            <img src="{{ $kaprodi->photo }}" width="450px" height="450px" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

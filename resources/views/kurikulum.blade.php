@@ -1,20 +1,6 @@
 @extends('layouts.public')
 
 @section('content')
-<!-- Hero Section -->
-<div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" style="background-image: url(assets/content/uploads/2020/06/cta-akademik-1.jpg) ;">
-   <div class="kingster-header-transparent-substitute"></div>
-   <div class="kingster-page-title-overlay"></div>
-   <div class="kingster-page-title-bottom-gradient"></div>
-   <div class="kingster-page-title-container kingster-container">
-      <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 60px ;">
-         <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;">Sistem Informasi</div>
-         <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;">
-            Kurikulum</h1>
-      </div>
-   </div>
-</div>
-
 <!-- Breadcrumb -->
 <div class="kingster-breadcrumbs">
    <div class="kingster-breadcrumbs-container kingster-container">
@@ -77,7 +63,7 @@
                                                 </div>
                                                 <div class="text-justify">
                                                 <table class="table">
-                                                   <thead>
+                                                   <thead class="table-dark">
                                                    <tr>
                                                       <th scope="col">No</th>
                                                       <th scope="col">Kode Mata Kuliah</th>
@@ -366,7 +352,7 @@
                                                 </div>
                                                 <div class="text-justify">
                                                    <table class="table">
-                                                      <thead>
+                                                      <thead class="table-dark">
                                                       <tr>
                                                          <th scope="col">Kode Mata Kuliah</th>
                                                          <th scope="col">Nama Mata Kuliah</th>

@@ -46,37 +46,6 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <p>Visi & Misi</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <a href="{{ url('/visi_misi') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-                <div class="small-box bg-info">
-                    <div class="inner">
-                        <p>Tujuan</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <a href="{{ url('/tujuans') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-                <div class="small-box bg-info">
-                    <div class="inner">
-                        <p>Tentang Prodi TI</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <a href="{{ url('/tentang') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                    <div class="inner">
                         <p>Distribusi Mata Kuliah</p>
                         <p>{{ $jumlah_mk }}</p>
                     </div>
@@ -97,11 +66,8 @@
                 </div>
             </div>
             <!-- ./col -->
-
         </div>
-        <!-- /.row -->
-
-        
+        <!-- /.row -->        
     </div><!-- /.container-fluid -->
 </section>
 <!-- /.content -->

@@ -43,6 +43,7 @@
                             <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-full-with-frame" style="padding-bottom: 40px ;">
                                 <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout="fitrows">
                                     @foreach($announcements as $announcement)
+                                    @if ($announcement->category == 'Pengumuman')
 
                                     <!-- Item -->
                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
@@ -78,7 +79,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    @endif
                                     @endforeach
                                 </div>
 

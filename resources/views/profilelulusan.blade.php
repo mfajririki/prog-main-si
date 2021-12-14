@@ -7,7 +7,7 @@
     <div class="kingster-page-title-overlay"  ></div>
     <div class="kingster-page-title-bottom-gradient" ></div>
     <div class="kingster-page-title-container kingster-container" >
-        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 400px ;padding-bottom: 60px ;"  >
+        <div class="kingster-page-title-content kingster-item-pdlr" style="padding-top:160px ;padding-bottom: 20px ;"  >
             <div class="kingster-page-caption" style="font-size: 21px ;font-weight: 400 ;letter-spacing: 0px ;"  >Sistem Informasi</div>
             <h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;"  >Profil Lulusan</h1>
         </div>
@@ -51,7 +51,7 @@
                   <div class="col-10">
                     <!-- Table -->
                     <table class="table">
-                     <thead>
+                     <thead class="table-dark">
                        <tr>
                          <th scope="col" class="col-1">No</th>
                          <th scope="col">Nama</th>
@@ -60,7 +60,7 @@
                      </thead>
                      <tbody>
                         @foreach ($profilelulusan as $profile)
-                        <tr align="justify">
+                        <tr align="justify" class="text-dark">
                            <td style="vertical-align: middle">{{ $profile->no }}</td>
                            <td style="vertical-align: middle">{{ $profile->nama}}</td>
                            <td>{!! $profile->deskripsi !!}</td>
