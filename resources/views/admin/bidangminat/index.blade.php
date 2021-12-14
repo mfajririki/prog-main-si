@@ -40,6 +40,7 @@
                                     <th>Semester</th>
                                     <th>SKS</th>
                                     <th>Stream</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
 
