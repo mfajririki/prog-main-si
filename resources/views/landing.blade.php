@@ -200,7 +200,9 @@
                                 <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
                                         <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
+                                            @foreach ($profile_kaprodi as $kaprodi)
                                             <img src="{{ $kaprodi->photo }}" width="450px" height="450px" />
+                                            @endforeach                                            
                                         </div>
                                     </div>
                                 </div>
