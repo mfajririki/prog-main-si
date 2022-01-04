@@ -37,14 +37,12 @@ class PembimbingAkademikController extends Controller
 
         DB::transaction(function () use ($request) {
             $document = $request->file('document');
-
             $nama_document = time() . "_" . $document->getClientOriginalName();
-
-            $tujuan_upload = 'document';
+            $tujuan_upload = public_path('document/');
             $document->move($tujuan_upload, $nama_document);
 
             $pembimbing_akademik = PembimbingAkademik::create([
-                'document' => $nama_document,
+                'document' => 'document/' . $nama_document,
                 'title'          => $request->title,
             ]);
         });
@@ -71,15 +69,13 @@ class PembimbingAkademikController extends Controller
         // ]);
 
         $document = $request->file('document');
-
         $nama_document = time() . "_" . $document->getClientOriginalName();
-
-        $tujuan_upload = 'document';
+        $tujuan_upload = public_path('document/');
         $document->move($tujuan_upload, $nama_document);
 
         $pembimbing_akademik = PembimbingAkademik::where('id', $id)
             ->update([
-                'document' => $nama_document,
+                'document' => 'document/' . $nama_document,
                 'title'          => $request->title,
             ]);
 

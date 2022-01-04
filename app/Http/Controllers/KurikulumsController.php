@@ -35,10 +35,12 @@ class KurikulumsController extends Controller
         ]);
 
         DB::transaction(function () use ($request) {
-            $document = $request->file('document');
-            $nama_document = time() . "_" . $document->getClientOriginalName();
-            $tujuan_upload = 'document';
-            $document->move($tujuan_upload, $nama_document);
+            if ($request->hasfile('document')) {
+                $document = $request->file('document');
+                $nama_document = time() . "_" . $document->getClientOriginalName();
+                $tujuan_upload = public_path('document/');
+                $document->move($tujuan_upload, $nama_document);
+            }
 
             $kurikulum = Kurikulums::create([
                 'kode_mk'           => $request->kode_mk,
@@ -46,7 +48,7 @@ class KurikulumsController extends Controller
                 'kelompok_mk'       => $request->kelompok_mk,
                 'sks'               => $request->sks,
                 'semester'          => $request->semester,
-                'document'          => $nama_document,
+                'document'          => request('document') ? 'document/' . $nama_document : null,
             ]);
         });
 
@@ -66,16 +68,16 @@ class KurikulumsController extends Controller
 
     public function update($id, Request $request)
     {
-        $this->validate($request, [
-            'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
-        ]);
+        // $this->validate($request, [
+        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
+        // ]);
 
-        $document = $request->file('document');
-
-        $nama_document = time() . "_" . $document->getClientOriginalName();
-
-        $tujuan_upload = 'document';
-        $document->move($tujuan_upload, $nama_document);
+        if ($request->hasfile('document')) {
+            $document = $request->file('document');
+            $nama_document = time() . "_" . $document->getClientOriginalName();
+            $tujuan_upload = public_path('document/');
+            $document->move($tujuan_upload, $nama_document);
+        }
 
         $kurikulum = Kurikulums::where('id', $id)
             ->update([
@@ -84,7 +86,7 @@ class KurikulumsController extends Controller
                 'kelompok_mk'       => $request->kelompok_mk,
                 'sks'               => $request->sks,
                 'semester'          => $request->semester,
-                'document'          => $nama_document,
+                'document'          => request('document') ? 'document/' . $nama_document : null,
             ]);
 
         return redirect(route('kurikulums.index'))->with('alert', 'Data berhasil diupdate!');

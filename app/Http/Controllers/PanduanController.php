@@ -37,20 +37,18 @@ class PanduanController extends Controller
 
         DB::transaction(function () use ($request) {
             $document = $request->file('document');
-
             $nama_document = time() . "_" . $document->getClientOriginalName();
-
-            $tujuan_upload = 'document';
+            $tujuan_upload = public_path('document/');
             $document->move($tujuan_upload, $nama_document);
 
             $panduan = Panduan::create([
-                'document' => $nama_document,
+                'document' => 'document/' . $nama_document,
                 'title'          => $request->title,
             ]);
         });
 
         // Redirect the user to the created post with a success notification
-        return redirect(route('panduan.index'))->with('alert', 'Pengumuman berhasil dibuat!');
+        return redirect(route('panduan.index'))->with('alert', 'Panduan berhasil dibuat!');
     }
 
     public function show($id)
@@ -71,15 +69,13 @@ class PanduanController extends Controller
         ]);
 
         $document = $request->file('document');
-
         $nama_document = time() . "_" . $document->getClientOriginalName();
-
-        $tujuan_upload = 'document';
+        $tujuan_upload = public_path('document/');
         $document->move($tujuan_upload, $nama_document);
 
         $panduan = Panduan::where('id', $id)
             ->update([
-                'document' => $nama_document,
+                'document' => 'document/' . $nama_document,
                 'title'          => $request->title,
             ]);
 
