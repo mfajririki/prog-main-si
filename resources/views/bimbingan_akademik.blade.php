@@ -35,7 +35,13 @@
                                     @foreach ($pembimbing_akademik as $document)
                                       <tr>
                                          <td style="text-align: start; color: black">{{ $document->title }}</td>
-                                         <td><a href="#"  target="_blank" download="{{ $document->document }}">Download</a></td>
+                                         <td><a target="_blank"
+                                            class="gdlr-core-button gdlr-core-button-solid gdlr-core-left-align gdlr-core-button-with-border"
+                                            href="{{ asset($document->document) }}"
+                                            style="font-size: 14px ;font-weight: 700 ;letter-spacing: 0px ;color: #d61b23 ;padding: 13px 26px 16px 30px;text-transform: none ;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;background: #ffffff ;border-color: #d61b23 ;"><span
+                                                class="gdlr-core-content">Download</span><i
+                                                class="gdlr-core-pos-right fa fa-file-pdf-o"
+                                                style="font-size: 14px ;"></i></a></td>
                                       </tr>
                                       @endforeach  
                                    </table>
