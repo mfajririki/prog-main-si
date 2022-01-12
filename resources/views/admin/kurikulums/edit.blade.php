@@ -111,7 +111,7 @@
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-sm btn-info"
-                                                            href="document/$kurikulum->document"
+                                                            href="{{ asset($kurikulum->document) }}"
                                                             target="_blank">Buka <i
                                                             class="fas fa-eye fa-sm ml-2"></i></a>   
                                                         <a class="btn btn-sm btn-danger"
