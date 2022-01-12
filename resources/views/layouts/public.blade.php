@@ -67,6 +67,17 @@
                                         <li class="menu-item"><a href="/profilelulusan">Profil Lulusan</a></li>
                                     </ul>
                                 </li>
+                                <ul class="menu-item">
+                                    @guest
+                                    <li class="menu-item">
+                                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                    </li>
+                                    @else
+                                    <li class="menu-item">
+                                        <a class="nav-link" href="{{ route('login') }}">Admin</a>
+                                    </li>
+                                    @endguest
+                                </ul>
                             </ul>
                         </div>
                     </div>

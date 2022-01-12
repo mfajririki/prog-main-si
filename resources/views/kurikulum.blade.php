@@ -62,14 +62,14 @@
                                                    </div>
                                                 </div>
                                                 <div class="text-justify">
-                                                <table class="table">
+                                                <table class="table" style="font-size:1.3vw;">
                                                    <thead class="table-dark">
                                                    <tr>
-                                                      <th scope="col">No</th>
-                                                      <th scope="col">Kode Mata Kuliah</th>
-                                                      <th scope="col">Nama Mata Kuliah</th>
-                                                      <th scope="col">Kelompok Mata Kuliah</th>
-                                                      <th scope="col">SKS</th>
+                                                      <th scope="col" style="font-size:1.3vw;">No</th>
+                                                      <th scope="col" style="font-size:1.3vw;">Kode Mata Kuliah</th>
+                                                      <th scope="col" style="font-size:1.3vw;">Nama Mata Kuliah</th>
+                                                      <th scope="col" style="font-size:1.3vw;">Kelompok Mata Kuliah</th>
+                                                      <th scope="col" style="font-size:1.3vw;">SKS</th>
                                                    </tr>
                                                    </thead>
                                                    <tbody>

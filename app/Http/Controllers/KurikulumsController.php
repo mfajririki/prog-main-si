@@ -30,9 +30,9 @@ class KurikulumsController extends Controller
     public function store(Request $request)
     {
         // Validate posted form data
-        $this->validate($request, [
-            'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
-        ]);
+        // $this->validate($request, [
+        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
+        // ]);
 
         DB::transaction(function () use ($request) {
             if ($request->hasfile('document')) {

@@ -33,7 +33,7 @@ Route::get('/pengumuman/{announcement}', [PublicController::class, 'show'])->nam
 Route::get('/profilelulusan', [PublicController::class, 'profilelulusan'])->name('profilelulusan');
 Route::get('/bimbingan-akademik', [PublicController::class, 'bimbingan_akademik'])->name('bimbingan_akademik');
 Route::get('/kurikulum', [PublicController::class, 'kurikulum_konten'])->name('kurikulum_konten');
-Route::get('/hal-panduan', [PublicController::class, 'halpanduan'])->name('halpanduan');
+Route::get('/halpanduan', [PublicController::class, 'halpanduan'])->name('halpanduan');
 
 // Admin
 Auth::routes([
