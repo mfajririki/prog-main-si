@@ -40,23 +40,23 @@
                             </thead>
 
                             <tbody>
-                                @foreach($profile_kaprodi as $kaprodi)
+                                @foreach($profile_kaprodi as $profile_kaprodi)
                                 <tr>                                    
-                                    <td>{{ $kaprodi->nama }}</td>
-                                    <td>{{ $kaprodi->kutipan }}</td>
+                                    <td>{{ $profile_kaprodi->nama }}</td>
+                                    <td>{{ $profile_kaprodi->kutipan }}</td>
                                     <td>
-                                        @if (!is_null($kaprodi->photo))
-                                        <img src="{{ asset($kaprodi->photo) }}" width="100">
+                                        @if (!is_null($profile_kaprodi->photo))
+                                        <img src="{{ asset($profile_kaprodi->photo) }}" width="100">
                                         @else
                                         -
                                         @endif
                                     </td>                                    
                                     <td>
-                                        <a href="{{ route('profile_kaprodi.edit', $kaprodi) }}"
+                                        <a href="{{ route('profile_kaprodi.edit', $profile_kaprodi) }}"
                                             class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>
                                         </a>
                                         <form class="d-inline" method="POST"
-                                            action="{{ route('profile_kaprodi.destroy', $kaprodi) }}">
+                                            action="{{ route('profile_kaprodi.destroy', $profile_kaprodi) }}">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
 

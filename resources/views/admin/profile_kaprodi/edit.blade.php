@@ -27,7 +27,7 @@
                     </div>
                     <!-- /.card-header -->
 
-                    <form action="{{ route('profile_kaprodi.update', $kaprodi->id) }}" method="POST"
+                    <form action="{{ route('profile_kaprodi.update', $profile_kaprodi->id) }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
                         {{ method_field('PUT') }}
@@ -38,8 +38,8 @@
                                     <div class="form-group">
                                         <label>Nama </label>
                                         <input type="text" name="nama" class="form-control"
-                                            value="{{ $kaprodi->nama }}" required="">
-                                        <input type="hidden" name="old_nama" value="{{ $kaprodi->nama }}">
+                                            value="{{ $profile_kaprodi->nama }}" required="">
+                                        <input type="hidden" name="old_nama" value="{{ $profile_kaprodi->nama }}">
                                     </div>
                                 </div>
                                 <!-- /.col -->
@@ -52,7 +52,7 @@
                                             <div class="custom-file">
                                                 <input type="file" name="photo" class="custom-file-input"
                                                     id="exampleInputFile">
-                                                <input type="hidden" name="old" value="{{ $kaprodi->photo }}">
+                                                <input type="hidden" name="old" value="{{ $profile_kaprodi->photo }}">
                                                 <label class="custom-file-label" for="exampleInputFile">Pilih
                                                     Foto</label>
                                             </div>
@@ -64,7 +64,7 @@
                                 <div class="col-md-12 mt-3">
                                     <div class="form-group">
                                         <label for="exampleInputFile" class="d-block">Isi Konten</label>
-                                        <textarea name="kutipan" class="summernote">{{ $kaprodi->kutipan }}</textarea>
+                                        <textarea name="kutipan" class="summernote">{{ $profile_kaprodi->kutipan }}</textarea>
                                     </div>
                                 </div>                                
                             </div>

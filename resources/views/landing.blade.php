@@ -54,14 +54,14 @@
                                                             <div class="gdlr-core-tab-item-content  gdlr-core-active" data-tab-id="1" style="background-color: #ffffff ;background-position: top right ;">
                                                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top">
                                                                     <div class="gdlr-core-title-item-title-wrap ">
-                                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;text-transform: none ;color: #314e85 ;">
+                                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: min(4vw, 22px);font-weight: 700 ;text-transform: none ;color: #314e85;">
                                                                             Sejarah Singkat Program Studi Sistem Informasi<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
                                                                         </h3>
                                                                     </div>
                                                                 </div>
                                                                 <div class="text-justify">
                                                                     @foreach ($tentang as $tentang)
-                                                                        <p>{!! $tentang->konten_tentang!!}</p>
+                                                                        <p style="font-size: min(3vw, 18px);">{!! $tentang->konten_tentang!!}</p>
                                                                     @endforeach
                                                                 </div>
                                                             </div>
@@ -74,7 +74,7 @@
                                                                         </h3>
                                                                     </div>
                                                                 </div>
-                                                                <div class="text-justify">
+                                                                <div class="text-justify" style="font-size: min(3vw, 18px);">
                                                                     @foreach ($visi_misi as $visi)
                                                                         <p>
                                                                             {!! $visi->visi !!}
@@ -91,9 +91,9 @@
                                                                         </h3>
                                                                     </div>
                                                                 </div>
-                                                                <div class="text-justify">
+                                                                <div class="text-justify" style="margin-left: -50px;">
                                                                     @foreach ($visi_misi as $misi)
-                                                                        <div class="kingster-single-article-content">
+                                                                        <div style="font-size: min(3vw, 18px);">
                                                                             {!! $misi->misi !!}
                                                                         </div>
                                                                     @endforeach
@@ -108,9 +108,9 @@
                                                                         </h3>
                                                                     </div>
                                                                 </div>
-                                                                <div class="text-justify">
+                                                                <div class="text-justify" style="margin-left: -50px;">
                                                                     @foreach ($tujuan as $tujuan)
-                                                                    <div class="kingster-single-article-content">
+                                                                    <div style="font-size: min(3vw, 18px);">
                                                                         {!! $tujuan->konten_tujuan !!}
                                                                     </div>
                                                                     @endforeach

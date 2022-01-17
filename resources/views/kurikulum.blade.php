@@ -39,7 +39,7 @@
 
                         <div class="gdlr-core-text-box-item-content" style="font-size: 16px ;text-transform: none ;">
                            {{-- Tab Content --}}
-                           <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                           <div class="gdlr-core-pbf-wrapper-content gdlr-core-js " style="margin: 0px -60px 0px -60px">
                               <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                                  <div class="gdlr-core-pbf-element">
                                     <div class="gdlr-core-tab-item gdlr-core-js gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-tab-style1-horizontal gdlr-core-item-pdlr">
@@ -62,7 +62,7 @@
                                                    </div>
                                                 </div>
                                                 <div class="text-justify">
-                                                <table class="table" style="font-size:1.3vw;">
+                                                <table class="table" style="font-size:min(2vw, 15px);">
                                                    <thead class="table-dark">
                                                    <tr>
                                                       <th scope="col" style="font-size:1.3vw;">No</th>

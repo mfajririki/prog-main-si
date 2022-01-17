@@ -36,14 +36,14 @@
               <div class="gdlr-core-pbf-element" >
                  <div class="gdlr-core-personnel-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-personnel-item-style-medium gdlr-core-personnel-style-medium"  >
                   <center>
-                  <div class="col-10">
+                  <div class="col-12">
                     <!-- Table -->
-                    <table class="table">
+                    <table class="table" style="font-size: min(2vw, 18px);">
                      <thead class="table-dark">
                        <tr>
-                         <th scope="col" class="col-1">No</th>
-                         <th scope="col">Nama</th>
-                         <th scope="col">Deskripsi</th>
+                         <th scope="col" style="font-size: min(2vw, 15px);">No</th>
+                         <th scope="col" style="font-size: min(2vw, 15px);">Nama</th>
+                         <th scope="col" style="font-size: min(2vw, 15px);">Deskripsi</th>
                        </tr>
                      </thead>
                      <tbody>
@@ -51,7 +51,7 @@
                         <tr align="justify" class="text-dark">
                            <td style="vertical-align: middle">{{ $profile->no }}</td>
                            <td style="vertical-align: middle">{{ $profile->nama}}</td>
-                           <td>{!! $profile->deskripsi !!}</td>
+                           <td style="vertical-align: middle">{!! $profile->deskripsi !!}</td>
                          </tr>
                         @endforeach
                      </tbody>

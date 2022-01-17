@@ -37,12 +37,12 @@
                  <div class="gdlr-core-personnel-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-personnel-item-style-medium gdlr-core-personnel-style-medium"  >
                     
                     <!-- Table -->
-                    <table class="table">
+                    <table class="table" style="font-size: min(2vw, 20px);">
                      <thead class="table-dark">
                        <tr>
-                         <th scope="col">Nama</th>
-                         <th scope="col">NIDN</th>
-                         <th scope="col">Jabatan</th>
+                         <th scope="col" style="font-size: min(2vw, 20px);">Nama</th>
+                         <th scope="col" style="font-size: min(2vw, 20px);">NIDN</th>
+                         <th scope="col" style="font-size: min(2vw, 20px);">Jabatan</th>
                        </tr>
                      </thead>
                      <tbody>

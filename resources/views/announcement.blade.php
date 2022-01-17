@@ -45,7 +45,7 @@
                                         <div class="gdlr-core-blog-full-frame gdlr-core-skin-e-background">
                                             <div class="gdlr-core-blog-full-head clearfix">
                                                 <div class="gdlr-core-blog-full-head-right">
-                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 33px ;font-weight: 700 ;letter-spacing: 0px ;">
+                                                    <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: min(8vw, 33px) ;font-weight: 700 ;letter-spacing: 0px ;">
                                                         <a href="{{ route('pengumuman_detail', $announcement) }}">{{ $announcement->title }}</a>
                                                     </h3>
 
