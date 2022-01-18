@@ -63,7 +63,7 @@
                                 <!-- Kutipan -->
                                 <div class="col-md-12 mt-3">
                                     <div class="form-group">
-                                        <label for="exampleInputFile" class="d-block">Isi Konten</label>
+                                        <label for="exampleInputFile" class="d-block">Kutipan</label>
                                         <textarea name="kutipan" class="summernote">{{ $profile_kaprodi->kutipan }}</textarea>
                                     </div>
                                 </div>                                
