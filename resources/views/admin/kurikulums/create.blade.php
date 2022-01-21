@@ -71,7 +71,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label>Kelompok Mata Kuliah <span class="text-danger">*</span></label>
+                                            <label>Kelompok Mata Kuliah</label>
                                             <select class="form-control" name="kelompok_mk">
                                                 <option value="" selected="selected">- Pilih Kelompok Mata Kuliah -</option>
                                                 <option value="MBP">MBP (Mata Kuliah Perilaku Berkarya)</option>

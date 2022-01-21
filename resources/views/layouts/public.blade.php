@@ -162,7 +162,7 @@
                         @else
                             @foreach ($sliders as $no => $slider)
                             <div class="carousel-item {{ ($no === 0) ? 'active' : '' }}">
-                                <img src="{{ $slider->photo }}" class="d-block w-100" alt="{{ $slider->nama }}" style="height: 275px;">
+                                <img src="{{ asset($slider->photo) }}" class="d-block w-100" alt="{{ $slider->nama }}" style="height: 275px;">
                             </div>
                             @endforeach
                         @endif                        
