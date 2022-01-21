@@ -16,7 +16,7 @@ class CreateProfileKaprodiTable extends Migration
         Schema::create('profile_kaprodi', function (Blueprint $table) {
             $table->id();
             $table->string('nama')->nullable();
-            $table->string('kutipan')->nullable();
+            $table->text('kutipan')->nullable();
             $table->text('photo')->nullable();
             $table->timestamps();
         });
