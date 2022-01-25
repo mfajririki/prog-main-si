@@ -29,11 +29,6 @@ class PanduanController extends Controller
 
     public function store(Request $request)
     {
-        // Validate posted form data
-        // $this->validate($request, [
-        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
-        //     'title' => 'required',
-        // ]);
 
         DB::transaction(function () use ($request) {
             $document = $request->file('document');
@@ -63,10 +58,6 @@ class PanduanController extends Controller
 
     public function update($id, Request $request)
     {
-        // $this->validate($request, [
-        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
-        //     'title' => 'required',
-        // ]);
 
         $document = $request->file('document');
         $nama_document = time() . "_" . $document->getClientOriginalName();
