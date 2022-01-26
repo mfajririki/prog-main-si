@@ -65,7 +65,7 @@
                                                 <table class="table" style="font-size:min(2vw, 15px);">
                                                    <thead class="table-dark">
                                                    <tr>
-                                                      <th scope="col" style="font-size:1.3vw;">No</th>
+                                                      <th scope="col" style="font-size:1.3vw; white-space: nowrap;">No</th>
                                                       <th scope="col" style="font-size:1.3vw;">Kode Mata Kuliah</th>
                                                       <th scope="col" style="font-size:1.3vw;">Nama Mata Kuliah</th>
                                                       <th scope="col" style="font-size:1.3vw;">Kelompok Mata Kuliah</th>
@@ -386,7 +386,7 @@
                                                          <th scope="col" style="font-size:1.3vw;">Nama Mata Kuliah</th>
                                                          <th scope="col" style="font-size:1.3vw;">Kelompok Mata Kuliah</th>
                                                          <th scope="col" style="font-size:1.3vw;">Semester</th>
-                                                         <th scope="col" style="font-size:1.3vw;">SKS</th>
+                                                         <th scope="col" style="font-size:1.3vw; white-space: nowrap;">SKS</th>
                                                          <th scope="col" style="font-size:1.3vw;">Stream</th>
                                                       </tr>
                                                       </thead>
@@ -401,9 +401,9 @@
                                                                   <td>{{ $itgovernance->kode_mk }}</td>
                                                                   <td>{{ $itgovernance->nama_mk }}</td>
                                                                   <td>{{ $itgovernance->kelompok_mk }}</td>
-                                                                  <td>{{ $itgovernance->semester }}</td>
+                                                                  <td style="white-space: nowrap;">{{ $itgovernance->semester }}</td>
                                                                   <td>{{ $itgovernance->sks }}</td>
-                                                                  <td>{{ $itgovernance->stream }}</td>
+                                                                  <td style="white-space: nowrap;">{{ $itgovernance->stream }}</td>
                                                                </tr>
                                                             @endif                        
                                                          @endforeach
