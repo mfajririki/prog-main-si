@@ -50,7 +50,7 @@
                         @foreach ($profilelulusan as $profile)
                         <tr align="justify" class="text-dark">
                            <td style="vertical-align: middle; white-space: nowrap;">{{ $profile->no }}</td>
-                           <td style="vertical-align: middle;">{{ $profile->nama}}</td>
+                           <td style="vertical-align: middle; word-break: keep-all;">{{ $profile->nama}}</td>
                            <td style="vertical-align: middle">{!! $profile->deskripsi !!}</td>
                          </tr>
                         @endforeach
