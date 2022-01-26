@@ -41,7 +41,7 @@
                     <table class="table" style="font-size: min(2vw, 18px);">
                      <thead class="table-dark">
                        <tr>
-                         <th scope="col" style="font-size: min(2vw, 15px);">No</th>
+                         <th scope="col" style="font-size: min(2vw, 15px); white-space: nowrap;">No</th>
                          <th scope="col" style="font-size: min(2vw, 15px);">Nama</th>
                          <th scope="col" style="font-size: min(2vw, 15px);">Deskripsi</th>
                        </tr>
@@ -49,8 +49,8 @@
                      <tbody>
                         @foreach ($profilelulusan as $profile)
                         <tr align="justify" class="text-dark">
-                           <td style="vertical-align: middle">{{ $profile->no }}</td>
-                           <td style="vertical-align: middle">{{ $profile->nama}}</td>
+                           <td style="vertical-align: middle; white-space: nowrap;">{{ $profile->no }}</td>
+                           <td style="vertical-align: middle;">{{ $profile->nama}}</td>
                            <td style="vertical-align: middle">{!! $profile->deskripsi !!}</td>
                          </tr>
                         @endforeach
