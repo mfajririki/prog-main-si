@@ -52,6 +52,7 @@ Route::resource('/bidangminat', BidangMinatController::class);
 Route::resource('/visi_misi', VisiMisiController::class);
 Route::resource('/profile_lulusan', ProfileLulusanController::class);
 Route::resource('/pembimbing_akademik', PembimbingAkademikController::class);
+Route::get('/pembimbing_akademik/{id}/hapus_doc', [PembimbingAkademikController::class, 'hapus_doc'])->name('pembimbing_akademik.hapus_doc');
 Route::resource('/tujuans', TujuansController::class);
 Route::resource('/tentang', TentangController::class);
 Route::resource('/kurikulums', KurikulumsController::class);
