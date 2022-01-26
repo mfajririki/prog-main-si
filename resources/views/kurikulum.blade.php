@@ -379,15 +379,15 @@
                                                    </div>
                                                 </div>
                                                 <div class="text-justify">
-                                                   <table class="table">
+                                                   <table class="table" style="font-size:min(2vw, 15px);">
                                                       <thead class="table-dark">
                                                       <tr>
-                                                         <th scope="col">Kode Mata Kuliah</th>
-                                                         <th scope="col">Nama Mata Kuliah</th>
-                                                         <th scope="col">Kelompok Mata Kuliah</th>
-                                                         <th scope="col">Semester</th>
-                                                         <th scope="col">SKS</th>
-                                                         <th scope="col">Stream</th>
+                                                         <th scope="col" style="font-size:1.3vw;">Kode Mata Kuliah</th>
+                                                         <th scope="col" style="font-size:1.3vw;">Nama Mata Kuliah</th>
+                                                         <th scope="col" style="font-size:1.3vw;">Kelompok Mata Kuliah</th>
+                                                         <th scope="col" style="font-size:1.3vw;">Semester</th>
+                                                         <th scope="col" style="font-size:1.3vw;">SKS</th>
+                                                         <th scope="col" style="font-size:1.3vw;">Stream</th>
                                                       </tr>
                                                       </thead>
                                                       <tbody>
