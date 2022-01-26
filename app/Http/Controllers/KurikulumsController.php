@@ -29,11 +29,6 @@ class KurikulumsController extends Controller
 
     public function store(Request $request)
     {
-        // Validate posted form data
-        // $this->validate($request, [
-        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
-        // ]);
-
         DB::transaction(function () use ($request) {
             if ($request->hasfile('document')) {
                 $document = $request->file('document');
@@ -73,6 +68,7 @@ class KurikulumsController extends Controller
         // ]);
 
         if ($request->hasfile('document')) {
+            $file = $request->file('file');
             $document = $request->file('document');
             $nama_document = time() . "_" . $document->getClientOriginalName();
             $tujuan_upload = public_path('document/');
@@ -86,7 +82,7 @@ class KurikulumsController extends Controller
                 'kelompok_mk'       => $request->kelompok_mk,
                 'sks'               => $request->sks,
                 'semester'          => $request->semester,
-                'document'          => request('document') ? 'document/' . $nama_document : null,
+                'document'          => request('document') ? 'document/' . $nama_document : $request->old,
             ]);
 
         return redirect(route('kurikulums.index'))->with('alert', 'Data berhasil diupdate!');

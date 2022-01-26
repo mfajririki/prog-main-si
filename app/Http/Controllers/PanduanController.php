@@ -58,8 +58,7 @@ class PanduanController extends Controller
 
     public function update($id, Request $request)
     {
-        $file = $request->file('file');
-        if ($file) {
+        if ($request->file('document')) {
             $document = $request->file('document');
             $nama_document = time() . "_" . $document->getClientOriginalName();
             $tujuan_upload = public_path('document/');
