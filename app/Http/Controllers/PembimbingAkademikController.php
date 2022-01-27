@@ -29,12 +29,6 @@ class PembimbingAkademikController extends Controller
 
     public function store(Request $request)
     {
-        // Validate posted form data
-        // $this->validate($request, [
-        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
-        //     'title' => 'required',
-        // ]);
-
         DB::transaction(function () use ($request) {
             $document = $request->file('document');
             $nama_document = time() . "_" . $document->getClientOriginalName();
@@ -63,15 +57,12 @@ class PembimbingAkademikController extends Controller
 
     public function update($id, Request $request)
     {
-        // $this->validate($request, [
-        //     'document' => 'required|file|mimes:docx,doc,pdf,xlsx|max:2048',
-        //     'title' => 'required',
-        // ]);
-
-        $document = $request->file('document');
-        $nama_document = time() . "_" . $document->getClientOriginalName();
-        $tujuan_upload = public_path('document/');
-        $document->move($tujuan_upload, $nama_document);
+        if ($request->file('document')) {
+            $document = $request->file('document');
+            $nama_document = time() . "_" . $document->getClientOriginalName();
+            $tujuan_upload = public_path('document/');
+            $document->move($tujuan_upload, $nama_document);
+        }
 
         $pembimbing_akademik = PembimbingAkademik::where('id', $id)
             ->update([
