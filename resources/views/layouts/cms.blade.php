@@ -325,7 +325,10 @@
                     // [groupName, [list of button]]
                     ['style', ['bold', 'italic', 'underline']],
                     ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
                     ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['table', 'picture', 'video', 'link']]
                 ]
             });
         })
