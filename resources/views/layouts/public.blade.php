@@ -157,7 +157,7 @@
                     <div class="carousel-inner">
                         @if ($sliders == [])
                             <div class="carousel-item active">
-                                <img src="images/slider.png" class="d-block w-100" alt="slider" style="height: 275px;">
+                                <img src={{ asset("images/slider.png") }} class="d-block w-100" alt="slider" style="height: 275px;">
                             </div>
                         @else
                             @foreach ($sliders as $no => $slider)

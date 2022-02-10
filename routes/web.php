@@ -48,6 +48,7 @@ Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'del
 Route::resource('/panduan', PanduanController::class);
 Route::get('/panduan/{id}/hapus_doc', [PanduanController::class, 'hapus_doc'])->name('panduan.hapus_doc');
 Route::resource('/staf_pengajar', StafController::class);
+Route::post('/staf_pengajar/import_excel', [StafController::class, 'import_excel']);
 Route::resource('/bidangminat', BidangMinatController::class);
 Route::resource('/visi_misi', VisiMisiController::class);
 Route::resource('/profile_lulusan', ProfileLulusanController::class);
@@ -56,6 +57,7 @@ Route::get('/pembimbing_akademik/{id}/hapus_doc', [PembimbingAkademikController:
 Route::resource('/tujuans', TujuansController::class);
 Route::resource('/tentang', TentangController::class);
 Route::resource('/kurikulums', KurikulumsController::class);
+Route::post('/kurikulum/import_excel', [KurikulumsController::class, 'import_excel']);
 Route::get('/kurikulums/{id}/hapus_doc', [KurikulumsController::class, 'hapus_doc'])->name('kurikulums.hapus_doc');
 Route::resource('/profile_kaprodi', ProfileKaprodiController::class);
 Route::resource('/slider', SliderController::class);
