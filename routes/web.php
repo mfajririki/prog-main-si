@@ -50,6 +50,7 @@ Route::get('/panduan/{id}/hapus_doc', [PanduanController::class, 'hapus_doc'])->
 Route::resource('/staf_pengajar', StafController::class);
 Route::post('/staf_pengajar/import_excel', [StafController::class, 'import_excel']);
 Route::resource('/bidangminat', BidangMinatController::class);
+Route::post('/bidangminat/import_excel', [BidangMinatController::class, 'import_excel']);
 Route::resource('/visi_misi', VisiMisiController::class);
 Route::resource('/profile_lulusan', ProfileLulusanController::class);
 Route::resource('/pembimbing_akademik', PembimbingAkademikController::class);
