@@ -37,14 +37,14 @@
                                         </div>
                                         <div class="modal-body">
                                             <img src={{ asset("images/ContohImportKurikulum.png") }} class="rounded mx-auto d-block" alt="Contoh penulisan excel" width="700px">
-                 
+
                                             {{ csrf_field() }}
-                 
+
                                             <label>Pilih file excel </label><span class="text-danger">&nbsp; *csv, xls, xlsx</span>
                                             <div class="form-group">
                                                 <input type="file" name="file" required="required">
                                             </div>
-                 
+
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -54,6 +54,8 @@
                                 </form>
                             </div>
                         </div>
+                        <a href="/kurikulum/delete_all" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus semua data?');">Hapus Semua<i
+                            class="ml-2 fa fa-trash fa-sm"></i></a>
                     </div>
                     <!-- /.card-header -->
 
@@ -73,35 +75,40 @@
                             </thead>
 
                             <tbody>
-                                @foreach($kurikulum as $no => $mata_kuliah)
-                                <tr>
-                                    <td>{{ $no+1 }}</td>
-                                    <td>{{ $mata_kuliah->kode_mk }}</td>
-                                    <td>{{ $mata_kuliah->nama_mk }}</td>
-                                    <td>{{ $mata_kuliah->kelompok_mk }}</td>
-                                    <td>{{ $mata_kuliah->sks }}</td>
-                                    <td>{{ $mata_kuliah->semester }}</td>
-                                    <td><a href="{{ asset($mata_kuliah->document) }}" target="_blank">{{ $mata_kuliah->document }}</a></td>
-                                    <td>
-                                        <a href="{{ route('kurikulums.edit', $mata_kuliah) }}"
-                                            class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>
-                                        </a>
-                                        <form class="d-inline" method="POST"
-                                            action="{{ route('kurikulums.destroy', $mata_kuliah) }}">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
 
-                                            <button type="submit" class="btn btn-sm btn-danger"
-                                                onclick="return confirm('Yakin ingin menghapus?');">Hapus <i
-                                                    class="fas fa-trash fa-sm ml-2"></i></button>
-                                        </form>
-                                    </td>
+                                @foreach($kurikulumSort as $no=>$mata_kuliah)
+                                <tr>
+                                        <td>{{ $no+1 }}</td>
+                                        <td>{{ $mata_kuliah->kode_mk }}</td>
+                                        <td>{{ $mata_kuliah->nama_mk }}</td>
+                                        <td>{{ $mata_kuliah->kelompok_mk }}</td>
+                                        <td>{{ $mata_kuliah->sks }}</td>
+
+                                            <td style="vertical-align: middle">{{ $mata_kuliah->semester }}</td>
+
+                                        <td><a href="{{ asset($mata_kuliah->document) }}" target="_blank">{{ $mata_kuliah->document }}</a></td>
+                                        <td>
+                                            <a href="{{ route('kurikulums.edit', $mata_kuliah) }}"
+                                                class="btn btn-sm btn-success"> Edit <i class="ml-2 fas fa-edit fa-sm"></i>
+                                            </a>
+                                            <form class="d-inline" method="POST"
+                                                action="{{ route('kurikulums.destroy', $mata_kuliah) }}">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+
+                                                <button type="submit" class="btn btn-sm btn-danger"
+                                                    onclick="return confirm('Yakin ingin menghapus?');">Hapus <i
+                                                        class="fas fa-trash fa-sm ml-2"></i></button>
+                                            </form>
+                                        </td>
+
                                 </tr>
+
                                 @endforeach
                             </tbody>
 
                         </table>
-                        
+
                     </div>
                     <!-- /.card-body -->
                 </div>

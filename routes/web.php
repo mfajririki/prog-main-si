@@ -47,19 +47,31 @@ Route::resource('/announcement', AnnouncementController::class);
 Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'delete_doc'])->name('announcement.delete_doc');
 Route::resource('/panduan', PanduanController::class);
 Route::get('/panduan/{id}/hapus_doc', [PanduanController::class, 'hapus_doc'])->name('panduan.hapus_doc');
+
 Route::resource('/staf_pengajar', StafController::class);
 Route::post('/staf_pengajar/import_excel', [StafController::class, 'import_excel']);
+Route::get('/staf/delete_all', [StafController::class, 'delete_all']);
+
 Route::resource('/bidangminat', BidangMinatController::class);
 Route::post('/bidangminat/import_excel', [BidangMinatController::class, 'import_excel']);
+Route::get('/minat/delete_all', [BidangMinatController::class, 'delete_all']);
+
 Route::resource('/visi_misi', VisiMisiController::class);
+
 Route::resource('/profile_lulusan', ProfileLulusanController::class);
+Route::get('/profilelulusan/delete_all', [ProfileLulusanController::class, 'delete_all']);
+Route::post('/profilelulusan/import_excel', [ProfileLulusanController::class, 'import_excel']);
+
 Route::resource('/pembimbing_akademik', PembimbingAkademikController::class);
 Route::get('/pembimbing_akademik/{id}/hapus_doc', [PembimbingAkademikController::class, 'hapus_doc'])->name('pembimbing_akademik.hapus_doc');
 Route::resource('/tujuans', TujuansController::class);
 Route::resource('/tentang', TentangController::class);
+
 Route::resource('/kurikulums', KurikulumsController::class);
+Route::get('/kurikulum/delete_all', [KurikulumsController::class, 'delete_all']);
 Route::post('/kurikulum/import_excel', [KurikulumsController::class, 'import_excel']);
 Route::get('/kurikulums/{id}/hapus_doc', [KurikulumsController::class, 'hapus_doc'])->name('kurikulums.hapus_doc');
+
 Route::resource('/profile_kaprodi', ProfileKaprodiController::class);
 Route::resource('/slider', SliderController::class);
 Route::resource('/user', UsersController::class);

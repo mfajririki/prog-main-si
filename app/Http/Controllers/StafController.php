@@ -122,4 +122,11 @@ class StafController extends Controller
         // alihkan halaman kembali
         return redirect(route('staf_pengajar.index'))->with('alert', 'Import berhasil.');
     }
+
+    public function delete_all(Staf $staf)
+    {
+        $staf->truncate();
+
+        return redirect(route('staf_pengajar.index'))->with('alert', 'Semua data berhasil dihapus');
+    }
 }

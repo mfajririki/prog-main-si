@@ -21,8 +21,9 @@ class KurikulumsController extends Controller
     public function index()
     {
         $kurikulum  = Kurikulums::latest()->get();
-
-        return view('admin.kurikulums.index', compact('kurikulum'));
+        $kurikulumSort = $kurikulum->sortBy('semester');
+        $semesterSatu = Kurikulums::where('semester', 'Semester 1')->count();
+        return view('admin.kurikulums.index', compact('kurikulum', 'semesterSatu', 'kurikulumSort'));
     }
 
     public function create()
@@ -131,5 +132,12 @@ class KurikulumsController extends Controller
 
         // alihkan halaman kembali
         return redirect(route('kurikulums.index'))->with('alert', 'Import berhasil.');
+    }
+
+    public function delete_all(Kurikulums $kurikulum)
+    {
+        $kurikulum->truncate();
+
+        return redirect(route('kurikulums.index'))->with('alert', 'Semua data berhasil dihapus');
     }
 }

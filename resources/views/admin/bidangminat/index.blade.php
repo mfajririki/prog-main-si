@@ -54,6 +54,8 @@
                                 </form>
                             </div>
                         </div>
+                        <a href="/minat/delete_all" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus semua data?');">Hapus Semua<i
+                            class="ml-2 fa fa-trash fa-sm"></i></a>
                     </div>
                     <!-- /.card-header -->
 

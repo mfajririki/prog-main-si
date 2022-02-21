@@ -111,4 +111,11 @@ class BidangMinatController extends Controller
         // alihkan halaman kembali
         return redirect(route('bidangminat.index'))->with('alert', 'Import berhasil.');
     }
+
+    public function delete_all(BidangMinat $bidangminat)
+    {
+        $bidangminat->truncate();
+
+        return redirect(route('bidangminat.index'))->with('alert', 'Semua data berhasil dihapus');
+    }
 }

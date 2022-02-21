@@ -37,14 +37,14 @@
                                         </div>
                                         <div class="modal-body">
                                             <img src={{ asset("images/ContohImportStaff.png") }} class="rounded mx-auto d-block" alt="Contoh penulisan excel" width="650px">
-                 
+
                                             {{ csrf_field() }}
-                 
+
                                             <label>Pilih file excel</label><span class="text-danger">&nbsp; *csv, xls, xlsx</span>
                                             <div class="form-group">
                                                 <input type="file" name="file" required="required">
                                             </div>
-                 
+
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -54,6 +54,8 @@
                                 </form>
                             </div>
                         </div>
+                        <a href="/staf/delete_all" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus semua data?');">Hapus Semua<i
+                            class="ml-2 fa fa-trash fa-sm"></i></a>
                     </div>
                     <!-- /.card-header -->
 
