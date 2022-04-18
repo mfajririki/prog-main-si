@@ -19,18 +19,22 @@ use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Sail\Console\PublishCommand;
-
-// Landing page
-Route::get('/', [PublicController::class, 'halamanUtama'])->name('landing');
+use Maatwebsite\Excel\Row;
 
 // Public
+Route::get('/', [PublicController::class, 'halamanUtama']);
+Route::get('/tentangprodi', [PublicController::class, 'tentangprodi']);
+Route::get('/visimisitujuan', [PublicController::class, 'visimisitujuan']);
+Route::get('/stafpengajar', [PublicController::class, 'stafpengajar']);
+Route::get('/profillulusan', [PublicController::class, 'profillulusan']);
+Route::get('/fasilitas', [PublicController::class, 'fasilitas']);
+Route::get('/kerjasama', [PublicController::class, 'kerjasama']);
+
 Route::get('/pengumuman', [PublicController::class, 'index'])->name('pengumuman');
 Route::get('/pengumuman-only', [PublicController::class, 'pengumuman'])->name('pengumuman_only');
 Route::get('/pengumuman-berita', [PublicController::class, 'berita'])->name('pengumuman_berita');
 Route::get('/pengumuman-prestasi', [PublicController::class, 'prestasi'])->name('pengumuman_prestasi');
-Route::get('/staf', [PublicController::class, 'staf'])->name('staf');
 Route::get('/pengumuman/{announcement}', [PublicController::class, 'show'])->name('pengumuman_detail');
-Route::get('/profilelulusan', [PublicController::class, 'profilelulusan'])->name('profilelulusan');
 Route::get('/bimbingan-akademik', [PublicController::class, 'bimbingan_akademik'])->name('bimbingan_akademik');
 Route::get('/kurikulum', [PublicController::class, 'kurikulum_konten'])->name('kurikulum_konten');
 Route::get('/halpanduan', [PublicController::class, 'halpanduan'])->name('halpanduan');

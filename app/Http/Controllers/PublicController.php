@@ -25,23 +25,10 @@ class PublicController extends Controller
 {
     public function halamanUtama()
     {
-        $tentang = Tentang::get();
-        $visi_misi = VisiMisi::get();
-        $tujuan = Tujuans::get();
-        $profile_kaprodi = ProfileKaprodi::get();
-        $sliders = Slider::get();
         $title = "Beranda";
 
         return view(
-            'landing',
-            compact(
-                'tentang',
-                'visi_misi',
-                'tujuan',
-                'title',
-                'profile_kaprodi',
-                'sliders'
-            ),
+            'new.beranda',
         );
     }
 
@@ -129,12 +116,33 @@ class PublicController extends Controller
         return view('bimbingan_akademik', compact('pembimbing_akademik', 'title', 'sliders'));
     }
 
-    public function profilelulusan()
+    public function profillulusan()
     {
-        $profilelulusan = ProfileLulusan::get();
-        $sliders = Slider::get();
-        $title = "Profil Lulusan";
+        return view('new.profil_lulusan',);
+    }
 
-        return view('profilelulusan', compact('profilelulusan', 'title', 'sliders'));
+    public function tentangprodi()
+    {
+        return view('new.tentang',);
+    }
+
+    public function visimisitujuan()
+    {
+        return view('new.visi_misi_tujuan');
+    }
+
+    public function stafpengajar()
+    {
+        return view('new.staf_pengajar');
+    }
+
+    public function fasilitas()
+    {
+        return view('new.fasilitas');
+    }
+
+    public function kerjasama()
+    {
+        return view('new.kerja_sama');
     }
 }
