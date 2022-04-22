@@ -85,3 +85,31 @@
     font-weight: 700;
     color: rgb(24, 55, 131);
 }
+
+.imgMBKM {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.subJudulMBKM {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(23, 35, 80);
+}
+
+.imgProgramMBKM {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.linkLoker {
+    text-decoration: none;
+    color: blue;
+}
+
+.linkLoker:hover {
+    color: red;
+}

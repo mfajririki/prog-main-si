@@ -29,14 +29,19 @@ Route::get('/stafpengajar', [PublicController::class, 'stafpengajar']);
 Route::get('/profillulusan', [PublicController::class, 'profillulusan']);
 Route::get('/fasilitas', [PublicController::class, 'fasilitas']);
 Route::get('/kerjasama', [PublicController::class, 'kerjasama']);
+Route::get('/mbkm', [PublicController::class, 'mbkm']);
+Route::get('/pengumuman', [PublicController::class, 'pengumuman']);
+Route::get('/berita', [PublicController::class, 'berita']);
+Route::get('/prestasi', [PublicController::class, 'prestasi']);
+Route::get('/lowongankerja', [PublicController::class, 'lowongankerja']);
+Route::get('/kurikulum', [PublicController::class, 'kurikulum']);
+Route::get('/bimbinganakademik', [PublicController::class, 'bimbinganakademik']);
+Route::get('/panduan', [PublicController::class, 'panduan']);
 
-Route::get('/pengumuman', [PublicController::class, 'index'])->name('pengumuman');
 Route::get('/pengumuman-only', [PublicController::class, 'pengumuman'])->name('pengumuman_only');
 Route::get('/pengumuman-berita', [PublicController::class, 'berita'])->name('pengumuman_berita');
 Route::get('/pengumuman-prestasi', [PublicController::class, 'prestasi'])->name('pengumuman_prestasi');
 Route::get('/pengumuman/{announcement}', [PublicController::class, 'show'])->name('pengumuman_detail');
-Route::get('/bimbingan-akademik', [PublicController::class, 'bimbingan_akademik'])->name('bimbingan_akademik');
-Route::get('/kurikulum', [PublicController::class, 'kurikulum_konten'])->name('kurikulum_konten');
 Route::get('/halpanduan', [PublicController::class, 'halpanduan'])->name('halpanduan');
 
 // Admin
@@ -49,8 +54,8 @@ Auth::routes([
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::resource('/announcement', AnnouncementController::class);
 Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'delete_doc'])->name('announcement.delete_doc');
-Route::resource('/panduan', PanduanController::class);
-Route::get('/panduan/{id}/hapus_doc', [PanduanController::class, 'hapus_doc'])->name('panduan.hapus_doc');
+// Route::resource('/panduan', PanduanController::class);
+// Route::get('/panduan/{id}/hapus_doc', [PanduanController::class, 'hapus_doc'])->name('panduan.hapus_doc');
 
 Route::resource('/staf_pengajar', StafController::class);
 Route::post('/staf_pengajar/import_excel', [StafController::class, 'import_excel']);

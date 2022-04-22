@@ -19,7 +19,7 @@
             </div>
             <div class="col">
                 <div class="col">
-                    <p class="border-bottom pb-3 footerJudul">Our Campus</p>
+                    <p class="border-bottom pb-3 footerJudul">Contact</p>
                     <p class="footerLink">No. Telepon 0711-515582</p>
                     <p class="footerLink" style="margin-bottom: -2px">Layanan PPM</p>
                     <p class="footerLink">0821-8061-0336/0821-7967-3360</p>

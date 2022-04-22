@@ -44,32 +44,22 @@ class PublicController extends Controller
 
     public function pengumuman()
     {
-        $announcements  = Announcement::latest()->paginate(8);
-        $latests  = Announcement::latest()->limit(6)->get();
-        $sliders = Slider::get();
-        $title = "Pengumuman";
-
-        return view('pengumuman_only', compact('announcements', 'latests', 'title', 'sliders'));
+        return view('new.pengumuman');
     }
 
     public function berita()
     {
-        $announcements  = Announcement::latest()->paginate(8);
-        $latests  = Announcement::latest()->limit(6)->get();
-        $sliders = Slider::get();
-        $title = "Pengumuman - Berita";
-
-        return view('pengumuman_berita', compact('announcements', 'latests', 'title', 'sliders'));
+        return view('new.berita');
     }
 
     public function prestasi()
     {
-        $announcements  = Announcement::latest()->paginate(8);
-        $latests  = Announcement::latest()->limit(6)->get();
-        $sliders = Slider::get();
-        $title = "Pengumuman - Prestasi";
+        return view('new.prestasi');
+    }
 
-        return view('pengumuman_prestasi', compact('announcements', 'latests', 'title', 'sliders'));
+    public function lowongankerja()
+    {
+        return view('new.lowongan_kerja');
     }
 
     public function show(Announcement $announcement)
@@ -88,32 +78,19 @@ class PublicController extends Controller
         return view('staf', compact('staf_pengajar', 'title', 'sliders'));
     }
 
-    public function kurikulum_konten()
+    public function kurikulum()
     {
-        $kurikulum = Kurikulums::get();
-        $mk_bidangminat = BidangMinat::get();
-        $sliders = Slider::get();
-        $title = "Kurikulum";
-
-        return view('kurikulum', compact('kurikulum', 'mk_bidangminat', 'title', 'sliders'));
+        return view('new.kurikulum');
     }
 
-    public function halpanduan()
+    public function panduan()
     {
-        $panduan = Panduan::get();
-        $sliders = Slider::get();
-        $title = "Panduan";
-
-        return view('panduan', compact('panduan', 'title', 'sliders'));
+        return view('new.panduan');
     }
 
-    public function bimbingan_akademik()
+    public function bimbinganakademik()
     {
-        $pembimbing_akademik = PembimbingAkademik::get();
-        $sliders = Slider::get();
-        $title = "Bimbingan Akademik";
-
-        return view('bimbingan_akademik', compact('pembimbing_akademik', 'title', 'sliders'));
+        return view('new.bimbingan_akademik');
     }
 
     public function profillulusan()
@@ -144,5 +121,10 @@ class PublicController extends Controller
     public function kerjasama()
     {
         return view('new.kerja_sama');
+    }
+
+    public function mbkm()
+    {
+        return view('new.mbkm');
     }
 }

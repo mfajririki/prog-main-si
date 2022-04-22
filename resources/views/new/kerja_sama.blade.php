@@ -56,7 +56,7 @@
                 <h5>Nama Instansi</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit magna in pellentesque interdum.
                 </p>
-                <a class="btn btn-primary rounded-pill active" href="#" role="button">Selengkapnya</a>
+                <a class="btn btn-primary btn-sm rounded-pill active" href="#" role="button">Selengkapnya</a>
             </div>
         </div>
     </div>
