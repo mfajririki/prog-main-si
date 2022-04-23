@@ -1,30 +1,28 @@
 @extends('layouts.new_public')
 
 @section('content')
-    @include('new.partials.navbar')
+    @include('new_ui.partials.navbar')
 
-    @include('new.partials.header')
+    @include('new_ui.partials.header')
 
     <div class="container">
         <div class="row mt-5 border-bottom border-2">
             <p class="subJudul">Sambutan Kaprodi</p>
         </div>
-        <div class="row mt-3">
-            <div class="col text-center">
-                <img src={{ asset('assets/images/PAK_ZAID.png') }} alt="Ketua Program Studi" style="width: 300px;">
+        @foreach ($profile_kaprodi as $kaprodi)
+            <div class="row mt-3">
+                @if ($kaprodi->photo != null)
+                    <div class="col text-center">
+                        <img src="{{ $kaprodi->photo }}" alt="Ketua Program Studi" style="width: 300px;">
+                    </div>
+                @endif
+                <div class="col">
+                    <p class="subJudulNamaKaprodi">{{ $kaprodi->nama }}</p>
+                    <p style="margin-top: -15px">Ketua Program Studi Sistem Informasi</p>
+                    <p style="text-align: justify">{!! $kaprodi->kutipan !!}</p>
+                </div>
             </div>
-            <div class="col">
-                <p class="subJudulNamaKaprodi">Zaid Amin, M.Kom., Ph.D.</p>
-                <p style="margin-top: -15px">Ketua Program Studi Sistem Informasi</p>
-                <p style="text-align: justify">Program Studi Sistem Informasi adalah salah satu program studi yang ada di
-                    Fakultas
-                    Ilmu Komputer Universitas
-                    Bina Darma. Akreditasi Program Studi yaitu “A” Tahun 2014. Keunggulan PSSI adalah pada kurikulumnya yang
-                    berbasis kompetensi yang menggabungkan kurikulum standar APTIKOM, kurikulum internasional (NIIT) dan
-                    Muatan
-                    kurikulum lokal, selain pengayaan kurikulum dengan sertifikasi Internasional PASAS.</p>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     <div class="bgGrey">
@@ -105,5 +103,5 @@
     </div>
 
     {{-- footer --}}
-    @include('new.partials.footer')
+    @include('new_ui.partials.footer')
 @endsection

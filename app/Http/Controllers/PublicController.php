@@ -9,6 +9,7 @@ use App\Models\Document;
 use App\Models\Kurikulums;
 use App\Models\Panduan;
 use App\Models\PembimbingAkademik;
+use App\Models\Kaprodi;
 use App\Models\ProfileKaprodi;
 use App\Models\ProfileLulusan;
 use App\Models\Slider;
@@ -26,9 +27,10 @@ class PublicController extends Controller
     public function halamanUtama()
     {
         $title = "Beranda";
+        $profile_kaprodi = ProfileKaprodi::get();
 
         return view(
-            'new.beranda',
+            'new_ui.beranda', compact('profile_kaprodi')
         );
     }
 
@@ -44,22 +46,22 @@ class PublicController extends Controller
 
     public function pengumuman()
     {
-        return view('new.pengumuman');
+        return view('new_ui.pengumuman');
     }
 
     public function berita()
     {
-        return view('new.berita');
+        return view('new_ui.berita');
     }
 
     public function prestasi()
     {
-        return view('new.prestasi');
+        return view('new_ui.prestasi');
     }
 
     public function lowongankerja()
     {
-        return view('new.lowongan_kerja');
+        return view('new_ui.lowongan_kerja');
     }
 
     public function show(Announcement $announcement)
@@ -80,51 +82,51 @@ class PublicController extends Controller
 
     public function kurikulum()
     {
-        return view('new.kurikulum');
+        return view('new_ui.kurikulum');
     }
 
     public function panduan()
     {
-        return view('new.panduan');
+        return view('new_ui.panduan');
     }
 
     public function bimbinganakademik()
     {
-        return view('new.bimbingan_akademik');
+        return view('new_ui.bimbingan_akademik');
     }
 
     public function profillulusan()
     {
-        return view('new.profil_lulusan',);
+        return view('new_ui.profil_lulusan',);
     }
 
     public function tentangprodi()
     {
-        return view('new.tentang',);
+        return view('new_ui.tentang',);
     }
 
     public function visimisitujuan()
     {
-        return view('new.visi_misi_tujuan');
+        return view('new_ui.visi_misi_tujuan');
     }
 
     public function stafpengajar()
     {
-        return view('new.staf_pengajar');
+        return view('new_ui.staf_pengajar');
     }
 
     public function fasilitas()
     {
-        return view('new.fasilitas');
+        return view('new_ui.fasilitas');
     }
 
     public function kerjasama()
     {
-        return view('new.kerja_sama');
+        return view('new_ui.kerja_sama');
     }
 
     public function mbkm()
     {
-        return view('new.mbkm');
+        return view('new_ui.mbkm');
     }
 }

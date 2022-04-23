@@ -1,7 +1,7 @@
 @extends('layouts.new_public')
 
 @section('content')
-    @include('new.partials.navbar')
+    @include('new_ui.partials.navbar')
 
     <div class="container">
         <div class="row mx-auto" style="margin-top: 100px">
@@ -48,5 +48,5 @@
         </div>
     </div>
 
-    @include('new.partials.footer')
+    @include('new_ui.partials.footer')
 @endsection

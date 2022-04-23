@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" aria-current="page" href="#">Beranda</a>
+                        <a class="nav-link active fw-bold" aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-bold active" href="#" id="navbarDropdown" role="button"
@@ -19,13 +19,14 @@
                             Tentang
                         </a>
                         <ul class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-white" href="#">Tentang Prodi Sistem Informasi</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Visi, Misi & Tujuan</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Staf Pengajar</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Profil Lulusan</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Prasarana</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Kerja Sama</a></li>
-                            <li><a class="dropdown-item text-white" href="#">MBKM</a></li>
+                            <li><a class="dropdown-item text-white" href="/tentangprodi">Tentang Prodi Sistem
+                                    Informasi</a></li>
+                            <li><a class="dropdown-item text-white" href="/visimisitujuan">Visi, Misi & Tujuan</a></li>
+                            <li><a class="dropdown-item text-white" href="/stafpengajar">Staf Pengajar</a></li>
+                            <li><a class="dropdown-item text-white" href="/profillulusan">Profil Lulusan</a></li>
+                            <li><a class="dropdown-item text-white" href="/fasilitas">Prasarana</a></li>
+                            <li><a class="dropdown-item text-white" href="/kerjasama">Kerja Sama</a></li>
+                            <li><a class="dropdown-item text-white" href="/mbkm">MBKM</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -34,10 +35,10 @@
                             Informasi
                         </a>
                         <ul class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-white" href="#">Pengumuman</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Berita</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Prestasi</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Lowongan Kerja</a></li>
+                            <li><a class="dropdown-item text-white" href="/pengumuman">Pengumuman</a></li>
+                            <li><a class="dropdown-item text-white" href="/berita">Berita</a></li>
+                            <li><a class="dropdown-item text-white" href="/prestasi">Prestasi</a></li>
+                            <li><a class="dropdown-item text-white" href="/lowongankerja">Lowongan Kerja</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -46,14 +47,22 @@
                             Kurikulum
                         </a>
                         <ul class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-white" href="#">Kurikulum Sistem Informasi</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Bimbingan Akademik</a></li>
+                            <li><a class="dropdown-item text-white" href="/kurikulum">Kurikulum Sistem Informasi</a>
+                            </li>
+                            <li><a class="dropdown-item text-white" href="/bimbinganakademik">Bimbingan Akademik</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fw-bold" aria-current="page" href="#">Panduan</a>
+                        <a class="nav-link active fw-bold" aria-current="page" href="/panduan">Panduan</a>
                     </li>
-                    <button type="button" class="btn btn-primary active btn-sm ms-3">Login</button>
+                    @guest
+                        <button type="button" class="btn btn-primary active btn-sm ms-3"><a href={{ route('login') }}
+                                class="loginLink">Login</a></button>
+                    @else
+                        <button type="button" class="btn btn-primary active btn-sm ms-3"><a href={{ route('login') }}
+                                class="loginLink">Admin</a></button>
+                    @endguest
                 </ul>
             </div>
         </div>

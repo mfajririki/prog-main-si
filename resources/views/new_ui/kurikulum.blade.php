@@ -1,7 +1,7 @@
 @extends('layouts.new_public')
 
 @section('content')
-    @include('new.partials.navbar')
+    @include('new_ui.partials.navbar')
 
     <div class="container">
         <div class="row mx-auto" style="margin-top: 100px">
@@ -38,13 +38,13 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-distribusimk" role="tabpanel"
                 aria-labelledby="nav-distribusimk-tab">
-                @include('new.partials.distribusi_mata_kuliah')
+                @include('new_ui.partials.distribusi_mata_kuliah')
             </div>
             <div class="tab-pane fade" id="nav-bidangminat" role="tabpanel" aria-labelledby="nav-bidangminat-tab">
-                @include('new.partials.mata_kuliah_bidang_minat')
+                @include('new_ui.partials.mata_kuliah_bidang_minat')
             </div>
         </div>
     </div>
 
-    @include('new.partials.footer')
+    @include('new_ui.partials.footer')
 @endsection

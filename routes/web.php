@@ -51,6 +51,9 @@ Auth::routes([
     'confirm' => false,
 ]);
 
+// Admin-Beranda
+Route::resource('/admin-kaprodi', ProfileKaprodiController::class);
+
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::resource('/announcement', AnnouncementController::class);
 Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'delete_doc'])->name('announcement.delete_doc');
@@ -81,8 +84,6 @@ Route::get('/kurikulum/delete_all', [KurikulumsController::class, 'delete_all'])
 Route::post('/kurikulum/import_excel', [KurikulumsController::class, 'import_excel']);
 Route::get('/kurikulums/{id}/hapus_doc', [KurikulumsController::class, 'hapus_doc'])->name('kurikulums.hapus_doc');
 
-Route::resource('/profile_kaprodi', ProfileKaprodiController::class);
+
 Route::resource('/slider', SliderController::class);
 Route::resource('/user', UsersController::class);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

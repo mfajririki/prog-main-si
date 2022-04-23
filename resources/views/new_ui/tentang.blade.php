@@ -1,9 +1,9 @@
 @extends('layouts.new_public')
 
 @section('content')
-    @include('new.partials.navbar')
+    @include('new_ui.partials.navbar')
 
-    @include('new.partials.header')
+    @include('new_ui.partials.header')
 
 
     <div class="container">
@@ -53,5 +53,5 @@
         </div>
     </div>
 
-    @include('new.partials.footer')
+    @include('new_ui.partials.footer')
 @endsection

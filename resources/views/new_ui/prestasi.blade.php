@@ -1,22 +1,22 @@
 @extends('layouts.new_public')
 
 @section('content')
-    @include('new.partials.navbar')
+    @include('new_ui.partials.navbar')
 
-    @include('new.partials.header_info')
+    @include('new_ui.partials.header_info')
 
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <p class="breadcrumb-item">Informasi</p>
-                <li class="breadcrumb-item active" aria-current="page">Berita</li>
+                <li class="breadcrumb-item active" aria-current="page">Prestasi</li>
             </ol>
         </nav>
     </div>
 
     <div class="container">
         <div class="row mt-5">
-            <p class="subJudul">Berita</p>
+            <p class="subJudul">Prestasi</p>
         </div>
     </div>
 
@@ -47,5 +47,5 @@
         </div>
     </div>
 
-    @include('new.partials.footer')
+    @include('new_ui.partials.footer')
 @endsection
