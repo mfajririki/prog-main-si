@@ -30,22 +30,17 @@
     </div>
 
     <div class="container">
-        <div class="row boxShadow p-3 my-3">
-            <div class="col align-self-center">
-                <p class="fw-bold py-3">Nama Panduan</p>
+        @foreach ($panduans as $panduan)
+            <div class="row boxShadow p-3 my-3">
+                <div class="col align-self-center">
+                    <p class="fw-bold py-3">{{ $panduan->title }}</p>
+                </div>
+                <div class="col text-end align-self-center">
+                    <a target="_blank" href="{{ asset($panduan->document) }}" type="button"
+                        class="btn btn-primary btn-sm active rounded-pill">Download</a>
+                </div>
             </div>
-            <div class="col text-end align-self-center">
-                <button type="button" class="btn btn-primary btn-sm active rounded-pill">Download</button>
-            </div>
-        </div>
-        <div class="row boxShadow p-3 my-3">
-            <div class="col align-self-center">
-                <p class="fw-bold py-3">Nama Panduan</p>
-            </div>
-            <div class="col text-end align-self-center">
-                <button type="button" class="btn btn-primary btn-sm active rounded-pill">Download</button>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     @include('new_ui.partials.footer')

@@ -13,7 +13,7 @@
             <div class="row mt-3">
                 @if ($kaprodi->photo != null)
                     <div class="col text-center">
-                        <img src="{{ $kaprodi->photo }}" alt="Ketua Program Studi" style="width: 300px;">
+                        <img src="{{ asset($kaprodi->photo) }}" alt="Ketua Program Studi" style="width: 300px;">
                     </div>
                 @endif
                 <div class="col">
@@ -31,33 +31,16 @@
                 <p class="subJudul">Berita Terbaru</p>
             </div>
             <div class="row mt-3">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <h6>tanggal</h6>
-                    <img src={{ asset('assets/images/image_placeholder.png') }} class="card-img-top cardImage" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Berita
-                            blablablalblalfdldflkdfjsdfakjsdfsdafksdfsdlkfsdldkfsdljfksdfljk
-                        </h5>
+                @foreach ($latest_news as $news)
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <h6>{{ $news->created_at->translatedFormat('l, d m Y') }}</h6>
+                        <img src="{{ $news->photo }}" class="card-img-top cardImage" alt={{ $news->slug }}>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $news->title }}
+                            </h5>
+                        </div>
                     </div>
-                </div>
-                <div class="card mx-auto" style="width: 18rem;">
-                    <h6>tanggal</h6>
-                    <img src={{ asset('assets/images/image_placeholder.png') }} class="card-img-top cardImage" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Berita
-                            blablablalblalfdldflkdfjsdfakjsdfsdafksdfsdlkfsdldkfsdljfksdfljk
-                        </h5>
-                    </div>
-                </div>
-                <div class="card mx-auto" style="width: 18rem;">
-                    <h6>tanggal</h6>
-                    <img src={{ asset('assets/images/Frame_8.png') }} class="card-img-top cardImage" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Judul Berita
-                            blablablalblalfdldflkdfjsdfakjsdfsdafksdfsdlkfsdldkfsdljfksdfljk
-                        </h5>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

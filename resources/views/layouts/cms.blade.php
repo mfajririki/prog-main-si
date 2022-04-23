@@ -98,7 +98,7 @@
                                 <div class="container">
                                     <li class="nav-item">
                                         <a href="{{ route('admin-kaprodi.index') }}"
-                                            class="nav-link {{ Request::segment(1) == 'profile_kaprodi' ? 'active' : '' }}">
+                                            class="nav-link {{ Request::segment(1) == 'admin-kaprodi' ? 'active' : '' }}">
                                             <i class="nav-icon fas fa-user"></i>
                                             <p>Kaprodi</p>
                                         </a>
@@ -139,6 +139,13 @@
                                 class="nav-link {{ Request::segment(1) == 'announcement' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-bullhorn"></i>
                                 <p>Pengumuman</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin-panduan.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'admin-panduan' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-bullhorn"></i>
+                                <p>Panduan</p>
                             </a>
                         </li>
                         {{-- Dropdown Kurikulum --}}

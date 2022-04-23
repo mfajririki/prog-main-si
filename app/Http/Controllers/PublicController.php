@@ -28,9 +28,11 @@ class PublicController extends Controller
     {
         $title = "Beranda";
         $profile_kaprodi = ProfileKaprodi::get();
+        $latest_news = Announcement::latest()->limit(3)->get();
 
         return view(
-            'new_ui.beranda', compact('profile_kaprodi')
+            'new_ui.beranda',
+            compact('profile_kaprodi', 'latest_news')
         );
     }
 
@@ -87,7 +89,9 @@ class PublicController extends Controller
 
     public function panduan()
     {
-        return view('new_ui.panduan');
+        $panduans = Panduan::latest()->get();
+
+        return view('new_ui.panduan', compact('panduans'));
     }
 
     public function bimbinganakademik()
