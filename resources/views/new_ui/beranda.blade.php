@@ -66,21 +66,13 @@
                 <p class="subJudul">ALUMNI</p>
             </div>
             <div class="row mt-3">
-                <div class="col text-center">
-                    <img src={{ asset('assets/images/user-photo.png') }} class="rounded-circle imgAlumni" alt="...">
-                    <p>Nama Alumni</p>
-                    <p>Profesi</p>
-                </div>
-                <div class="col text-center">
-                    <img src={{ asset('assets/images/user-photo.png') }} class="rounded-circle imgAlumni" alt="...">
-                    <p>Nama Alumni</p>
-                    <p>Profesi</p>
-                </div>
-                <div class="col text-center">
-                    <img src={{ asset('assets/images/user-photo.png') }} class="rounded-circle imgAlumni" alt="...">
-                    <p>Nama Alumni</p>
-                    <p>Profesi</p>
-                </div>
+                @foreach ($alumnus as $alumni)
+                    <div class="col text-center">
+                        <img src="{{ $alumni->photo }}" class="rounded-circle imgAlumni mb-3" alt="...">
+                        <p>{{ $alumni->nama }}</p>
+                        <p>{{ $alumni->profesi }}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

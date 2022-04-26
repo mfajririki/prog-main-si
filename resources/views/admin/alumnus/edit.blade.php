@@ -23,11 +23,11 @@
 
                     <div class="card card-primary">
                         <div class="card-header">
-                            Ketua Program Studi
+                            Alumni
                         </div>
                         <!-- /.card-header -->
 
-                        <form action="{{ route('admin-alumnus.update', $alumni->id) }}" method="POST"
+                        <form action="{{ route('admin-alumnus.update', $admin_alumnu->id) }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             {{ method_field('PUT') }}
@@ -38,8 +38,16 @@
                                         <div class="form-group">
                                             <label>Nama </label>
                                             <input type="text" name="nama" class="form-control"
-                                                value="{{ $alumni->nama }}" required="">
-                                            <input type="hidden" name="old_nama" value="{{ $alumni->nama }}">
+                                                value="{{ $admin_alumnu->nama }}" required="">
+                                            <input type="hidden" name="old_nama" value="{{ $admin_alumnu->nama }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Profesi </label>
+                                            <input type="text" name="profesi" class="form-control"
+                                                value="{{ $admin_alumnu->profesi }}" required="">
+                                            <input type="hidden" name="old_profesi" value="{{ $admin_alumnu->profesi }}">
                                         </div>
                                     </div>
                                     <!-- /.col -->
@@ -52,19 +60,11 @@
                                                 <div class="custom-file">
                                                     <input type="file" name="photo" class="custom-file-input"
                                                         id="exampleInputFile">
-                                                    <input type="hidden" name="old" value="{{ $alumni->photo }}">
+                                                    <input type="hidden" name="old" value="{{ $admin_alumnu->photo }}">
                                                     <label class="custom-file-label" for="exampleInputFile">Pilih
                                                         Foto</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Kutipan -->
-                                    <div class="col-md-12 mt-3">
-                                        <div class="form-group">
-                                            <label for="exampleInputFile" class="d-block">Profesi</label>
-                                            <textarea name="kutipan" class="summernote">{{ $alumni->kutipan }}</textarea>
                                         </div>
                                     </div>
                                 </div>

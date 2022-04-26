@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Alumnus;
 use App\Models\Announcement;
 use App\Models\BidangMinat;
 use App\Models\Staf;
@@ -29,10 +30,11 @@ class PublicController extends Controller
         $title = "Beranda";
         $profile_kaprodi = ProfileKaprodi::get();
         $latest_news = Announcement::latest()->limit(3)->get();
+        $alumnus = Alumnus::latest()->limit(3)->get();
 
         return view(
             'new_ui.beranda',
-            compact('profile_kaprodi', 'latest_news')
+            compact('profile_kaprodi', 'latest_news', 'alumnus')
         );
     }
 
@@ -101,7 +103,9 @@ class PublicController extends Controller
 
     public function profillulusan()
     {
-        return view('new_ui.profil_lulusan',);
+        $profile_lulusan = ProfileLulusan::get();
+
+        return view('new_ui.profil_lulusan', compact('profile_lulusan'));
     }
 
     public function tentangprodi()
@@ -111,7 +115,11 @@ class PublicController extends Controller
 
     public function visimisitujuan()
     {
-        return view('new_ui.visi_misi_tujuan');
+
+        $visi_misi = VisiMisi::get();
+        $tujuan = Tujuans::get();
+
+        return view('new_ui.visi_misi_tujuan', compact('visi_misi', 'tujuan'));
     }
 
     public function stafpengajar()

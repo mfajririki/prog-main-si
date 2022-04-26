@@ -28,14 +28,15 @@
         <div class="row mt-5 border-bottom border-2">
             <p class="subJudul">Profil Lulusan</p>
         </div>
-        <div class="row my-3 py-3 boxShadow rounded">
-            <div class="col">
-                <p class="subJudulProfilLulusan">Konsultan Sistem Informasi</p>
-                <p>Mampu mengidentifikasi, menganalisis, dan mengevaluasi kebutuhan industri dalam pengembangan sistem
-                    informasi
-                </p>
+
+        @foreach ($profile_lulusan as $profile)
+            <div class="row my-3 py-3 boxShadow rounded">
+                <div class="col">
+                    <p class="subJudulProfilLulusan"> {{ $profile->nama }} </p>
+                    <p> {{ $profile->deskripsi }} </p>
+                </div>
             </div>
-        </div>
+        @endforeach
     </div>
 
     @include('new_ui.partials.footer')

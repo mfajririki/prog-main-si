@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Ketua Program Studi</h1>
+                    <h1 class="m-0">Alumni</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -43,7 +43,7 @@
                                     @foreach ($alumnus as $alumni)
                                         <tr>
                                             <td>{{ $alumni->nama }}</td>
-                                            <td>{{ $alumni->kutipan }}</td>
+                                            <td>{{ $alumni->profesi }}</td>
                                             <td>
                                                 @if (!is_null($alumni->photo))
                                                     <img src="{{ asset($alumni->photo) }}" width="100">

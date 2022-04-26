@@ -30,24 +30,16 @@
                 <img src={{ asset('assets/images/visi.png') }} alt="Visi" style="width: 170px">
             </div>
             <div class="col align-self-center">
-                <p style="text-align: justify">Kompetensi lulusan Program Studi Sistem Informasi meliputi 3 bidang keahlian
-                    (konsentrasi) yaitu
-                    Konsentrasi
-                    dalam Bidang Sistem Informasi Bisnis, Konsentrasi dalam bidang Sistem Penunjang Manajemen, Konsentrasi
-                    dalam
-                    bidang Teknologi Informasi.</p>
+                @foreach ($visi_misi as $visi)
+                    <p style="text-align: justify"> {!! $visi->visi !!} </p>
+                @endforeach
             </div>
         </div>
         <div class="row border-bottom pb-2 mb-2">
             <div class="col align-self-center">
-                <p style="text-align: justify">Menyelenggarakan pendidikan di bidang Sistem Informasi dengan memperhatikan
-                    kurikulum yang berbasis
-                    kompetensi untuk menciptakan proses belajar mengajar dengan pelayanan pendidikan yang berkualitas
-                    internasional melalui pemanfaatan teknologi informasi.
-                    Penyelenggaraan penelitian di bidang rekayasa sistem informasi yang berkualitas.
-                    Penyelenggaraan pengabdian kepada masyarakat dengan penerapan hasil penelitian dan kajian bidang
-                    rekayasa
-                    sistem informasi.</p>
+                @foreach ($visi_misi as $misi)
+                    <p style="text-align: justify"> {!! $misi->misi !!} </p>
+                @endforeach
             </div>
             <div class="col-2 align-self-center">
                 <img src={{ asset('assets/images/misi.png') }} alt="Misi" style="width: 170px">
@@ -58,14 +50,9 @@
                 <img src={{ asset('assets/images/tujuan.png') }} alt="Tujuan" style="width: 170px">
             </div>
             <div class="col align-self-center">
-                <p style="text-align: justify">Menghasilkan sumber daya manusia yang mampu mengembangkan sistem informasi di
-                    berbagai bidang yang relevan.
-                    Menghasilkan sumber daya manusia yang mampu menciptakan lapangan pekerjaan sendiri/berwiraswasta.
-                    Menghasilkan lulusan yang berpotensi dan berkualitas yang cerdas dan berkarakter.
-                    Menghasilkan sumber daya manusia yang mampu bersaing dengan lulusan lain baik secara regional, nasional,
-                    maupun internasional.
-                    Menghasilkan penelitian yang berkualitas di bidang sistem informasi.
-                    Melakukan berbagai wujud pengabdian yang berguna bagi masyarakat.</p>
+                @foreach ($tujuan as $tujuan)
+                    <p style="text-align: justify"> {!! $tujuan->konten_tujuan !!} </p>
+                @endforeach
             </div>
         </div>
     </div>

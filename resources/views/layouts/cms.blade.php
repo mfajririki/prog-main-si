@@ -86,7 +86,7 @@
                             </a>
                         </li>
                         {{-- Dropdown Beranda --}}
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-folder"></i>
                                 <p>
@@ -96,43 +96,44 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <div class="container">
-                                    <li class="nav-item">
-                                        <a href="{{ route('admin-kaprodi.index') }}"
-                                            class="nav-link {{ Request::segment(1) == 'admin-kaprodi' ? 'active' : '' }}">
-                                            <i class="nav-icon fas fa-user"></i>
-                                            <p>Kaprodi</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('visi_misi.index') }}"
-                                            class="nav-link {{ Request::segment(1) == 'visi_misi' ? 'active' : '' }}">
-                                            <i class="nav-icon fas fa-flag"></i>
-                                            <p>Visi & Misi</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('visi_misi.index') }}"
-                                            class="nav-link {{ Request::segment(1) == 'visi_misi' ? 'active' : '' }}">
-                                            <i class="nav-icon fas fa-flag"></i>
-                                            <p>Visi & Misi</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('tujuans.index') }}"
-                                            class="nav-link {{ Request::segment(1) == 'tujuans' ? 'active' : '' }}">
-                                            <i class="nav-icon fas fa-flag"></i>
-                                            <p>Tujuan</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('tentang.index') }}"
-                                            class="nav-link {{ Request::segment(1) == 'tentang' ? 'active' : '' }}">
-                                            <i class="nav-icon fas fa-file"></i>
-                                            <p>Tentang Prodi SI</p>
-                                        </a>
-                                    </li>
+
                                 </div>
                             </ul>
+                        </li> --}}
+                        <li class="nav-item">
+                            <a href="{{ route('admin-kaprodi.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'admin-kaprodi' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>Kaprodi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('tentang.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'tentang' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-list-alt"></i>
+                                <p>Tentang Prodi SI</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('visi_misi.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'visi_misi' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-flag"></i>
+                                <p>Visi & Misi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('tujuans.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'tujuans' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-flag"></i>
+                                <p>Tujuan</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin-alumnus.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'admin-alumnus' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Alumni</p>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('announcement.index') }}"

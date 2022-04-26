@@ -14,6 +14,7 @@ use App\Http\Controllers\KurikulumsController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\ProfileLulusanController;
 use App\Http\Controllers\PembimbingAkademikController;
+use App\Http\Controllers\PrasaranaController;
 use App\Http\Controllers\ProfileKaprodiController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SliderController;
@@ -66,6 +67,8 @@ Route::resource('/admin-alumnus', AlumnusControlller::class);
 Route::post('/admin-alumnus/import_excel', [AlumnusControlller::class, 'import_excel']);
 Route::get('/admin-alumnus/delete_all', [AlumnusControlller::class, 'delete_all']);
 
+Route::resource('/visi_misi', VisiMisiController::class);
+
 Route::resource('/staf_pengajar', StafController::class);
 Route::post('/staf_pengajar/import_excel', [StafController::class, 'import_excel']);
 Route::get('/staf/delete_all', [StafController::class, 'delete_all']);
@@ -73,8 +76,6 @@ Route::get('/staf/delete_all', [StafController::class, 'delete_all']);
 Route::resource('/bidangminat', BidangMinatController::class);
 Route::post('/bidangminat/import_excel', [BidangMinatController::class, 'import_excel']);
 Route::get('/minat/delete_all', [BidangMinatController::class, 'delete_all']);
-
-Route::resource('/visi_misi', VisiMisiController::class);
 
 Route::resource('/profile_lulusan', ProfileLulusanController::class);
 Route::get('/profilelulusan/delete_all', [ProfileLulusanController::class, 'delete_all']);
@@ -90,6 +91,7 @@ Route::get('/kurikulum/delete_all', [KurikulumsController::class, 'delete_all'])
 Route::post('/kurikulum/import_excel', [KurikulumsController::class, 'import_excel']);
 Route::get('/kurikulums/{id}/hapus_doc', [KurikulumsController::class, 'hapus_doc'])->name('kurikulums.hapus_doc');
 
-
 Route::resource('/slider', SliderController::class);
 Route::resource('/user', UsersController::class);
+
+Route::resource('/admin-prasarana', PrasaranaController::class);

@@ -21,7 +21,7 @@
 
                     <div class="card card-primary">
                         <div class="card-header">
-                            Ketua Program Studi
+                            Alumni
                         </div>
                         <!-- /.card-header -->
 
@@ -34,6 +34,13 @@
                                             <label>Nama</label>
                                             <input type="text" name="nama" class="form-control"
                                                 value="{{ old('nama') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Profesi</label>
+                                            <input type="text" name="profesi" class="form-control"
+                                                value="{{ old('profesi') }}">
                                         </div>
                                     </div>
                                     <!-- /.col -->
@@ -50,12 +57,6 @@
                                                         Foto</label>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="exampleInputFile" class="d-block">Profesi</label>
-                                            <textarea name="kutipan" class="summernote"></textarea>
                                         </div>
                                     </div>
                                 </div>

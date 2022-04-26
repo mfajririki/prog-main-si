@@ -51,14 +51,9 @@ class AlumnusControlller extends Controller
         return redirect(route('admin-alumnus.index'))->with('alert', 'Profil berhasil dibuat!');
     }
 
-    public function show($id)
+    public function edit(Alumnus $admin_alumnu)
     {
-        //
-    }
-
-    public function edit(Alumnus $alumnus)
-    {
-        return view('admin.alumnus.edit', compact('alumnus',));
+        return view('admin.alumnus.edit', compact('admin_alumnu'));
     }
 
     public function update($id, Request $request)
@@ -80,13 +75,13 @@ class AlumnusControlller extends Controller
         return redirect(route('admin-alumnus.index'))->with('alert', 'Profil berhasil diupdate!');
     }
 
-    public function destroy(Alumnus $alumnus)
+    public function destroy(Alumnus $admin_alumnu)
     {
-        if (file_exists($alumnus->photo)) {
-            unlink($alumnus->photo);
+        if (file_exists($admin_alumnu->photo)) {
+            unlink($admin_alumnu->photo);
         }
 
-        $alumnus->delete();
+        $admin_alumnu->delete();
 
         return redirect(route('admin-alumnus.index'))->with('alert', 'Profil berhasil dihapus!');
     }
