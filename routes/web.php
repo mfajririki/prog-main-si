@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AlumnusControlller;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\StafController;
 use App\Http\Controllers\BidangMinatController;
@@ -57,8 +58,13 @@ Route::resource('/admin-kaprodi', ProfileKaprodiController::class);
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::resource('/announcement', AnnouncementController::class);
 Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'delete_doc'])->name('announcement.delete_doc');
+
 Route::resource('/admin-panduan', PanduanController::class);
 Route::get('/admin-panduan/{id}/hapus_doc', [PanduanController::class, 'hapus_doc'])->name('panduan.hapus_doc');
+
+Route::resource('/admin-alumnus', AlumnusControlller::class);
+Route::post('/admin-alumnus/import_excel', [AlumnusControlller::class, 'import_excel']);
+Route::get('/admin-alumnus/delete_all', [AlumnusControlller::class, 'delete_all']);
 
 Route::resource('/staf_pengajar', StafController::class);
 Route::post('/staf_pengajar/import_excel', [StafController::class, 'import_excel']);
