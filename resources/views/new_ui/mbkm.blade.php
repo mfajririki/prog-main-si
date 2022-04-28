@@ -32,19 +32,24 @@
     <div class="bgGrey my-3 py-3">
         <div class="container">
             <p class="subJudulMBKM">Berita MBKM Terkini</p>
-            <div class="row rounded bg-white p-3 boxShadow">
-                <div class="col">
-                    <img src={{ asset('assets/images/image_placeholder.png') }} alt="" class="imgMBKM rounded">
-                </div>
-                <div class="col">
-                    <p class="fw-bold">Tanggal</p>
-                    <p style="font-size: 22px">Judul</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere urna in ligula hendrerit,
-                        at vestibulum erat dignissim.</p>
-                    <a class="btn btn-primary btn-sm rounded-pill active" href="#" role="button">Selengkapnya</a>
-                </div>
-            </div>
+            @foreach ($announcements as $announcement)
+                @if ($announcement->category == 'MBKM')
+                    <div class="row rounded bg-white p-3 boxShadow">
+                        <div class="col">
+                            <img src="{{ asset($announcement->photo) }}" alt="" class="imgMBKM rounded">
+                        </div>
+                        <div class="col">
+                            <p class="fw-bold">{{ $announcement->created_at->translatedFormat('l, d m Y') }}</p>
+                            <p style="font-size: 22px">{{ $announcement->title }}</p>
+                            <p>{!! $announcement->content !!}</p>
+                            <a class="btn btn-primary btn-sm rounded-pill active" href="#" role="button">Selengkapnya</a>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
         </div>
+
+        <div class="justify-content-center">{{ $announcements->links() }}</div>
     </div>
 
     <div class="container">

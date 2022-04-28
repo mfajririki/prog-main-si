@@ -7,6 +7,7 @@ use App\Http\Controllers\AlumnusControlller;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\StafController;
 use App\Http\Controllers\BidangMinatController;
+use App\Http\Controllers\KerjaSamaController;
 use App\Http\Controllers\VisiMisiController;
 use App\Http\Controllers\TujuansController;
 use App\Http\Controllers\TentangController;
@@ -84,7 +85,9 @@ Route::post('/profilelulusan/import_excel', [ProfileLulusanController::class, 'i
 
 Route::resource('/pembimbing_akademik', PembimbingAkademikController::class);
 Route::get('/pembimbing_akademik/{id}/hapus_doc', [PembimbingAkademikController::class, 'hapus_doc'])->name('pembimbing_akademik.hapus_doc');
+
 Route::resource('/tujuans', TujuansController::class);
+
 Route::resource('/tentang', TentangController::class);
 
 Route::resource('/kurikulums', KurikulumsController::class);
@@ -96,3 +99,5 @@ Route::resource('/slider', SliderController::class);
 Route::resource('/user', UsersController::class);
 
 Route::resource('/admin-prasarana', PrasaranaController::class);
+
+Route::resource('/admin-kerjasama', KerjaSamaController::class);

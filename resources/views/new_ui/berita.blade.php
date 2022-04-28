@@ -21,31 +21,24 @@
     </div>
 
     <div class="container">
-        <div class="row rounded my-4 p-3 boxShadow">
-            <div class="col text-center">
-                <img src={{ asset('assets/images/image_placeholder.png') }} alt="" class="imgMBKM rounded">
-            </div>
-            <div class="col">
-                <p class="fw-bold">Tanggal</p>
-                <p style="font-size: 22px">Judul</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere urna in ligula hendrerit,
-                    at vestibulum erat dignissim.</p>
-                <a class="btn btn-primary btn-sm rounded-pill active" href="#" role="button">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="row rounded my-4 p-3 boxShadow">
-            <div class="col text-center">
-                <img src={{ asset('assets/images/image_placeholder.png') }} alt="" class="imgMBKM rounded">
-            </div>
-            <div class="col">
-                <p class="fw-bold">Tanggal</p>
-                <p style="font-size: 22px">Judul</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere urna in ligula hendrerit,
-                    at vestibulum erat dignissim.</p>
-                <a class="btn btn-primary btn-sm rounded-pill active" href="#" role="button">Selengkapnya</a>
-            </div>
-        </div>
+        @foreach ($announcements as $announcement)
+            @if ($announcement->category == 'Berita')
+                <div class="row rounded my-4 p-3 boxShadow">
+                    <div class="col text-center">
+                        <img src="{{ asset($announcement->photo) }}" alt="" class="imgMBKM rounded">
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold">{{ $announcement->created_at->translatedFormat('l, d m Y') }}</p>
+                        <p style="font-size: 22px">{{ $announcement->title }}</p>
+                        <p>{!! $announcement->content !!}</p>
+                        <a class="btn btn-primary btn-sm rounded-pill active" href="#" role="button">Selengkapnya</a>
+                    </div>
+                </div>
+            @endif
+        @endforeach
     </div>
+
+    <div class="justify-content-center">{{ $announcements->links() }}</div>
 
     @include('new_ui.partials.footer')
 @endsection

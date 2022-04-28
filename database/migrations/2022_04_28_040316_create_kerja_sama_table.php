@@ -15,6 +15,10 @@ class CreateKerjaSamaTable extends Migration
     {
         Schema::create('kerja_sama', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_instansi');
+            $table->text('deskripsi');
+            $table->string('kategori');
+            $table->text('photo');
             $table->timestamps();
         });
     }

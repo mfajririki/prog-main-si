@@ -30,22 +30,17 @@
     </div>
 
     <div class="container">
-        <div class="row boxShadow p-3 my-3">
-            <div class="col align-self-center">
-                <p class="fw-bold py-3">Dosen Pembimbing Akademik (PA) Angkatan 20XX</p>
+        @foreach ($bimbinganakademik as $ba)
+            <div class="row boxShadow p-3 my-3">
+                <div class="col align-self-center">
+                    <p class="fw-bold py-3">{{ $ba->title }}</p>
+                </div>
+                <div class="col text-end align-self-center">
+                    <a target="_blank" href="{{ asset($ba->document) }}" type="button"
+                        class="btn btn-primary btn-sm active rounded-pill">Download</a>
+                </div>
             </div>
-            <div class="col text-end align-self-center">
-                <button type="button" class="btn btn-primary btn-sm active rounded-pill">Download</button>
-            </div>
-        </div>
-        <div class="row boxShadow p-3 my-3">
-            <div class="col align-self-center">
-                <p class="fw-bold py-3">Dosen Pembimbing Akademik (PA) Angkatan 20XX</p>
-            </div>
-            <div class="col text-end align-self-center">
-                <button type="button" class="btn btn-primary btn-sm active rounded-pill">Download</button>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     @include('new_ui.partials.footer')

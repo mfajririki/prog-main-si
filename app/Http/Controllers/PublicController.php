@@ -11,6 +11,7 @@ use App\Models\Kurikulums;
 use App\Models\Panduan;
 use App\Models\PembimbingAkademik;
 use App\Models\Kaprodi;
+use App\Models\KerjaSama;
 use App\Models\Prasarana;
 use App\Models\ProfileKaprodi;
 use App\Models\ProfileLulusan;
@@ -51,17 +52,23 @@ class PublicController extends Controller
 
     public function pengumuman()
     {
-        return view('new_ui.pengumuman');
+        $announcements  = Announcement::latest()->paginate(8);
+
+        return view('new_ui.pengumuman', compact('announcements'));
     }
 
     public function berita()
     {
-        return view('new_ui.berita');
+        $announcements  = Announcement::latest()->paginate(8);
+
+        return view('new_ui.berita', compact('announcements'));
     }
 
     public function prestasi()
     {
-        return view('new_ui.prestasi');
+        $announcements  = Announcement::latest()->paginate(8);
+
+        return view('new_ui.prestasi', compact('announcements'));
     }
 
     public function lowongankerja()
@@ -78,7 +85,9 @@ class PublicController extends Controller
 
     public function kurikulum()
     {
-        return view('new_ui.kurikulum');
+        $kurikulum = Kurikulums::get();
+        $bidangminat = BidangMinat::get();
+        return view('new_ui.kurikulum', compact('kurikulum', 'bidangminat'));
     }
 
     public function panduan()
@@ -90,7 +99,9 @@ class PublicController extends Controller
 
     public function bimbinganakademik()
     {
-        return view('new_ui.bimbingan_akademik');
+        $bimbinganakademik = PembimbingAkademik::get();
+
+        return view('new_ui.bimbingan_akademik', compact('bimbinganakademik'));
     }
 
     public function profillulusan()
@@ -132,11 +143,15 @@ class PublicController extends Controller
 
     public function kerjasama()
     {
-        return view('new_ui.kerja_sama');
+        $kerja_sama = KerjaSama::get();
+
+        return view('new_ui.kerja_sama', compact('kerja_sama'));
     }
 
     public function mbkm()
     {
-        return view('new_ui.mbkm');
+        $announcements  = Announcement::latest()->paginate(8);
+
+        return view('new_ui.mbkm', compact('announcements'));
     }
 }

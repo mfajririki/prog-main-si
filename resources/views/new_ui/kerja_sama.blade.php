@@ -31,34 +31,40 @@
 
     <div class="container my-4">
         <p class="subJudulKerjaSama">Kerja Sama Dalam Negeri</p>
-        <div class="row boxShadow rounded my-4 p-3">
-            <div class="col text-center">
-                <img src={{ asset('assets/images/image_placeholder.png') }} alt="" class="imgKerjaSama rounded">
-            </div>
-            <div class="col">
-                <p class="fw-bold">Tanggal mulai - Tanggal berakhir</p>
-                <h5>Nama Instansi</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit magna in pellentesque interdum.
-                </p>
-                <a class="btn btn-primary rounded-pill active" href="#" role="button">Selengkapnya</a>
-            </div>
-        </div>
+        @foreach ($kerja_sama as $kerjasama)
+            @if ($kerjasama->kategori == 'Kerja Sama Dalam Negeri')
+                <div class="row boxShadow rounded my-4 p-3">
+                    <div class="col text-center">
+                        <img src="{{ asset($kerjasama->photo) }}" alt="" class="imgKerjaSama rounded">
+                    </div>
+                    <div class="col">
+                        {{-- <p class="fw-bold">Tanggal mulai - Tanggal berakhir</p> --}}
+                        <h5>{{ $kerjasama->nama_instansi }}</h5>
+                        <p>{!! $kerjasama->deskripsi !!}</p>
+                        {{-- <a class="btn btn-primary rounded-pill active" href="#" role="button">Selengkapnya</a> --}}
+                    </div>
+                </div>
+            @endif
+        @endforeach
     </div>
 
     <div class="container my-5 pt-5">
         <p class="subJudulKerjaSama">Kerja Sama Luar Negeri</p>
-        <div class="row boxShadow rounded my-4 p-3">
-            <div class="col text-center">
-                <img src={{ asset('assets/images/image_placeholder.png') }} alt="" class="imgKerjaSama rounded">
-            </div>
-            <div class="col">
-                <p class="fw-bold">Tanggal mulai - Tanggal berakhir</p>
-                <h5>Nama Instansi</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit magna in pellentesque interdum.
-                </p>
-                <a class="btn btn-primary btn-sm rounded-pill active" href="#" role="button">Selengkapnya</a>
-            </div>
-        </div>
+        @foreach ($kerja_sama as $kerjasama)
+            @if ($kerjasama->kategori == 'Kerja Sama Luar Negeri')
+                <div class="row boxShadow rounded my-4 p-3">
+                    <div class="col text-center">
+                        <img src="{{ asset($kerjasama->photo) }}" alt="" class="imgKerjaSama rounded">
+                    </div>
+                    <div class="col">
+                        {{-- <p class="fw-bold">Tanggal mulai - Tanggal berakhir</p> --}}
+                        <h5>{{ $kerjasama->nama_instansi }}</h5>
+                        <p>{!! $kerjasama->deskripsi !!}</p>
+                        {{-- <a class="btn btn-primary rounded-pill active" href="#" role="button">Selengkapnya</a> --}}
+                    </div>
+                </div>
+            @endif
+        @endforeach
     </div>
 
     @include('new_ui.partials.footer')

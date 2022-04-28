@@ -122,6 +122,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('admin-kerjasama.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'admin-kerjasama' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-share-alt"></i>
+                                <p>Kerja Sama</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('staf_pengajar.index') }}"
                                 class="nav-link {{ Request::segment(1) == 'staf_pengajar' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-users"></i>
