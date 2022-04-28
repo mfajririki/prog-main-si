@@ -9,7 +9,7 @@
             </div>
             <div class="col">
                 <p class="border-bottom pb-3 footerJudul">Our Campus</p>
-                <a href="" class="d-flex footerLink">Portal Web UBD</a>
+                <a href="https://www.binadarma.ac.id/" target="_blank" class="d-flex footerLink">Portal Web UBD</a>
                 <a href="" class="d-flex footerLink">Sistem Informasi Akademik</a>
                 <a href="" class="d-flex footerLink">E-learning</a>
                 <p class="border-bottom mt-5 pb-3 footerJudul">Social Info</p>

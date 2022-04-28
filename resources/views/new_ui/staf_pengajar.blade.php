@@ -28,26 +28,29 @@
         <div class="row mt-5 border-bottom border-2">
             <p class="subJudul">Staf</p>
         </div>
-        <div class="row py-3 border-bottom">
-            <div class="col text-end">
-                <img src={{ asset('assets/images/user-photo.png') }} alt="" style="height: 170px">
+        @foreach ($staf_pengajar as $staf)
+            <div class="row py-3 mb-3 border-bottom">
+                <div class="col text-end">
+                    <img src="{{ asset($staf->photo) }}" alt="" class="imgStaf">
+                </div>
+                <div class="col-2">
+                    <p>Nama</p>
+                    <p>NIDN</p>
+                    <p>Jabatan</p>
+                    <p>Email</p>
+                    <a href="https://{{ $staf->sintaid }}" style="text-decoration: none">Sinta</a>
+                </div>
+                <div class="col">
+                    <p>: {{ $staf->nama }}</p>
+                    <p>: {{ $staf->nidn }}</p>
+                    <p>: {{ $staf->jabatan }}</p>
+                    <p>: {{ $staf->email }}</p>
+                    <p></p>
+                </div>
+                <div class="col"></div>
             </div>
-            <div class="col-2">
-                <p>Nama</p>
-                <p>NIDN</p>
-                <p>Jabatan</p>
-                <p>Email</p>
-                <a href="#" style="text-decoration: none">Link sinta.id</a>
-            </div>
-            <div class="col">
-                <p>: Fajri</p>
-                <p>: 1234567</p>
-                <p>: Mahasiswa</p>
-                <p>: fajri@email.com</p>
-                <p></p>
-            </div>
-            <div class="col"></div>
-        </div>
+        @endforeach
+        <div class="justify-content-center">{{ $staf_pengajar->links() }}</div>
     </div>
 
     @include('new_ui.partials.footer')

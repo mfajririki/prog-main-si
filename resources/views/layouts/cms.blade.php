@@ -101,10 +101,24 @@
                             </ul>
                         </li> --}}
                         <li class="nav-item">
+                            <a href="{{ route('admin-alumnus.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'admin-alumnus' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-graduation-cap"></i>
+                                <p>Alumni</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('admin-kaprodi.index') }}"
                                 class="nav-link {{ Request::segment(1) == 'admin-kaprodi' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>Kaprodi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('staf_pengajar.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'staf_pengajar' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Staf Pengajar</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -115,13 +129,6 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('visi_misi.index') }}"
-                                class="nav-link {{ Request::segment(1) == 'visi_misi' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-flag"></i>
-                                <p>Visi & Misi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="{{ route('tujuans.index') }}"
                                 class="nav-link {{ Request::segment(1) == 'tujuans' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-flag"></i>
@@ -129,10 +136,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin-alumnus.index') }}"
-                                class="nav-link {{ Request::segment(1) == 'admin-alumnus' ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>Alumni</p>
+                            <a href="{{ route('visi_misi.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'visi_misi' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-flag"></i>
+                                <p>Visi & Misi</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -201,13 +208,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <div class="container">
-                                    <li class="nav-item">
-                                        <a href="{{ route('staf_pengajar.index') }}"
-                                            class="nav-link {{ Request::segment(1) == 'staf_pengajar' ? 'active' : '' }}">
-                                            <i class="nav-icon fas fa-users"></i>
-                                            <p>Staf Pengajar</p>
-                                        </a>
-                                    </li>
+
                                     <li class="nav-item">
                                         <a href="{{ route('profile_lulusan.index') }}"
                                             class="nav-link {{ Request::segment(1) == 'profile_lulusan' ? 'active' : '' }}">

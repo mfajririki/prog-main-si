@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStafPengajarTable extends Migration
+class CreatePrasaranaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateStafPengajarTable extends Migration
      */
     public function up()
     {
-        Schema::create('staf_pengajar', function (Blueprint $table) {
+        Schema::create('prasarana', function (Blueprint $table) {
             $table->id();
-            $table->text('photo')->nullable();
-            $table->string('nama');
-            $table->string('nidn');
-            $table->string('jabatan');
-            $table->string('email');
-            $table->string('sintaid')->nullable();
+            $table->string('nama_fasilitas');
+            $table->text('deskripsi');
+            $table->text('photo');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateStafPengajarTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staf_pengajar');
+        Schema::dropIfExists('prasarana');
     }
 }

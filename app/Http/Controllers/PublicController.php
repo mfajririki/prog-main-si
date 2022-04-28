@@ -75,15 +75,6 @@ class PublicController extends Controller
         return view('announcement_detail', compact('announcement', 'title', 'sliders'));
     }
 
-    public function staf()
-    {
-        $staf_pengajar = Staf::paginate(10);
-        $sliders = Slider::get();
-        $title = "Staf Pengajar";
-
-        return view('staf', compact('staf_pengajar', 'title', 'sliders'));
-    }
-
     public function kurikulum()
     {
         return view('new_ui.kurikulum');
@@ -110,7 +101,9 @@ class PublicController extends Controller
 
     public function tentangprodi()
     {
-        return view('new_ui.tentang',);
+        $tentang = Tentang::get();
+
+        return view('new_ui.tentang', compact('tentang'));
     }
 
     public function visimisitujuan()
@@ -124,7 +117,9 @@ class PublicController extends Controller
 
     public function stafpengajar()
     {
-        return view('new_ui.staf_pengajar');
+        $staf_pengajar = Staf::paginate(10);
+
+        return view('new_ui.staf_pengajar', compact('staf_pengajar'));
     }
 
     public function fasilitas()
