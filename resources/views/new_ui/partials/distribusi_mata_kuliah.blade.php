@@ -17,7 +17,7 @@
             $no = 0;
         @endphp
         @foreach ($kurikulum as $mk1)
-            @if ($kurikulum->semester == 'Semester 1')
+            @if ($mk1->semester == 'Semester 1')
                 <tr>
                     <td scope="row">{{ $no + 1 }}</td>
                     <td>{{ $mk1->kode_mk }}</td>
@@ -46,7 +46,7 @@
             $no = 0;
         @endphp
         @foreach ($kurikulum as $mk2)
-            @if ($kurikulum->semester == 'Semester 2')
+            @if ($mk2->semester == 'Semester 2')
                 <tr>
                     <td scope="row">{{ $no + 1 }}</td>
                     <td>{{ $mk2->kode_mk }}</td>
@@ -75,7 +75,7 @@
             $no = 0;
         @endphp
         @foreach ($kurikulum as $mk3)
-            @if ($kurikulum->semester == 'Semester 3')
+            @if ($mk3->semester == 'Semester 3')
                 <tr>
                     <td scope="row">{{ $no + 1 }}</td>
                     <td>{{ $mk3->kode_mk }}</td>
