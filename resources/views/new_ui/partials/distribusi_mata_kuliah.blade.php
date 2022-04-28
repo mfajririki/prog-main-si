@@ -96,5 +96,150 @@
             <td colspan="4">Jumlah SKS</td>
             <td>{{ $kurikulum->where('semester', 'Semester 3')->sum('sks') }}</td>
         </tr>
+        {{-- Semester 4 --}}
+        <tr class="table-warning">
+            <td colspan="5">Semester 4</td>
+        </tr>
+        @php
+            $no = 0;
+        @endphp
+        @foreach ($kurikulum as $mk4)
+            @if ($mk4->semester == 'Semester 4')
+                <tr>
+                    <td scope="row">{{ $no + 1 }}</td>
+                    <td>{{ $mk4->kode_mk }}</td>
+                    @if ($mk4->document == null)
+                        <td>{{ $mk4->nama_mk }}</td>
+                    @else
+                        <td><a href="{{ asset($mk4->document) }}" target="_blank">{{ $mk4->nama_mk }}</a></td>
+                    @endif
+                    <td>{{ $mk4->kelompok_mk }}</td>
+                    <td>{{ $mk4->sks }}</td>
+                </tr>
+                @php
+                    $no++;
+                @endphp
+            @endif
+        @endforeach
+        <tr>
+            <td colspan="4">Jumlah SKS</td>
+            <td>{{ $kurikulum->where('semester', 'Semester 4')->sum('sks') }}</td>
+        </tr>
+        {{-- Semester 5 --}}
+        <tr class="table-warning">
+            <td colspan="5">Semester 5</td>
+        </tr>
+        @php
+            $no = 0;
+        @endphp
+        @foreach ($kurikulum as $mk5)
+            @if ($mk5->semester == 'Semester 5')
+                <tr>
+                    <td scope="row">{{ $no + 1 }}</td>
+                    <td>{{ $mk5->kode_mk }}</td>
+                    @if ($mk5->document == null)
+                        <td>{{ $mk5->nama_mk }}</td>
+                    @else
+                        <td><a href="{{ asset($mk5->document) }}" target="_blank">{{ $mk5->nama_mk }}</a></td>
+                    @endif
+                    <td>{{ $mk5->kelompok_mk }}</td>
+                    <td>{{ $mk5->sks }}</td>
+                </tr>
+                @php
+                    $no++;
+                @endphp
+            @endif
+        @endforeach
+        <tr>
+            <td colspan="4">Jumlah SKS</td>
+            <td>{{ $kurikulum->where('semester', 'Semester 5')->sum('sks') }}</td>
+        </tr>
+        {{-- Semester 6 --}}
+        <tr class="table-warning">
+            <td colspan="5">Semester 6</td>
+        </tr>
+        @php
+            $no = 0;
+        @endphp
+        @foreach ($kurikulum as $mk6)
+            @if ($mk6->semester == 'Semester 6')
+                <tr>
+                    <td scope="row">{{ $no + 1 }}</td>
+                    <td>{{ $mk6->kode_mk }}</td>
+                    @if ($mk6->document == null)
+                        <td>{{ $mk6->nama_mk }}</td>
+                    @else
+                        <td><a href="{{ asset($mk6->document) }}" target="_blank">{{ $mk6->nama_mk }}</a></td>
+                    @endif
+                    <td>{{ $mk6->kelompok_mk }}</td>
+                    <td>{{ $mk6->sks }}</td>
+                </tr>
+                @php
+                    $no++;
+                @endphp
+            @endif
+        @endforeach
+        <tr>
+            <td colspan="4">Jumlah SKS</td>
+            <td>{{ $kurikulum->where('semester', 'Semester 6')->sum('sks') }}</td>
+        </tr>
+        {{-- Semester 7 --}}
+        <tr class="table-warning">
+            <td colspan="5">Semester 7</td>
+        </tr>
+        @php
+            $no = 0;
+        @endphp
+        @foreach ($kurikulum as $mk7)
+            @if ($mk7->semester == 'Semester 7')
+                <tr>
+                    <td scope="row">{{ $no + 1 }}</td>
+                    <td>{{ $mk7->kode_mk }}</td>
+                    @if ($mk7->document == null)
+                        <td>{{ $mk7->nama_mk }}</td>
+                    @else
+                        <td><a href="{{ asset($mk7->document) }}" target="_blank">{{ $mk7->nama_mk }}</a></td>
+                    @endif
+                    <td>{{ $mk7->kelompok_mk }}</td>
+                    <td>{{ $mk7->sks }}</td>
+                </tr>
+                @php
+                    $no++;
+                @endphp
+            @endif
+        @endforeach
+        <tr>
+            <td colspan="4">Jumlah SKS</td>
+            <td>{{ $kurikulum->where('semester', 'Semester 7')->sum('sks') }}</td>
+        </tr>
+        {{-- Semester 8 --}}
+        <tr class="table-warning">
+            <td colspan="5">Semester 8</td>
+        </tr>
+        @php
+            $no = 0;
+        @endphp
+        @foreach ($kurikulum as $mk8)
+            @if ($mk8->semester == 'Semester 8')
+                <tr>
+                    <td scope="row">{{ $no + 1 }}</td>
+                    <td>{{ $mk8->kode_mk }}</td>
+                    @if ($mk8->document == null)
+                        <td>{{ $mk8->nama_mk }}</td>
+                    @else
+                        <td><a href="{{ asset($mk8->document) }}" target="_blank">{{ $mk8->nama_mk }}</a></td>
+                    @endif
+                    <td>{{ $mk8->kelompok_mk }}</td>
+                    <td>{{ $mk8->sks }}</td>
+                </tr>
+                @php
+                    $no++;
+                @endphp
+            @endif
+        @endforeach
+        <tr>
+            <td colspan="4">Jumlah SKS</td>
+            <td>{{ $kurikulum->where('semester', 'Semester 8')->sum('sks') }}</td>
+        </tr>
     </tbody>
 </table>
