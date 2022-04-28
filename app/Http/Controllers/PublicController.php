@@ -11,6 +11,7 @@ use App\Models\Kurikulums;
 use App\Models\Panduan;
 use App\Models\PembimbingAkademik;
 use App\Models\Kaprodi;
+use App\Models\Prasarana;
 use App\Models\ProfileKaprodi;
 use App\Models\ProfileLulusan;
 use App\Models\Slider;
@@ -124,7 +125,9 @@ class PublicController extends Controller
 
     public function fasilitas()
     {
-        return view('new_ui.fasilitas');
+        $prasarana = Prasarana::get();
+
+        return view('new_ui.fasilitas', compact('prasarana'));
     }
 
     public function kerjasama()

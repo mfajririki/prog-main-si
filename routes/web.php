@@ -54,9 +54,10 @@ Auth::routes([
 ]);
 
 // Admin-Beranda
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+
 Route::resource('/admin-kaprodi', ProfileKaprodiController::class);
 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::resource('/announcement', AnnouncementController::class);
 Route::get('/announcement/{id}/delete_doc', [AnnouncementController::class, 'delete_doc'])->name('announcement.delete_doc');
 

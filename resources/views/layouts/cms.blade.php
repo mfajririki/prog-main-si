@@ -108,6 +108,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('admin-prasarana.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'admin-prasarana' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-archive"></i>
+                                <p>Fasilitas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('admin-kaprodi.index') }}"
                                 class="nav-link {{ Request::segment(1) == 'admin-kaprodi' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-user"></i>
