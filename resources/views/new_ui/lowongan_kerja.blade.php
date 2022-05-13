@@ -32,12 +32,11 @@
 
     <div class="container">
         <ol>
-            <li><a href="#" class="linkLoker">Loker "Nama Instansi"</a> (Lokasi) | <span
-                    style="color: rgb(255, 5, 5)">Deadline</span></li>
-            <li><a href="#" class="linkLoker">Loker "Nama Instansi"</a> (Lokasi) | <span
-                    style="color: rgb(255, 5, 5)">Deadline</span></li>
-            <li><a href="#" class="linkLoker">Loker "Nama Instansi"</a> (Lokasi) | <span
-                    style="color: rgb(255, 5, 5)">Deadline</span></li>
+            @foreach ($lowongan_kerja as $loker)
+                <li><a href="https://{{ $loker->link }}" class="linkLoker" target="_blank">{{ $loker->nama_loker }}
+                        "{{ $loker->nama_instansi }}"</a> (Lokasi) | <span style="color: rgb(255, 5, 5)">Deadline</span>
+                </li>
+            @endforeach
         </ol>
     </div>
 

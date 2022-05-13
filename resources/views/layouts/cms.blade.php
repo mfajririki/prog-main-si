@@ -115,6 +115,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('admin-lowongankerja.index') }}"
+                                class="nav-link {{ Request::segment(1) == 'admin-lowongankerja' ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-exclamation"></i>
+                                <p>Lowongan Kerja</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('admin-kaprodi.index') }}"
                                 class="nav-link {{ Request::segment(1) == 'admin-kaprodi' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-user"></i>

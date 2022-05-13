@@ -12,6 +12,7 @@ use App\Http\Controllers\VisiMisiController;
 use App\Http\Controllers\TujuansController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\KurikulumsController;
+use App\Http\Controllers\LowonganKerjaController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\ProfileLulusanController;
 use App\Http\Controllers\PembimbingAkademikController;
@@ -101,3 +102,5 @@ Route::resource('/user', UsersController::class);
 Route::resource('/admin-prasarana', PrasaranaController::class);
 
 Route::resource('/admin-kerjasama', KerjaSamaController::class);
+
+Route::resource('/admin-lowongankerja', LowonganKerjaController::class);

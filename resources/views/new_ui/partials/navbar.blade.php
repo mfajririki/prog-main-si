@@ -27,6 +27,7 @@
                             <li><a class="dropdown-item text-white" href="/fasilitas">Prasarana</a></li>
                             <li><a class="dropdown-item text-white" href="/kerjasama">Kerja Sama</a></li>
                             <li><a class="dropdown-item text-white" href="/mbkm">MBKM</a></li>
+                            <li><a class="dropdown-item text-white" href="#">IABEE</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

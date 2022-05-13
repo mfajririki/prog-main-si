@@ -241,5 +241,9 @@
             <td colspan="4">Jumlah SKS</td>
             <td>{{ $kurikulum->where('semester', 'Semester 8')->sum('sks') }}</td>
         </tr>
+        <tr class="table-primary">
+            <td colspan="4">Jumlah Seluruh SKS</td>
+            <td>{{ $kurikulum->sum('sks') }}</td>
+        </tr>
     </tbody>
 </table>

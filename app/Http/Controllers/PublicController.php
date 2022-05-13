@@ -12,6 +12,7 @@ use App\Models\Panduan;
 use App\Models\PembimbingAkademik;
 use App\Models\Kaprodi;
 use App\Models\KerjaSama;
+use App\Models\LowonganKerja;
 use App\Models\Prasarana;
 use App\Models\ProfileKaprodi;
 use App\Models\ProfileLulusan;
@@ -73,7 +74,9 @@ class PublicController extends Controller
 
     public function lowongankerja()
     {
-        return view('new_ui.lowongan_kerja');
+        $lowongan_kerja = LowonganKerja::latest()->get();
+
+        return view('new_ui.lowongan_kerja', compact('lowongan_kerja'));
     }
 
     public function show(Announcement $announcement)
