@@ -89,7 +89,7 @@ class PublicController extends Controller
     public function kurikulum()
     {
         $kurikulum = Kurikulums::get();
-        $bidangminat = BidangMinat::get();
+        $bidangminat = BidangMinat::get()->sortBy('semester');
         return view('new_ui.kurikulum', compact('kurikulum', 'bidangminat'));
     }
 
