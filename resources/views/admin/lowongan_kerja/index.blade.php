@@ -34,7 +34,9 @@
                                     <tr>
                                         <th>Lowongan Kerja</th>
                                         <th>Nama Instansi</th>
+                                        <th>Lokasi</th>
                                         <th>Link</th>
+                                        <th>Deadline</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -44,8 +46,10 @@
                                         <tr>
                                             <td>{{ $loker->nama_loker }}</td>
                                             <td>{{ $loker->nama_instansi }}</td>
+                                            <td>{{ $loker->lokasi }}</td>
                                             <td><a href="https://{{ $loker->link }}" target="_blank"
                                                     rel="noopener noreferrer">{{ $loker->link }}</a></td>
+                                            <td class="text-danger">{{ $loker->deadline }}</td>
                                             <td>
                                                 <a href="{{ route('admin-lowongankerja.edit', $loker) }}"
                                                     class="btn btn-sm btn-success"> Edit <i

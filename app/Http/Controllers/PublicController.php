@@ -157,4 +157,9 @@ class PublicController extends Controller
 
         return view('new_ui.mbkm', compact('announcements'));
     }
+
+    public function iabee()
+    {
+        return view('new_ui.iabee');
+    }
 }

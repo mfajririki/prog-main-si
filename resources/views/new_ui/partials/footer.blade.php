@@ -10,12 +10,16 @@
             <div class="col">
                 <p class="border-bottom pb-3 footerJudul">Our Campus</p>
                 <a href="https://www.binadarma.ac.id/" target="_blank" class="d-flex footerLink">Portal Web UBD</a>
-                <a href="" class="d-flex footerLink">Sistem Informasi Akademik</a>
-                <a href="" class="d-flex footerLink">E-learning</a>
+                <a href="https://sisfo.binadarma.ac.id/" target="_blank" class="d-flex footerLink">Sistem Informasi
+                    Akademik</a>
+                <a href="https://elearning.binadarma.ac.id/" target="_blank" class="d-flex footerLink">E-learning</a>
                 <p class="border-bottom mt-5 pb-3 footerJudul">Social Info</p>
-                <a href="" class="footerLink" style="margin-right: 20px">Facebook</a>
-                <a href="" class="footerLink" style="margin-right: 20px">Instagram</a>
-                <a href="" class="footerLink">Youtube</a>
+                <a href="https://id-id.facebook.com/UBDPalembang/" target="_blank" class="footerLink"
+                    style="margin-right: 20px">Facebook</a>
+                <a href="https://www.instagram.com/ubd_palembang/" target="_blank" class="footerLink"
+                    style="margin-right: 20px">Instagram</a>
+                <a href="https://www.youtube.com/channel/UClxVs1JgwCFt2-eO1crYcYA" target="_blank"
+                    class="footerLink">Youtube</a>
             </div>
             <div class="col">
                 <div class="col">

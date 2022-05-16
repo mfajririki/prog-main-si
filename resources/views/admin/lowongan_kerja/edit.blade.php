@@ -50,10 +50,24 @@
                                                 value="{{ $admin_lowongankerja->nama_instansi }}">
                                         </div>
                                         <div class="form-group">
+                                            <label>Lokasi <span class="text-danger">*</span></label>
+                                            <input type="text" name="lokasi" class="form-control"
+                                                value="{{ $admin_lowongankerja->lokasi }}" required="">
+                                            <input type="hidden" name="old_lokasi"
+                                                value="{{ $admin_lowongankerja->lokasi }}">
+                                        </div>
+                                        <div class="form-group">
                                             <label>Link <span class="text-danger">*</span></label>
                                             <input type="text" name="link" class="form-control"
                                                 value="{{ $admin_lowongankerja->link }}" required="">
                                             <input type="hidden" name="old_link" value="{{ $admin_lowongankerja->link }}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Deadline <span class="text-danger">*</span></label>
+                                            <input type="date" name="deadline" class="form-control"
+                                                value="{{ $admin_lowongankerja->deadline }}" required="">
+                                            <input type="hidden" name="old_deadline"
+                                                value="{{ $admin_lowongankerja->deadline }}">
                                         </div>
                                     </div>
                                     <!-- /.col -->

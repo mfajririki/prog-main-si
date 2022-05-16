@@ -48,10 +48,26 @@
                                             @enderror
                                         </div>
                                         <div class="form-group">
+                                            <label>Lokasi <span class="text-danger">*</span></label>
+                                            <input type="text" name="lokasi" class="form-control"
+                                                value="{{ old('lokasi') }}" required="">
+                                            @error('lokasi')
+                                                <div class="mt-2 text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group">
                                             <label>Link <span class="text-danger">*</span></label>
                                             <input type="text" name="link" class="form-control"
                                                 value="{{ old('link') }}" required="">
                                             @error('link')
+                                                <div class="mt-2 text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Deadline <span class="text-danger">*</span></label>
+                                            <input type="date" name="deadline" class="form-control"
+                                                value="{{ old('deadline') }}" required="">
+                                            @error('deadline')
                                                 <div class="mt-2 text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>

@@ -13,6 +13,8 @@ class LowonganKerja extends Model
     protected $fillable = [
         'nama_loker',
         'nama_instansi',
-        'link'
+        'lokasi',
+        'link',
+        'deadline'
     ];
 }

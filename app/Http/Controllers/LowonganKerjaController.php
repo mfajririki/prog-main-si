@@ -36,7 +36,9 @@ class LowonganKerjaController extends Controller
             $lowongan_kerja = LowonganKerja::create([
                 'nama_loker'          => $request->nama_loker,
                 'nama_instansi'        => $request->nama_instansi,
+                'lokasi'        => $request->lokasi,
                 'link'        => $request->link,
+                'deadline'        => $request->deadline,
             ]);
         });
 
@@ -60,10 +62,10 @@ class LowonganKerjaController extends Controller
             ->update([
                 'nama_loker'          => $request->nama_loker,
                 'nama_instansi'        => $request->nama_instansi,
+                'lokasi'        => $request->lokasi,
                 'link'        => $request->link,
+                'deadline'        => $request->deadline,
             ]);
-
-
 
         return redirect(route('admin-lowongankerja.index'))->with('alert', 'Data berhasil diupdate!');
     }

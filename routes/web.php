@@ -41,6 +41,7 @@ Route::get('/lowongankerja', [PublicController::class, 'lowongankerja']);
 Route::get('/kurikulum', [PublicController::class, 'kurikulum']);
 Route::get('/bimbinganakademik', [PublicController::class, 'bimbinganakademik']);
 Route::get('/panduan', [PublicController::class, 'panduan']);
+Route::get('/iabee', [PublicController::class, 'iabee']);
 
 Route::get('/pengumuman-only', [PublicController::class, 'pengumuman'])->name('pengumuman_only');
 Route::get('/pengumuman-berita', [PublicController::class, 'berita'])->name('pengumuman_berita');

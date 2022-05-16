@@ -34,7 +34,8 @@
         <ol>
             @foreach ($lowongan_kerja as $loker)
                 <li><a href="https://{{ $loker->link }}" class="linkLoker" target="_blank">{{ $loker->nama_loker }}
-                        "{{ $loker->nama_instansi }}"</a> (Lokasi) | <span style="color: rgb(255, 5, 5)">Deadline</span>
+                        "{{ $loker->nama_instansi }}"</a> ({{ $loker->lokasi }}) | <span
+                        style="color: rgb(255, 5, 5)">Deadline : {{ $loker->deadline }}</span>
                 </li>
             @endforeach
         </ol>

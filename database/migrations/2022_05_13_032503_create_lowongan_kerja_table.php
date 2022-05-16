@@ -17,7 +17,9 @@ class CreateLowonganKerjaTable extends Migration
             $table->id();
             $table->string('nama_loker');
             $table->string('nama_instansi');
+            $table->string('lokasi');
             $table->text('link');
+            $table->date('deadline');
             $table->timestamps();
         });
     }
