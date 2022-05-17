@@ -9,7 +9,7 @@
                 <p class="judul">IABEE</p>
             </div>
             <div class="col text-end">
-                <img src="" alt="www.binadarma.ac.id" style="width: 450px">
+                <img src="{{ asset('assets/images/iabeeBanner.png') }}" alt="www.binadarma.ac.id" style="width: 450px">
             </div>
         </div>
     </div>
@@ -30,10 +30,9 @@
     </div>
 
     <div class="container">
-        {{-- @foreach ($tentang as $tentangprodi)
-            <p style="text-align: justify"> {!! $tentangprodi->konten_tentang !!} </p>
-        @endforeach --}}
-        <p>lorem ipsum blallkflkalkflekfalkgakgajgefakfklflkgamggepawegpqprtgbnbcv,vcggaoiefdlkl</p>
+        @foreach ($iabee as $iabee)
+            <p style="text-align: justify"> {!! $iabee->konten !!} </p>
+        @endforeach
     </div>
 
     @include('new_ui.partials.footer')

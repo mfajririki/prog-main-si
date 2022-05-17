@@ -7,6 +7,7 @@ use App\Http\Controllers\AlumnusControlller;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\StafController;
 use App\Http\Controllers\BidangMinatController;
+use App\Http\Controllers\IabeeController;
 use App\Http\Controllers\KerjaSamaController;
 use App\Http\Controllers\VisiMisiController;
 use App\Http\Controllers\TujuansController;
@@ -105,3 +106,5 @@ Route::resource('/admin-prasarana', PrasaranaController::class);
 Route::resource('/admin-kerjasama', KerjaSamaController::class);
 
 Route::resource('/admin-lowongankerja', LowonganKerjaController::class);
+
+Route::resource('/admin-iabee', IabeeController::class);
