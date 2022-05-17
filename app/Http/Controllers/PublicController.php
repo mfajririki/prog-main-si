@@ -7,6 +7,7 @@ use App\Models\Announcement;
 use App\Models\BidangMinat;
 use App\Models\Staf;
 use App\Models\Document;
+use App\Models\Iabee;
 use App\Models\Kurikulums;
 use App\Models\Panduan;
 use App\Models\PembimbingAkademik;
@@ -160,6 +161,8 @@ class PublicController extends Controller
 
     public function iabee()
     {
-        return view('new_ui.iabee');
+        $iabee = Iabee::get();
+
+        return view('new_ui.iabee', compact('iabee'));
     }
 }
